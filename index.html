@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narkóvia - Ficha</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="ficha">
+    <h1 class="text-center">Ficha Narkovia</h1>
+    <div class="ficha-nome mb-3">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Nome">
+    </div>
+    <div class="ficha-ancestralidade">
+      <label for="ancestralidade">Ancestralidade</label>
+      <select id="ancestralidade" class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
+        <option selected>Escolha sua ancestralidade</option>
+        <option value="humanoNarkoviano">Humano Narkoviano</option>
+        <option value="humanoMiraniano">Humano Miraniano</option>
+        <option value="munkaiSeltino">Mun'Kai Seltino</option>
+        <option value="munkaiDunfrine">Mun'Kai Dun'frine</option>
+        <option value="munkaiTitere">Mun'Kai Títere</option>
+        <option value="munkaiCisco">Mun'Kai Cisco</option>
+        <option value="espuriaFenixy">Espúria Fenixy</option>
+        <option value="espuriaGale">Espúria Gale</option>
+        <option value="espuriaSniff">Espúria Sniff</option>
+        <option value="espuriaMuphawa">Espúria Muphawa</option>
+        <option value="espuriaDunrock">Espúria Dunrock</option>
+      </select>
+      <table class="table table-bordered table-striped-columns d-none">
+        <tr>
+          <td class="fw-bold">Categorias Possíveis</td>
+          <td class="categorias-possiveis"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Virtudes</td>
+          <td class="virtudes"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Vícios</td>
+          <td class="vicios"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Traços</td>
+          <td class="tracos"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Condutas Bloqueadas</td>
+          <td class="condutas-bloqueadas"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ficha-categoria">
+      <label for="categoria">Categoria</label>
+      <select id="categoria" disabled class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
+        <option selected>Escolha sua categoria</option>
+        <option value="ordinario">Ordinário</option>
+        <option value="insolito">Insólito</option>
+        <option value="extraordinario">Extraordinário</option>
+        <option value="sobrehumano">Sobrehumano</option>
+      </select>
+      <table class="table table-bordered table-sm d-none">
+        <tr class="table-light text-center">
+          <td class="fw-bold" colspan="2">Atributos Máximos</td>
+        </tr>
+        <tr>
+          <td class="atributos text-center" colspan="2">2, 2, 2, 2, 2, 2, 3, 3</td>
+        </tr>
+        <tr class="table-light">
+          <td class="text-center fw-bold w-50">Sortilégio</td>
+          <td class="text-center fw-bold">Composição</td>
+        </tr>
+        <tr>
+          <td class="sortilegio text-center"></td>
+          <td class="composicao text-center"></td>
+        </tr>
+        <tr class="table-light">
+          <td class="text-center fw-bold">Graduação</td>
+          <td class="text-center fw-bold">Maestria</td>
+        </tr>
+        <tr>
+          <td class="graduacao text-center"></td>
+          <td class="maestria text-center"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="ficha-idade d-none">
+      <label for="idade" class="form-label">Idade <span class="idade-value">0</span> ciclos
+        <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
+        <i class="idade-mais bi bi-chevron-right user-select-none" role="button"></i>
+      </label>
+      <input type="range" class="form-range" value="0" min="0" max="240" id="idade">
+      <div>
+        <p>Expectativa de Vida de <span class="expectativa"></span></p>
+        <p><span class="expectativa-valor"></span> ciclos</p>
+      </div>
+      <table class="table table-bordered table-sm">
+        <tr>
+          <td class="fw-bold table-primary text-center" colspan="3">Vivência</td>
+        </tr>
+        <tr>
+          <td class="vivencia fw-bold text-center" colspan="3">Infante</td>
+        </tr>
+        <tr>
+          <td class="fw-bold text-center">Sortilégio</td>
+          <td class="fw-bold text-center">Composição</td>
+          <td class="fw-bold text-center">Graduação</td>
+        </tr>
+        <tr>
+          <td class="sortilegio text-center">00</td>
+          <td class="composicao text-center">00</td>
+          <td class="graduacao text-center">00</td>
+        </tr>
+        <tr>
+          <td class="fw-bold text-center">Vícios Max</td>
+          <td class="fw-bold text-center" colspan="2">Maestria</td>
+        </tr>
+        <tr>
+          <td class="vicios text-center">00</td>
+          <td class="maestria text-center" colspan="2">00</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
