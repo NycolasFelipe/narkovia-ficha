@@ -2,4 +2,28 @@
   max-width: 300px;
   margin: 0 auto;
   padding-top: 30px;
+  padding-bottom: 200px;
+}
+
+#ficha-titulo {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+label {
+  font-family: 'Libre Baskerville', serif;
+  padding-bottom: 5px;
+}
+
+.idade-buttons i {
+  font-size: 1.5rem;
+}
+
+.idade-buttons p {
+  width: 100px;
+}
+
+.idade-expectativa {
+  margin: 20px 0 40px 0;
 }

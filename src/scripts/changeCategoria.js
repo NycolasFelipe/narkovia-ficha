@@ -4,7 +4,7 @@ export default function changeCategoria() {
   const tipo = $('#categoria').val();
   $('.ficha-categoria table').removeClass("d-none");
 
-  if (tipo !== "Escolha sua categoria") {
+  if (!tipo.includes("Escolha")) {
     const categoria = contentCategoria(tipo);
     $('.ficha-categoria table .atributos').text(categoria.atributos);
     $('.ficha-categoria table .sortilegio').text(categoria.sortilegio);

@@ -58,32 +58,32 @@ export default function changeIdade() {
       const vivencia = conteudoIdade[idadesNome[i]].vivencia;
       if (valor <= vivencia.infanteMax) {
         $(".vivencia").text("Infante");
-        $(".sortilegio").text("Suma +4");
-        $(".composicao").text("-2");
-        $(".graduacao").text("-12");
-        $(".vicios").text("-");
-        $(".maestria").text("-4");
+        $(".vivenciaSortilegio").text("Suma +4");
+        $(".vivenciaComposicao").text("-2");
+        $(".vivenciaGraduacao").text("-12");
+        $(".vivenciaViciosMax").text("-");
+        $(".vivenciaMaestria").text("-4");
       } else if (valor >= vivencia.infanteMax + 1 && valor <= vivencia.jovemMax) {
         $(".vivencia").text("Jovem");
-        $(".sortilegio").text("-");
-        $(".composicao").text("-");
-        $(".graduacao").text("-6");
-        $(".vicios").text("+1");
-        $(".maestria").text("-2");
+        $(".vivenciaSortilegio").text("-");
+        $(".vivenciaComposicao").text("-");
+        $(".vivenciaGraduacao").text("-6");
+        $(".vivenciaViciosMax").text("+1");
+        $(".vivenciaMaestria").text("-2");
       } else if (valor >= vivencia.jovemMax + 1 && valor <= vivencia.maduroMax) {
         $(".vivencia").text("Maduro");
-        $(".sortilegio").text("-");
-        $(".composicao").text("-");
-        $(".graduacao").text("-");
-        $(".vicios").text("+2");
-        $(".maestria").text("-");
+        $(".vivenciaSortilegio").text("-");
+        $(".vivenciaComposicao").text("-");
+        $(".vivenciaGraduacao").text("-");
+        $(".vivenciaViciosMax").text("+2");
+        $(".vivenciaMaestria").text("-");
       } else {
         $(".vivencia").text("Senior");
-        $(".sortilegio").text("Suma -2");
-        $(".composicao").text("-2");
-        $(".graduacao").text("+12");
-        $(".vicios").text("+4");
-        $(".maestria").text("+4");
+        $(".vivenciaSortilegio").text("Suma -2");
+        $(".vivenciaComposicao").text("-2");
+        $(".vivenciaGraduacao").text("+12");
+        $(".vivenciaViciosMax").text("+4");
+        $(".vivenciaMaestria").text("+4");
       }
     }
   })
