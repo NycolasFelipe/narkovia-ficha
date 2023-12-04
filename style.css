@@ -1,19 +1,39 @@
+:root {
+  --libre: 'Libre Baskerville', serif;
+  --cor-passo: #3081D0;
+  --cor-passo-concluido: #198754;
+}
+
+label {
+  font-family: var(--libre);
+  padding-bottom: 5px;
+}
+
 .ficha {
   max-width: 300px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 200px;
 }
 
 #ficha-titulo {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--libre);
   font-weight: bold;
-  white-space: nowrap;
+  font-size: 1.8rem;
 }
 
-label {
-  font-family: 'Libre Baskerville', serif;
-  padding-bottom: 5px;
+.ficha-passo {
+  font-family: var(--libre);
+}
+
+.ficha-passo strong {
+  color: var(--cor-passo);
+  transition: all 0.5s ease;
+}
+
+.ficha-passo strong.concluido {
+  color: var(--cor-passo-concluido);
+  transition: all 0.5s ease;
 }
 
 .idade-buttons i {

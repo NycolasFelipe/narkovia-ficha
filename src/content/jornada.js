@@ -4,32 +4,38 @@ export default function contentJornada(tipo, nome) {
       {
         "conduta": "professor",
         "titulo": "Professor/Estudioso",
-        "ganhos": "3 PM em Papelarias"
+        "ganhos": ["Itens de Papelaria 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "alopata",
         "titulo": "Alopata",
-        "ganhos": "3 PM em Alopáticos"
+        "ganhos": ["Conjuntos Alopáticos 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "inspetor",
         "titulo": "Inspetor",
-        "ganhos": "2 PM Livres"
+        "ganhos": ["Objetos de Arqueometria 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "alquimista",
         "titulo": "Alquimista",
-        "ganhos": "3 PM em Alquímicos"
+        "ganhos": ["Reagentes Alquímicos 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "inventor",
         "titulo": "Inventor",
-        "ganhos": "3 PM em Mecânicos"
+        "ganhos": ["Dispositivos Mecânicos 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "mestreDeVislumbres",
-        "titulo": "Mestre de Vislumbres",
-        "ganhos": "3 PM em Arqueômetros"
+        "conduta": "mestreDeVislumbre",
+        "titulo": "Mestre de Vislumbre",
+        "ganhos": ["Artefatos & Relicários 2"],
+        "ganhos-livres": ["+2 PM"]
       },
     ],
 
@@ -37,19 +43,22 @@ export default function contentJornada(tipo, nome) {
       {
         "conduta": "aristocrata",
         "titulo": "Aristocrata",
-        "ganhos": "1 PM em papelaria, 1 PM em Veículo e 1 PM armas simples"
+        "ganhos": ["Armas Simples 1", "Papelaria 1"],
+        "ganhos-livres": ["+2 PM"]
 
       },
       {
         "conduta": "abastado",
         "titulo": "Abastado",
-        "ganhos": "2 PM Livres"
+        "ganhos": [],
+        "ganhos-livres": ["+4 PM"]
 
       },
       {
         "conduta": "servoDeHonra",
         "titulo": "Servo de Honra",
-        "ganhos": "1 PM em Armas Simples, 1 PM em Veículos e 1 PM em Papelarias"
+        "ganhos": ["Veículo 1", "Papelaria 1"],
+        "ganhos-livres": ["+2 PM"]
       },
     ],
 
@@ -57,27 +66,38 @@ export default function contentJornada(tipo, nome) {
       {
         "conduta": "cacadorDeCabecas",
         "titulo": "Caçador de Cabeças",
-        "ganhos": "3 PM em Armas Simples"
+        "ganhos": ["Armas Simples 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "ladrao",
         "titulo": "Ladrão",
-        "ganhos": "2 PM Livres"
+        "ganhos": ["Apetrechos de Ladroagem 2"],
+        "ganhos-livres": ["+2 PM"]
+      },
+      {
+        "conduta": "trapaceiro",
+        "titulo": "Trapaceiro",
+        "ganhos": ["Itens de Papelaria 1"],
+        "ganhos-livres": ["+4 PM"]
       },
       {
         "conduta": "pirata",
         "titulo": "Pirata",
-        "ganhos": "3 PM em Veículos"
+        "ganhos": ["Veículo 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "contrabandista",
         "titulo": "Contrabandista",
-        "ganhos": "1 PM em Veículos e 1 PM em Apetrechos"
+        "ganhos": ["Veículo 1", "Apetrechos de Ladroagem 1"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "falsificador",
         "titulo": "Falsificador",
-        "ganhos": "3 PM em Papelarias"
+        "ganhos": ["3 PM em Papelarias"],
+        "ganhos-livres": ["+2 PM"]
       }
     ],
 
@@ -85,30 +105,35 @@ export default function contentJornada(tipo, nome) {
       {
         "conduta": "eremita",
         "titulo": "Eremita",
-        "ganhos": "3 PM em Survivalistas"
+        "ganhos": ["Provisões de Sobrevivência 3"],
+        "ganhos-livres": []
       },
       {
         "conduta": "tribal",
         "titulo": "Tribal",
-        "ganhos": "1 PM em Survivalista, 1 PM em Alopáticos e 1 PM em Relicários"
+        "ganhos": ["Provisões de Sobrevivência 1", "Armas Marciais 2"],
+        "ganhos-livres": []
       },
       {
         "conduta": "cacadorDaNoite",
         "titulo": "Caçador da Noite",
-        "ganhos": "3 PM em Relicários"
+        "ganhos": ["Armas Simples 1", "Artefatos & Relicários 1", "Provisões de Sobrevivência 1"],
+        "ganhos-livres": ["+2 PM"]
       }
     ],
 
     "oculto": [
       {
-        "conduta": "munkai",
-        "titulo": "Mun'Kai",
-        "ganhos": "3 PM em Relicários"
+        "conduta": "mestreMunkai",
+        "titulo": "Mestre Mun'Kai",
+        "ganhos": ["Artefatos & Relicários 3"],
+        "ganhos-livres": []
       },
       {
-        "conduta": "espurias",
-        "titulo": "Espúrias",
-        "ganhos": "3 PM em Relicários"
+        "conduta": "espuria",
+        "titulo": "Espúria",
+        "ganhos": ["Artefatos & Relicários 2"],
+        "ganhos-livres": ["+2 PM"]
       }
     ],
 
@@ -116,76 +141,95 @@ export default function contentJornada(tipo, nome) {
       {
         "conduta": "sacerdote",
         "titulo": "Sacerdote",
-        "ganhos": "3 PM em Relicários"
+        "ganhos": ["Artefatos & Relicários 1", "Itens de Papelaria 1"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
         "conduta": "profeta",
         "titulo": "Profeta",
-        "ganhos": "2 PM Livres"
+        "ganhos": [],
+        "ganhos-livres": ["+4 PM"]
+      },
+      {
+        "conduta": "expurgador",
+        "titulo": "Expurgador",
+        "ganhos": ["Artefatos & Relicários 3"],
+        "ganhos-livres": []
       }
     ],
 
     "combate": [
       {
-        "conduta": "mercenarios",
-        "titulo": "Mercenários",
-        "ganhos": "3 PM em Armas"
+        "conduta": "mercenario",
+        "titulo": "Mercenário",
+        "ganhos": ["Armaduras Simples ou Marciais 2", "Amadura 1"],
+        "ganhos-livres": []
       },
       {
-        "conduta": "guardas",
-        "titulo": "Guardas",
-        "ganhos": "1 PM em Armas Marciais, 1 PM em Escudos e 1 PM em Armaduras"
+        "conduta": "guarda",
+        "titulo": "Guarda",
+        "ganhos": ["Armas Simples 1", "Armaduras 1", "Escudos 1", "Armas Marciais 1"],
+        "ganhos-livres": []
       },
       {
         "conduta": "miliciano",
         "titulo": "Miliciano",
-        "ganhos": "2 PM Livres"
+        "ganhos": ["Armas Simples 1", "Armas Marciais 1"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "pinceiro",
-        "titulo": "Pinceiro",
-        "ganhos": "1 PM em Armas Simples, 1 PM em Ferramentas e 1 PM em Apetrechos"
+        "conduta": "pincador",
+        "titulo": "Pinçador",
+        "ganhos": [],
+        "ganhos-livres": ["+4 PM"]
       }
     ],
 
     "arte": [
       {
-        "conduta": "menestreis",
-        "titulo": "Menestréis",
-        "ganhos": "3 PM em Instrumentos"
+        "conduta": "menestrel",
+        "titulo": "Menestrel",
+        "ganhos": ["Instrumentos Musicais 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "escritores",
-        "titulo": "Escritores",
-        "ganhos": "3 PM em Papelarias"
+        "conduta": "escritor",
+        "titulo": "Escritor",
+        "ganhos": ["Itens de Papelaria 2"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "performance",
-        "titulo": "Performance",
-        "ganhos": "1 PM em Instrumento, 1 PM em ferramentas e 1 PM em armas simples"
+        "conduta": "performancer",
+        "titulo": "Performancer",
+        "ganhos": [],
+        "ganhos-livres": ["+4 PM"]
       },
       {
         "conduta": "artifice",
         "titulo": "Artífice",
-        "ganhos": "3 PM em ferramentas"
+        "ganhos": ["Ferramentas de Ofício 2"],
+        "ganhos-livres": ["+2 PM"]
       }
     ],
 
     "oficio": [
       {
-        "conduta": "extratores",
-        "titulo": "Extratores",
-        "ganhos": "3 PM em Survivalistas"
+        "conduta": "extrator",
+        "titulo": "Extrator",
+        "ganhos": ["Provisões de Sobrevivência 2", "Ferramentas de Ofício 1"],
+        "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "artesaos",
+        "conduta": "artesao",
         "titulo": "Artesãos",
-        "ganhos": "3 PM em ferramentas"
+        "ganhos": ["Ferramentas de Ofício 3", "Provisões de Sobrevivência 1"],
+        "ganhos-livres": []
       },
       {
-        "conduta": "servidores",
-        "titulo": "Servidores",
-        "ganhos": "2 PM Livres"
+        "conduta": "servidor",
+        "titulo": "Servidor",
+        "ganhos": ["Ferramentas de Ofício 2"],
+        "ganhos-livres": ["+2 PM"]
       }
     ]
   }

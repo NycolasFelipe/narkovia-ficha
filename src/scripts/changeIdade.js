@@ -85,6 +85,13 @@ export default function changeIdade() {
         $(".vivenciaViciosMax").text("+4");
         $(".vivenciaMaestria").text("+4");
       }
+      return false;
     }
   })
+
+  if (valor !== 0) {
+    $(".ficha-idade .ficha-passo strong").addClass("concluido");
+  } else {
+    $(".ficha-idade .ficha-passo strong").removeClass("concluido");
+  }
 }

@@ -24,11 +24,16 @@ export default function changeJornada() {
     const jornadaGanhos = contentJornada("jornadas", tipo);
     $(".jornada-ganho").text(jornadaGanhos);
 
+    //Atualiza passo
+    $(".ficha-jornada .ficha-passo strong").addClass("concluido");
   } else {
     $("#jornada-ganhos").addClass("d-none");
     $("#conduta").addClass("d-none");
     $("#conduta-label").addClass("d-none");
     $("#conduta-ganhos").addClass("d-none");
+
+    //Atualiza passo
+    $(".ficha-jornada .ficha-passo strong").removeClass("concluido");
   }
 
   changeConduta();

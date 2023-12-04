@@ -39,8 +39,14 @@ export default function changeAncestralidade() {
     //Atualiza tabela de categoria
     $('.ficha-categoria table').addClass("d-none");
     $('#categoria').prop('selectedIndex', 0);
+
+    //Atualiza passo
+    $(".ficha-ancestralidade .ficha-passo strong").addClass("concluido");
   } else {
     $('.ficha-ancestralidade table').addClass("d-none");
     $('.ficha-idade').addClass("d-none");
+
+    //Atualiza passo
+    $(".ficha-ancestralidade .ficha-passo strong").removeClass("concluido");
   }
 }

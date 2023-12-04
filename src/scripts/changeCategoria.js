@@ -11,7 +11,13 @@ export default function changeCategoria() {
     $('.ficha-categoria table .composicao').text(categoria.composicao);
     $('.ficha-categoria table .graduacao').text(categoria.graduacao);
     $('.ficha-categoria table .maestria').text(categoria.maestria);
+
+    //Atualiza passo
+    $(".ficha-categoria .ficha-passo strong").addClass("concluido");
   } else {
     $('.ficha-categoria table').addClass("d-none");
+
+    //Atualiza passo
+    $(".ficha-categoria .ficha-passo strong").removeClass("concluido");
   }
 }

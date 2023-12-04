@@ -24,13 +24,12 @@
 
 <body>
   <div class="ficha">
-    <h1 id="ficha-titulo" class="text-center mb-4">Ficha Narkovia</h1>
-    <div class="ficha-nome mb-4">
-      <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome" placeholder="Nome">
+    <h1 id="ficha-titulo" class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
+    <div class="ficha-nome mb-5">
+      <p class="ficha-passo"><strong class="concluido">Passo 1:</strong> Escolha um nome para seu personagem.</p>
     </div>
-    <div class="ficha-ancestralidade mb-4">
-      <label for="ancestralidade">Ancestralidade</label>
+    <div class="ficha-ancestralidade mb-5">
+      <p class="ficha-passo"><strong>Passo 2:</strong> Escolha uma ancestralidade.</p>
       <select id="ancestralidade" class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
         <option selected>Escolha sua ancestralidade</option>
         <option value="humanoNarkoviano">Humano Narkoviano</option>
@@ -75,8 +74,43 @@
         </tr>
       </table>
     </div>
+    <div class="ficha-jornada">
+      <p class="ficha-passo"><strong>Passo 3:</strong> Escolha uma jornada e depois uma conduta.</p>
+      <select id="jornada" class="form-select form-select-md mb-3" aria-label="Escolha sua jornada">
+        <option selected>Escolha sua jornada</option>
+        <option value="erudicao">Erudição</option>
+        <option value="riqueza">Riqueza</option>
+        <option value="crime">Crime</option>
+        <option value="natureza">Natureza</option>
+        <option value="oculto">Oculto</option>
+        <option value="sagrado">Sagrado</option>
+        <option value="combate">Combate</option>
+        <option value="arte">Arte</option>
+        <option value="oficio">Ofício</option>
+      </select>
+
+      <table id="jornada-ganhos" class="table table-bordered d-none">
+        <tr>
+          <td class="fw-bold text-center" colspan="2">Ganhos da Jornada</td>
+        </tr>
+        <tr>
+          <td class="jornada-ganho text-center"></td>
+        </tr>
+      </table>
+
+      <label id="conduta-label" class="d-none mt-4" for="conduta">Conduta</label>
+      <select id="conduta" class="form-select form-select-md mb-3 d-none" aria-label="Escolha sua conduta">
+        <option selected>Escolha sua conduta</option>
+      </select>
+
+      <table id="conduta-ganhos" class="table table-bordered d-none">
+        <tr>
+          <td class="fw-bold text-center" colspan="2">Ganhos da Conduta</td>
+        </tr>
+      </table>
+    </div>
     <div class="ficha-categoria my-5">
-      <label for="categoria">Categoria</label>
+      <p class="ficha-passo"><strong>Passo 4:</strong> Escolha uma categoria.</p>
       <select id="categoria" disabled class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
         <option selected>Escolha sua categoria</option>
         <option value="ordinario">Ordinário</option>
@@ -110,7 +144,7 @@
       </table>
     </div>
     <div class="ficha-idade d-none">
-      <label for="idade" class="form-label">Idade</label>
+      <p class="ficha-passo"><strong>Passo 5:</strong> Escolha uma idade.</p>
       <div class="idade-buttons d-flex pb-2 justify-content-around align-items-center">
         <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
         <p class="text-center fs-5 mb-0"><span class="idade-value">0</span> ciclos</p>
@@ -123,10 +157,7 @@
       </div>
       <table class="table table-bordered table-sm">
         <tr>
-          <td class="fw-bold table-primary text-center" colspan="3">Vivência</td>
-        </tr>
-        <tr>
-          <td class="vivencia fw-bold text-center" colspan="3">Infante</td>
+          <td class="fw-bold text-center" colspan="3">Vivência - <span class="vivencia fw-bold text-center"></span></td>
         </tr>
         <tr>
           <td class="fw-bold text-center">Sortilégio</td>
@@ -148,45 +179,8 @@
         </tr>
       </table>
     </div>
-    <hr class="border border-secondary border-2 my-5">
-    <div class="ficha-jornada">
-      <label for="jornada">Jornada</label>
-      <select id="jornada" class="form-select form-select-md mb-3" aria-label="Escolha sua jornada">
-        <option selected>Escolha sua jornada</option>
-        <option value="erudicao">Erudição</option>
-        <option value="riqueza">Riqueza</option>
-        <option value="crime">Crime</option>
-        <option value="natureza">Natureza</option>
-        <option value="oculto">Oculto</option>
-        <option value="sagrado">Sagrado</option>
-        <option value="combate">Combate</option>
-        <option value="arte">Arte</option>
-        <option value="oficio">Ofício</option>
-      </select>
+    <!-- <hr class="border border-secondary border-2 my-5"> -->
 
-      <table id="jornada-ganhos" class="table table-bordered d-none">
-        <tr>
-          <td class="fw-bold text-center" colspan="2">Ganhos da Jornada</td>
-        </tr>
-        <tr>
-          <td class="jornada-ganho text-center"></td>
-        </tr>
-      </table>
-
-      <label id="conduta-label" class="d-none" for="conduta">Conduta</label>
-      <select id="conduta" class="form-select form-select-md mb-3 d-none" aria-label="Escolha sua conduta">
-        <option selected>Escolha sua conduta</option>
-      </select>
-
-      <table id="conduta-ganhos" class="table table-bordered d-none">
-        <tr>
-          <td class="fw-bold text-center" colspan="2">Ganhos da Conduta</td>
-        </tr>
-        <tr>
-          <td class="conduta-ganho text-center"></td>
-        </tr>
-      </table>
-    </div>
   </div>
   <script type="module" src="script.js"></script>
 </body>
