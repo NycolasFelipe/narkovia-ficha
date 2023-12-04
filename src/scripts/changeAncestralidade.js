@@ -8,6 +8,7 @@ export default function changeAncestralidade() {
   $('.ficha-ancestralidade table').removeClass("d-none");
   $('#categoria option').removeAttr("disabled");
   $('#categoria').removeAttr("disabled");
+  $('#categoria + table').removeClass("d-none");
   $('.ficha-idade').removeClass("d-none");
 
   if (tipo !== "Escolha sua ancestralidade") {
@@ -45,6 +46,9 @@ export default function changeAncestralidade() {
   } else {
     $('.ficha-ancestralidade table').addClass("d-none");
     $('.ficha-idade').addClass("d-none");
+    $('#categoria').attr("disabled", "disabled");
+    $('#categoria').prop('selectedIndex', 0);
+    $('#categoria + table').addClass("d-none");
 
     //Atualiza passo
     $(".ficha-ancestralidade .ficha-passo strong").removeClass("concluido");

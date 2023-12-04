@@ -5,7 +5,7 @@ export default function changeConduta() {
   jornada = contentJornada("condutas", jornada);
 
   let conduta = $("#conduta").val();
-  conduta = jornada.find((item) => item.conduta.includes(conduta));
+  conduta = Array.isArray(jornada) ? jornada.find((item) => item.conduta.includes(conduta)) : [];
   
   const condutaGanhos = conduta["ganhos"];
   const condutaGanhosLivres = conduta["ganhos-livres"];
