@@ -1,7 +1,7 @@
-import contentAncestralidade from "../content/ancestralidade.js";
-import contentIdade from "../content/idade.js";
-import disableSelectOption from "./disableSelectOption.js";
-import removeDiacritics from "./removeDiacritics.js";
+import contentAncestralidade from "../../content/ancestralidade.js";
+import contentIdade from "../../content/idade.js";
+import disableSelectOption from "../common/disableSelectOption.js";
+import removeDiacritics from "../common/removeDiacritics.js";
 
 export default function changeAncestralidade() {
   const tipo = $('#ancestralidade').val();

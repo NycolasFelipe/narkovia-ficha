@@ -1,4 +1,4 @@
-import contentCategoria from "../content/categoria.js";
+import contentCategoria from "../../content/categoria.js";
 
 export default function changeCategoria() {
   const tipo = $('#categoria').val();

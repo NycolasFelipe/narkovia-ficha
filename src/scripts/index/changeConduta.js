@@ -1,4 +1,4 @@
-import contentJornada from "../content/jornada.js";
+import contentJornada from "../../content/jornada.js";
 
 export default function changeConduta() {
   let jornada = $("#jornada").val();

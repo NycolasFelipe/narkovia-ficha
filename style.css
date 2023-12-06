@@ -9,17 +9,17 @@ label {
   padding-bottom: 5px;
 }
 
+.button {
+  font-family: var(--libre);
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+}
+
 .ficha {
   max-width: 300px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 200px;
-}
-
-.ficha-link-calculadora {
-  font-family: var(--libre);
-  border: 2px solid lightgrey;
-  border-radius: 5px;
 }
 
 .ficha-link-calculadora a {

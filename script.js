@@ -1,9 +1,9 @@
-import changeAncestralidade from "./src/scripts/changeAncestralidade.js";
-import changeCategoria from "./src/scripts/changeCategoria.js";
-import changeConduta from "./src/scripts/changeConduta.js";
-import changeIdade from "./src/scripts/changeIdade.js";
-import changeJornada from "./src/scripts/changeJornada.js";
-import incrementIdade from "./src/scripts/incrementIdade.js";
+import changeAncestralidade from "./src/scripts/index/changeAncestralidade.js";
+import changeCategoria from "./src/scripts/index/changeCategoria.js";
+import changeConduta from "./src/scripts/index/changeConduta.js";
+import changeIdade from "./src/scripts/index/changeIdade.js";
+import changeJornada from "./src/scripts/index/changeJornada.js";
+import incrementIdade from "./src/scripts/index/incrementIdade.js";
 
 //Atualiza ancestralidade
 $("#ancestralidade").on("change", changeAncestralidade);

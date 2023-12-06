@@ -1,4 +1,4 @@
-import contentJornada from "../content/jornada.js";
+import contentJornada from "../../content/jornada.js";
 import changeConduta from "./changeConduta.js";
 
 export default function changeJornada() {

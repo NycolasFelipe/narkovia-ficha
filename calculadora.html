@@ -25,17 +25,19 @@
 <body>
   <main class="ficha">
     <h1 id="ficha-titulo" class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
-    <button type="button" class="btn btn-light ficha-link-calculadora w-100 mb-4"
-      onclick="location.href='index.html'">
+    <button type="button" class="btn btn-light button w-100 mb-4" onclick="location.href='index.html'">
       Passo a passo
     </button>
     <hr class="ficha-hr border border-2 opacity-50 mb-5">
-    <h2 id="ficha-subtitulo" class="mb-5">Calculadora:</h2>
+    <div class="d-flex justify-content-between">
+      <h2 id="ficha-subtitulo" class="mb-5">Calculadora:</h2>
+      <button id="limpar-atributos" type="button" class="btn btn-light button h-75 lh-1 border-2">Limpar</button>
+    </div>
     <div class="calculadora d-flex flex-wrap justify-content-between">
       <h3 class="w-100 mb-4">Atributos</h3>
     </div>
   </main>
-  <script type="module" src="./src/scripts/calculadora.js"></script>
+  <script type="module" src="./src/scripts/calculadora/script.js"></script>
 </body>
 
 </html>
