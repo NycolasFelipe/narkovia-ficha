@@ -4,29 +4,40 @@ import changeConduta from "./src/scripts/index/changeConduta.js";
 import changeIdade from "./src/scripts/index/changeIdade.js";
 import changeJornada from "./src/scripts/index/changeJornada.js";
 import incrementIdade from "./src/scripts/index/incrementIdade.js";
+import localStorageSave from "./src/scripts/index/localStorageSave.js";
+import localStorageLoad from "./src/scripts/index/localStorageLoad.js";
+import localStorageClear from "./src/scripts/index/localStorageClear.js";
+
+//Local Storage
+$(document).ready(() => {
+  localStorageLoad();
+});
+
+$(window).on("unload", () => localStorageSave());
+$("#clear").on("click", () => localStorageClear());
 
 //Atualiza ancestralidade
-$("#ancestralidade").on("change", changeAncestralidade);
+$("#ancestralidade select").on("change", changeAncestralidade);
 
 //Atualiza jornadas
-$("#jornada").on("change", changeJornada);
+$("#jornada select#jornadas").on("change", changeJornada);
 
 //Atualiza condutas
-$("#conduta").on("change", changeConduta);
+$("#jornada select#condutas").on("change", changeConduta);
 
 //Atualiza categoria
-$("#categoria").on("change", changeCategoria);
+$("#categoria select").on("change", changeCategoria);
 
 //Atualiza ciclos de vida
-$.each(["mousemove", "touchmove"], (k, v) => $("#idade").on(v, changeIdade));
+$.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, changeIdade));
 
 //Atualiza valor do slide de idade
-$(".ficha-idade .idade-menos").on("click", () => {
+$("#idade .idade-menos").on("click", () => {
   incrementIdade(-1);
   changeIdade();
 })
 
-$(".ficha-idade .idade-mais").on("click", () => {
+$("#idade .idade-mais").on("click", () => {
   incrementIdade(1);
   changeIdade();
 })

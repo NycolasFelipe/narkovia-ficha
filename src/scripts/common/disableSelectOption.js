@@ -1,3 +1,3 @@
-export default function disableSelectOption(select, option) {
-  $(`#${select} option[value="${option}"]`).attr("disabled", "disabled");
+export default function disableSelectOption(categoria, option) {
+  $(`#${categoria} select option[value="${option}"]`).attr("disabled", "disabled");
 }

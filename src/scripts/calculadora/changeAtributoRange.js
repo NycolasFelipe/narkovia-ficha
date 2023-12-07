@@ -10,8 +10,8 @@ export default function changeAtributoRange(e) {
   }
 
   let atributoTotal = 0;
-  $(".atributo-titulo > span").each((i, e) => {
+  $("#atributos .titulo > span").each((i, e) => {
     atributoTotal += parseInt(e.textContent);
   })
-  $(".calculadora-atributo-total span").text(atributoTotal);
+  $("#atributos .total span").text(atributoTotal);
 }

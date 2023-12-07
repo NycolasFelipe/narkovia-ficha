@@ -38,7 +38,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       },
     ],
-
     "riqueza": [
       {
         "conduta": "aristocrata",
@@ -61,7 +60,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       },
     ],
-
     "crime": [
       {
         "conduta": "cacadorDeCabecas",
@@ -100,7 +98,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       }
     ],
-
     "natureza": [
       {
         "conduta": "eremita",
@@ -121,7 +118,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       }
     ],
-
     "oculto": [
       {
         "conduta": "mestreMunkai",
@@ -136,7 +132,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       }
     ],
-
     "sagrado": [
       {
         "conduta": "sacerdote",
@@ -157,7 +152,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": []
       }
     ],
-
     "combate": [
       {
         "conduta": "mercenario",
@@ -184,7 +178,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+4 PM"]
       }
     ],
-
     "arte": [
       {
         "conduta": "menestrel",
@@ -211,7 +204,6 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       }
     ],
-
     "oficio": [
       {
         "conduta": "extrator",

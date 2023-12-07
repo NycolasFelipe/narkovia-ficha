@@ -1,14 +1,19 @@
 import changeAtributoRange from "./changeAtributoRange.js";
 import loadAtributos from "../calculadora/loadAtributos.js";
-import loadLocalStorage from "../localStorage/loadLocalStorage.js";
-import clearLocalStorage from "../localStorage/clearLocalStorage.js";
-import saveLocalStorage from "../localStorage/saveLocalStorage.js";
+import localStorageLoad from "./localStorageLoad.js";
+import localStorageClear from "./localStorageClear.js";
+import localStorageSave from "./localStorageSave.js";
+import loadGraduacoes from "./loadGraduacoes.js";
+
 
 $(document).ready(() => {
   loadAtributos();
-  $(".atributo-range").on("change", (e) => changeAtributoRange(e));
-  loadLocalStorage();
+  loadGraduacoes();
+  $("#atributos input").on("change", (e) => changeAtributoRange(e));
+  localStorageLoad();
 });
 
-$(window).on("unload", () => saveLocalStorage());
-$("#limpar-atributos").on("click", () => clearLocalStorage());
+// Local Storage
+$(window).on("unload", () => localStorageSave());
+$("#clear").on("click", () => localStorageClear());
+

@@ -1,0 +1,10 @@
+@use "../../abstract/variaveis";
+
+#calculadora {
+  h3 {
+    font-family: variaveis.$ft-principal;
+    font-size: 1.2rem;
+    color: variaveis.$cor-principal;
+    font-weight: 600;
+  }
+}

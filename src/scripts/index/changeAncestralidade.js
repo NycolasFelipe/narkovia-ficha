@@ -4,20 +4,20 @@ import disableSelectOption from "../common/disableSelectOption.js";
 import removeDiacritics from "../common/removeDiacritics.js";
 
 export default function changeAncestralidade() {
-  const tipo = $('#ancestralidade').val();
-  $('.ficha-ancestralidade table').removeClass("d-none");
-  $('#categoria option').removeAttr("disabled");
-  $('#categoria').removeAttr("disabled");
-  $('#categoria + table').removeClass("d-none");
-  $('.ficha-idade').removeClass("d-none");
+  const tipo = $('#ancestralidade select').val();
 
   if (tipo !== "Escolha sua ancestralidade") {
     const ancestralidade = contentAncestralidade(tipo);
-    $('.ficha-ancestralidade table .categorias-possiveis').text(ancestralidade.categoriasPossiveis);
-    $('.ficha-ancestralidade table .virtudes').text(ancestralidade.virtudes);
-    $('.ficha-ancestralidade table .vicios').text(ancestralidade.vicios);
-    $('.ficha-ancestralidade table .tracos').text(ancestralidade.tracos);
-    $('.ficha-ancestralidade table .condutas-bloqueadas').text(ancestralidade.condutasBloqueadas);
+    $('#ancestralidade table .categorias-possiveis').text(ancestralidade.categoriasPossiveis);
+    $('#ancestralidade table .virtudes').text(ancestralidade.virtudes);
+    $('#ancestralidade table .vicios').text(ancestralidade.vicios);
+    $('#ancestralidade table .tracos').text(ancestralidade.tracos);
+    $('#ancestralidade table .condutas-bloqueadas').text(ancestralidade.condutasBloqueadas);
+
+    $('#ancestralidade table').removeClass("d-none");
+    $('#categoria select').removeAttr("disabled");
+    $('#categoria table').removeClass("d-none");
+    $('#idade').removeClass("d-none");
 
     //Atualiza categorias permitidas por ancestralidade
     const categorias = contentAncestralidade("categorias");
@@ -34,23 +34,23 @@ export default function changeAncestralidade() {
     const idade = contentIdade(tipo);
     const idadeTitulo = idade.titulo;
     const idadeExpectativa = idade.expectativa;
-    $('.ficha-idade .expectativa').text(idadeTitulo);
-    $('.ficha-idade .expectativa-valor').text(idadeExpectativa);
+    $('#idade .expectativa').text(idadeTitulo);
+    $('#idade .expectativa-valor').text(idadeExpectativa);
 
     //Atualiza tabela de categoria
-    $('.ficha-categoria table').addClass("d-none");
-    $('#categoria').prop('selectedIndex', 0);
+    $('#categoria table').addClass("d-none");
+    $('#categoria table').prop('selectedIndex', 0);
 
     //Atualiza passo
-    $(".ficha-ancestralidade .ficha-passo strong").addClass("concluido");
+    $("#ancestralidade .passo strong").addClass("concluido");
   } else {
-    $('.ficha-ancestralidade table').addClass("d-none");
-    $('.ficha-idade').addClass("d-none");
+    $('#ancestralidade table').addClass("d-none");
+    $('#idade').addClass("d-none");
     $('#categoria').attr("disabled", "disabled");
     $('#categoria').prop('selectedIndex', 0);
-    $('#categoria + table').addClass("d-none");
+    $('#categoria table').addClass("d-none");
 
     //Atualiza passo
-    $(".ficha-ancestralidade .ficha-passo strong").removeClass("concluido");
+    $("#ancestralidade .passo strong").removeClass("concluido");
   }
 }

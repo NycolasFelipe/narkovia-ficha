@@ -3,10 +3,10 @@ import contentVivencia from "../../content/vivencia.js";
 import removeDiacritics from "../common/removeDiacritics.js";
 
 export default function changeIdade() {
-  $('.ficha-idade .idade-value').text($("#idade").val());
-  const valor = parseInt($('#idade').val());
+  $('#idade .idade-value').text($("#idade input").val());
+  const valor = parseInt($('#idade input').val());
   const conteudoIdade = contentIdade("content");
-  const textExpectativa = removeDiacritics($('.expectativa').text()).toLowerCase().replaceAll("-", "");
+  const textExpectativa = removeDiacritics($('#idade .expectativa').text()).toLowerCase().replaceAll("-", "");
   const ancestralidades = Object.keys(conteudoIdade);
 
   $.each(ancestralidades, (i, e) => {
@@ -25,20 +25,20 @@ export default function changeIdade() {
       }
 
       const vivenciaInformacoes = contentVivencia(vivenciaTipo);
-      $(".vivencia").text(vivenciaInformacoes.titulo);
-      $(".vivenciaSortilegio").text(vivenciaInformacoes.sortilegio);
-      $(".vivenciaComposicao").text(vivenciaInformacoes.composicao);
-      $(".vivenciaGraduacao").text(vivenciaInformacoes.graduacao);
-      $(".vivenciaViciosMax").text(vivenciaInformacoes.viciosMax);
-      $(".vivenciaMaestria").text(vivenciaInformacoes.maestria);
+      $("#idade .vivencia").text(vivenciaInformacoes.titulo);
+      $("#idade .vivenciaSortilegio").text(vivenciaInformacoes.sortilegio);
+      $("#idade .vivenciaComposicao").text(vivenciaInformacoes.composicao);
+      $("#idade .vivenciaGraduacao").text(vivenciaInformacoes.graduacao);
+      $("#idade .vivenciaViciosMax").text(vivenciaInformacoes.viciosMax);
+      $("#idade .vivenciaMaestria").text(vivenciaInformacoes.maestria);
 
       return false;
     }
   });
 
   if (valor !== 0) {
-    $(".ficha-idade .ficha-passo strong").addClass("concluido");
+    $("#idade .passo strong").addClass("concluido");
   } else {
-    $(".ficha-idade .ficha-passo strong").removeClass("concluido");
+    $("#idade .passo strong").removeClass("concluido");
   }
 }

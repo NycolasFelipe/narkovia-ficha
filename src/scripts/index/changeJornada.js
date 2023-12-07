@@ -2,38 +2,38 @@ import contentJornada from "../../content/jornada.js";
 import changeConduta from "./changeConduta.js";
 
 export default function changeJornada() {
-  const tipo = $("#jornada").val();
-  $("#jornada-ganhos").removeClass("d-none");
-  $("#conduta").removeClass("d-none");
-  $("#conduta-label").removeClass("d-none");
-  $("#conduta-ganhos").removeClass("d-none");
+  const tipo = $("#jornada select#jornadas").val();
+  $("#jornada #jornada-ganhos").removeClass("d-none");
+  $("#jornada #condutas-label").removeClass("d-none");
+  $("#jornada select#condutas").removeClass("d-none");
+  $("#jornada #conduta-ganhos").removeClass("d-none");
 
   if (!tipo.includes("Escolha")) {
     const jornada = contentJornada("condutas", tipo);
-    $("#conduta").html("");
+    $("#jornada select#condutas").html("");
 
     $.each(jornada, (i, e) => {
       //Populando condutas da jornada escolhida
       const condutaValue = jornada[i].conduta;
       const condutaTitulo = jornada[i].titulo;
       const condutaOption = `<option value="${condutaValue}">${condutaTitulo}</option>`;
-      $("#conduta").append(condutaOption);
+      $("#jornada select#condutas").append(condutaOption);
     })
 
     //Exibindo ganhos da jornada escolhida
     const jornadaGanhos = contentJornada("jornadas", tipo);
-    $(".jornada-ganho").text(jornadaGanhos);
+    $("#jornada .jornada-ganho").text(jornadaGanhos);
 
     //Atualiza passo
-    $(".ficha-jornada .ficha-passo strong").addClass("concluido");
+    $("#jornada .passo strong").addClass("concluido");
   } else {
     $("#jornada-ganhos").addClass("d-none");
-    $("#conduta").addClass("d-none");
-    $("#conduta-label").addClass("d-none");
-    $("#conduta-ganhos").addClass("d-none");
+    $("#jornada #condutas-label").addClass("d-none");
+    $("#jornada select#condutas").addClass("d-none");
+    $("#jornada #conduta-ganhos").addClass("d-none");
 
     //Atualiza passo
-    $(".ficha-jornada .ficha-passo strong").removeClass("concluido");
+    $("#jornada .passo strong").removeClass("concluido");
   }
 
   changeConduta();

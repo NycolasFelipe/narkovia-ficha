@@ -1,0 +1,14 @@
+@use "../../abstract/variaveis";
+
+#index .passo {
+  font-family: variaveis.$ft-principal;
+
+  strong {
+    color: variaveis.$cor-principal;
+    transition: all 0.5s ease;
+  }
+
+  .concluido {
+    color: variaveis.$cor-secundaria;
+  }
+}

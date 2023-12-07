@@ -1,0 +1,15 @@
+@use "../abstract/variaveis";
+
+header {
+  h1 {
+    font-family: variaveis.$ft-principal;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-family: variaveis.$ft-principal;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}

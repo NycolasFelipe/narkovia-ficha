@@ -19,24 +19,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 
 <body>
-  <main class="ficha">
-    <h1 id="ficha-titulo" class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
-    <button type="button" class="btn btn-light button w-100 mb-4"
-      onclick="location.href='calculadora.html'">
-      Calculadora de Pontos
-    </button>
-    <hr class="ficha-hr border border-2 opacity-50 mb-5">
-    <h2 id="ficha-subtitulo" class="mb-5">Passo a passo:</h2>
-    <div class="ficha-nome mb-5">
-      <p class="ficha-passo"><strong class="concluido">Passo 1:</strong> Escolha um nome para seu personagem.</p>
+  <main id="index">
+    <header>
+      <h1 class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
+      <button type="button" class="btn btn-light button w-100 mb-4" onclick="location.href='calculadora.html'">
+        Calculadora de Pontos
+      </button>
+      <hr class="hr border border-2 opacity-50 mb-5">
+      <div class="d-flex justify-content-between">
+        <h2 class="mb-5">Passo a passo:</h2>
+        <button id="clear" type="button" class="btn btn-light button button-sm h-75 lh-1 border-2">Limpar</button>
+      </div>
+    </header>
+    <div id="nome" class="mb-5">
+      <p class="passo"><strong class="concluido">Passo 1:</strong> Escolha um nome para seu personagem.</p>
     </div>
-    <div class="ficha-ancestralidade mb-5">
-      <p class="ficha-passo"><strong>Passo 2:</strong> Escolha uma ancestralidade.</p>
-      <select id="ancestralidade" class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
+    <div id="ancestralidade" class="mb-5">
+      <p class="passo"><strong>Passo 2:</strong> Escolha uma ancestralidade.</p>
+      <select class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
         <option selected>Escolha sua ancestralidade</option>
         <option value="humanoNarkoviano">Humano Narkoviano</option>
         <option value="humanoMiraniano">Humano Miraniano</option>
@@ -80,9 +84,9 @@
         </tr>
       </table>
     </div>
-    <div class="ficha-jornada">
-      <p class="ficha-passo"><strong>Passo 3:</strong> Escolha uma jornada e depois uma conduta.</p>
-      <select id="jornada" class="form-select form-select-md mb-3" aria-label="Escolha sua jornada">
+    <div id="jornada">
+      <p class="passo"><strong>Passo 3:</strong> Escolha uma jornada e depois uma conduta.</p>
+      <select id="jornadas" class="form-select form-select-md mb-3" aria-label="Escolha sua jornada">
         <option selected>Escolha sua jornada</option>
         <option value="erudicao">Erudição</option>
         <option value="riqueza">Riqueza</option>
@@ -104,8 +108,8 @@
         </tr>
       </table>
 
-      <label id="conduta-label" class="d-none mt-4" for="conduta">Conduta</label>
-      <select id="conduta" class="form-select form-select-md mb-3 d-none" aria-label="Escolha sua conduta">
+      <label id="condutas-label" class="d-none mt-4" for="condutas">Conduta</label>
+      <select id="condutas" class="form-select form-select-md mb-3 d-none" aria-label="Escolha sua conduta">
         <option selected>Escolha sua conduta</option>
       </select>
 
@@ -115,9 +119,9 @@
         </tr>
       </table>
     </div>
-    <div class="ficha-categoria my-5">
-      <p class="ficha-passo"><strong>Passo 4:</strong> Escolha uma categoria.</p>
-      <select id="categoria" disabled class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
+    <div id="categoria" class="my-5">
+      <p class="passo"><strong>Passo 4:</strong> Escolha uma categoria.</p>
+      <select disabled class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
         <option selected>Escolha sua categoria</option>
         <option value="ordinario">Ordinário</option>
         <option value="insolito">Insólito</option>
@@ -149,14 +153,14 @@
         </tr>
       </table>
     </div>
-    <div class="ficha-idade d-none">
-      <p class="ficha-passo"><strong>Passo 5:</strong> Escolha uma idade.</p>
+    <div id="idade" class="d-none">
+      <p class="passo"><strong>Passo 5:</strong> Escolha uma idade.</p>
       <div class="idade-buttons d-flex pb-2 justify-content-around align-items-center">
         <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
         <p class="text-center fs-5 mb-0"><span class="idade-value">0</span> ciclos</p>
         <i class="idade-mais bi bi-chevron-right user-select-none" role="button"></i>
       </div>
-      <input type="range" class="form-range" value="0" min="0" max="240" id="idade">
+      <input type="range" class="form-range" value="0" min="0" max="240">
       <div class="idade-expectativa">
         <p class="text-center mb-0">Expectativa de vida de <span class="expectativa"></span>:</p>
         <p class="text-center"><span class="expectativa-valor"></span> ciclos</p>

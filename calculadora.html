@@ -19,22 +19,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 
 <body>
-  <main class="ficha">
-    <h1 id="ficha-titulo" class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
-    <button type="button" class="btn btn-light button w-100 mb-4" onclick="location.href='index.html'">
-      Passo a passo
-    </button>
-    <hr class="ficha-hr border border-2 opacity-50 mb-5">
-    <div class="d-flex justify-content-between">
-      <h2 id="ficha-subtitulo" class="mb-5">Calculadora:</h2>
-      <button id="limpar-atributos" type="button" class="btn btn-light button h-75 lh-1 border-2">Limpar</button>
-    </div>
-    <div class="calculadora d-flex flex-wrap justify-content-between">
+  <main id="calculadora">
+    <header>
+      <h1 class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
+      <button type="button" class="btn btn-light button w-100 mb-4" onclick="location.href='index.html'">
+        Passo a passo
+      </button>
+      <hr class="hr border border-2 opacity-50 mb-5">
+      <div class="d-flex justify-content-between">
+        <h2 class="mb-5">Calculadora:</h2>
+        <button id="clear" type="button" class="btn btn-light button button-sm h-75 lh-1 border-2">Limpar</button>
+      </div>
+    </header>
+    <div id="atributos" class="campos d-flex flex-wrap justify-content-between mb-5">
       <h3 class="w-100 mb-4">Atributos</h3>
+    </div>
+    <div id="graduacoes" class="campos d-flex flex-wrap justify-content-between">
+      <h3 class="w-100 mb-4">Graduações</h3>
     </div>
   </main>
   <script type="module" src="./src/scripts/calculadora/script.js"></script>

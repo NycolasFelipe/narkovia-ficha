@@ -1,0 +1,11 @@
+@use "../abstract/variaveis";
+
+.button {
+  font-family: variaveis.$ft-principal;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.button-sm {
+  font-size: 0.9rem;
+}
