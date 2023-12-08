@@ -13,6 +13,7 @@ $(document).ready(() => {
   $("#atributos input").on("change", (e) => changeAtributoRange(e));
   $("#graduacoes input").on("change", (e) => changeGraduacaoRange(e));
   $("#graduacoes input").on("click", (e) => clearGraduacaoRange(e));
+  $("#graduacoes input").on("click touchstart", (e) => clearGraduacaoRange(e));
   localStorageLoad();
 });
 
