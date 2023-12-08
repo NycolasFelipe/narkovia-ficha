@@ -1,49 +1,26 @@
+import contentGraduacoes from "../../content/graduacoes.js";
 import removeDiacritics from "../common/removeDiacritics.js";
 
 export default function loadGraduacoes() {
-  const graduacoes = {
-    "agudeza": {
-      "titulo": "Habilidades de Agudeza",
-      "itens": ["Sabedoria", "Determinação", "Intuição", "Percepção"]
-    },
-    "combate": {
-      "titulo": "Habilidades de Combate",
-      "itens": ["Ataque", "Mira", "Proteção"]
-    },
-    "erudicao": {
-      "titulo": "Habilidades de Erudição",
-      "itens": ["Educação", "Alopatia", "Alquimia", "Mecânica"]
-    },
-    "sagacidade": {
-      "titulo": "Habilidades de Sagacidade",
-      "itens": ["Artimanha", "Sutilidade", "Mobilidade"]
-    },
-    "tecnica": {
-      "titulo": "Habilidades de Técnica",
-      "itens": ["Arguição", "Sobrevivência", "Laboração", "Ocultismo", "Hierática"]
-    },
-    "lideranca": {
-      "titulo": "Habilidades de Liderança",
-      "itens": ["Comando", "Inspiração"]
-    },
-    "influencia": {
-      "titulo": "Habilidades de Influência",
-      "itens": [
-        "Dissuasão", "Blefe", "Intimidação", "Provocação", "Prestígio",
-        "Performance", "Etiqueta", "Charme"
-      ]
-    },
-  };
+  const graduacoes = contentGraduacoes();
 
   $.each(graduacoes, (i, e) => {
     const graduacao = graduacoes[i];
 
     const graduacaoTipo = `
-      <div id="${i}" class="d-flex flex-wrap justify-content-between mt-3">
+      <div id="${i}" class="d-flex flex-wrap justify-content-between mb-4 mt-3">
         <h4 class="w-100 mb-4">${graduacao.titulo}</h4>
       </div>
     `;
     $("#graduacoes").append(graduacaoTipo);
+
+    const graduacaoSubtotal = `
+      <div class="subtotal w-100">
+        <p>Subtotal:</p>
+        <span>0</span>
+      </div>
+    `;
+    $(`#${i}`).append(graduacaoSubtotal);
 
     $(`#${i}`).each((j, f) => {
       $.each(graduacao.itens, (k, g) => {
@@ -51,7 +28,7 @@ export default function loadGraduacoes() {
         const graduacaoHtml = `
           <div class="graduacao w-40">
             <p class="titulo">${g}: <span>0</span></p>
-            <table class="table table-bordered">
+            <table class="table table-bordered graduacoes white-bg">
               <tr>
                 <td></td><td></td><td></td><td></td><td></td>
               </tr>
@@ -67,7 +44,7 @@ export default function loadGraduacoes() {
   });
 
   const graduacaoTotalHtml = `
-    <div class="total">
+    <div class="total w-100">
       <p>Total: <span>0</span></p>
     </div>
   `;

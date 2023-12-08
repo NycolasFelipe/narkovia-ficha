@@ -55,14 +55,20 @@ label {
 #calculadora .campos h4 {
   font-family: "Libre Baskerville", serif;
   font-size: 1rem;
-  color: #3081D0;
+  color: #000;
 }
 #calculadora .campos td {
   height: 28px;
   width: 25px;
 }
-#calculadora .campos tr td:first-of-type {
-  background: #494949;
+#calculadora .campos table:not(.graduacoes) tr td:first-of-type {
+  background: #494949 !important;
+}
+#calculadora .campos table.graduacoes tr td:first-of-type {
+  background: #000;
+}
+#calculadora .campos table.white-bg tr td:first-of-type {
+  background: #fff !important;
 }
 #calculadora .campos table + input {
   position: relative;
@@ -79,13 +85,29 @@ label {
 #calculadora .campos .titulo {
   font-family: "Libre Baskerville", serif;
 }
+#calculadora .campos .subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Libre Baskerville", serif;
+  background: #3081D0;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+#calculadora .campos .subtotal p {
+  margin-bottom: 0;
+  line-height: 2;
+}
 #calculadora .campos .total {
   font-family: "Libre Baskerville", serif;
   background: #2baf71;
   color: #fff;
   text-align: center;
   font-size: 1.2rem;
-  width: 100%;
   padding-top: 15px;
   margin-bottom: 30px;
   border-radius: 5px;

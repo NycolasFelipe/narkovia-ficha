@@ -4,7 +4,7 @@
   h4 {
     font-family: variaveis.$ft-principal;
     font-size: 1rem;
-    color: variaveis.$cor-principal;
+    color: #000;
   }
 
   td {
@@ -12,8 +12,16 @@
     width: 25px;
   }
 
-  tr td:first-of-type {
-    background: #494949;
+  table:not(.graduacoes) tr td:first-of-type {
+    background: #494949 !important;
+  }
+
+  table.graduacoes tr td:first-of-type {
+    background: #000;
+  }
+
+  table.white-bg tr td:first-of-type {
+    background: #fff !important;
   }
 
   table {
@@ -37,13 +45,31 @@
     font-family: variaveis.$ft-principal;
   }
 
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: variaveis.$ft-principal;
+    background: variaveis.$cor-principal;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+
+  .subtotal p {
+    margin-bottom: 0;
+    line-height: 2;
+  }
+
   .total {
     font-family: variaveis.$ft-principal;
     background: variaveis.$cor-secundaria;
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
-    width: 100%;
     padding-top: 15px;
     margin-bottom: 30px;
     border-radius: 5px;

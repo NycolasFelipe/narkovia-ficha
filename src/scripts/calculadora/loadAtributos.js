@@ -1,7 +1,8 @@
+import contentAtributos from "../../content/atributos.js";
 import removeDiacritics from "../common/removeDiacritics.js";
 
 export default function loadAtributos() {
-  const atributos = ["Aura", "Captação", "Celeridade", "Eteressência", "Idoneidade", "Sapiência", "Tenacidade", "Pujança"];
+  const atributos = contentAtributos();
 
   $.each(atributos, (i, e) => {
     const atributoId = removeDiacritics(atributos[i]);
@@ -22,7 +23,7 @@ export default function loadAtributos() {
   })
 
   const atributoTotalHtml = `
-    <div class="total">
+    <div class="total w-100">
       <p>Total: <span>0</span></p>
     </div>
   `;
