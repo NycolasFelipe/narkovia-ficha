@@ -44,7 +44,7 @@ export default function loadGraduacoes() {
   });
 
   const graduacaoTotalHtml = `
-    <div class="total-graduacoes w-100">
+    <div class="total-graduacoes w-100 d-none">
       <p>Graduações | Total: <span>0</span></p>
       <button class="limpar btn btn-light button button-sm h-75 lh-1 border-2 w-75">
         Limpar
