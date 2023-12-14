@@ -8,7 +8,7 @@ export default function localStorageClear() {
     $(`#${e.id}`).val(0);
     $(`#${e.id}`).parent().find(".titulo > span").text("0");
     $(`#${e.id}`).parent().parent().find(".subtotal > span").text("0");
-    $(`#graduacoes .total span`).text("0");
+    $(`#graduacoes .total-graduacoes span`).text("0");
     $(graduacaoTabela).css("background", "#fff");
     $(graduacaoTabela).parent().parent().parent().addClass("white-bg");
   });

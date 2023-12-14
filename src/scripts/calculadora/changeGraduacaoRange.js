@@ -23,5 +23,5 @@ export default function changeGraduacaoRange(e) {
   $("#graduacoes .titulo > span").each((i, e) => {
     graduacaoTotal += parseInt(e.textContent);
   });
-  $("#graduacoes .total span").text(graduacaoTotal);
+  $("#graduacoes .total-graduacoes span").text(graduacaoTotal);
 }

@@ -102,7 +102,7 @@ label {
   margin-bottom: 0;
   line-height: 2;
 }
-#calculadora .campos .total {
+#calculadora .campos .total, #calculadora .campos .total-graduacoes {
   font-family: "Libre Baskerville", serif;
   background: #2baf71;
   color: #fff;
@@ -111,6 +111,19 @@ label {
   padding-top: 15px;
   margin-bottom: 30px;
   border-radius: 5px;
+}
+#calculadora .campos .total-graduacoes {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+  max-width: 300px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+#calculadora .campos .total-graduacoes .limpar {
+  margin-bottom: 20px;
 }
 
 #calculadora h3 {
