@@ -26,6 +26,8 @@ export default function changeAncestralidade() {
     let categoriasPossiveis = removeDiacritics(ancestralidade.categoriasPossiveis.toLowerCase()).split(", ");
     categoriasPossiveis = $(categoriasDisponiveis).not(categoriasPossiveis).get();
 
+    $(`#categoria select option`).removeAttr("disabled");
+
     $.each(categoriasPossiveis, (i, e) => {
       disableSelectOption("categoria", categoriasPossiveis[i]);
     });
@@ -39,15 +41,15 @@ export default function changeAncestralidade() {
 
     //Atualiza tabela de categoria
     $('#categoria table').addClass("d-none");
-    $('#categoria table').prop('selectedIndex', 0);
+    $('#categoria select').prop('selectedIndex', 0);
 
     //Atualiza passo
     $("#ancestralidade .passo strong").addClass("concluido");
   } else {
     $('#ancestralidade table').addClass("d-none");
     $('#idade').addClass("d-none");
-    $('#categoria').attr("disabled", "disabled");
-    $('#categoria').prop('selectedIndex', 0);
+    $('#categoria select').attr("disabled", "disabled");
+    $('#categoria select').prop('selectedIndex', 0);
     $('#categoria table').addClass("d-none");
 
     //Atualiza passo
