@@ -32,8 +32,8 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": ["+2 PM"]
       },
       {
-        "conduta": "mestreDeVislumbre",
-        "titulo": "Mestre de Vislumbre",
+        "conduta": "mestre de vislumbres",
+        "titulo": "Mestre de Vislumbres",
         "ganhos": ["Artefatos & Relicários 2"],
         "ganhos-livres": ["+2 PM"]
       },
@@ -54,7 +54,7 @@ export default function contentJornada(tipo, nome) {
 
       },
       {
-        "conduta": "servoDeHonra",
+        "conduta": "servo de honra",
         "titulo": "Servo de Honra",
         "ganhos": ["Veículo 1", "Papelaria 1"],
         "ganhos-livres": ["+2 PM"]
@@ -62,7 +62,7 @@ export default function contentJornada(tipo, nome) {
     ],
     "crime": [
       {
-        "conduta": "cacadorDeCabecas",
+        "conduta": "cacador de cabecas",
         "titulo": "Caçador de Cabeças",
         "ganhos": ["Armas Simples 2"],
         "ganhos-livres": ["+2 PM"]
@@ -112,7 +112,7 @@ export default function contentJornada(tipo, nome) {
         "ganhos-livres": []
       },
       {
-        "conduta": "cacadorDaNoite",
+        "conduta": "cacador da noite",
         "titulo": "Caçador da Noite",
         "ganhos": ["Armas Simples 1", "Artefatos & Relicários 1", "Provisões de Sobrevivência 1"],
         "ganhos-livres": ["+2 PM"]
@@ -120,7 +120,7 @@ export default function contentJornada(tipo, nome) {
     ],
     "oculto": [
       {
-        "conduta": "mestreMunkai",
+        "conduta": "munkai",
         "titulo": "Mestre Mun'Kai",
         "ganhos": ["Artefatos & Relicários 3"],
         "ganhos-livres": []
