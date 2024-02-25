@@ -6,7 +6,8 @@ export default function contentVivencia(tipo) {
       "composicao": "-2",
       "graduacao": "-12",
       "viciosMax": "-",
-      "maestria": "-4"
+      "maestria": "-4",
+      "condutas": "0"
     },
     "jovem": {
       "titulo": "Jovem",
@@ -14,7 +15,8 @@ export default function contentVivencia(tipo) {
       "composicao": "-",
       "graduacao": "-6",
       "viciosMax": "+1",
-      "maestria": "-2"
+      "maestria": "-2",
+      "condutas": "1"
     },
     "maduro": {
       "titulo": "Maduro",
@@ -22,7 +24,8 @@ export default function contentVivencia(tipo) {
       "composicao": "-",
       "graduacao": "-",
       "viciosMax": "+2",
-      "maestria": "-"
+      "maestria": "-",
+      "condutas": "2"
     },
     "senior": {
       "titulo": "Sênior",
@@ -30,7 +33,8 @@ export default function contentVivencia(tipo) {
       "composicao": "-2",
       "graduacao": "+12",
       "viciosMax": "+4",
-      "maestria": "+4"
+      "maestria": "+4",
+      "condutas": "3"
     },
   };
 

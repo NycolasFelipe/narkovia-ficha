@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Narkovia | Passo a passo</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <!-- Estilo -->
+  <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+
+<body>
+  <main id="criar-ficha">
+    <header>
+      <h1 class="text-center mb-5 text-white">Manual de Narkóvia</h1>
+      <button id="ficha-button-voltar" type="button"
+        class="btn btn-light button button-main-menu button-main-menu-simples w-100 mb-4"
+        onclick="location.href='index.html'">
+        <p class="button-main-titulo">Voltar</p>
+      </button>
+    </header>
+    <hr class="hr border border-2 opacity-50 mt-5 mb-5">
+    <div id="nome" class="mb-5">
+      <p class="passo text-center text-white">1º Passo:</p>
+      <p class="passo-descricao text-center text-white">Escolha um nome para seu personagem.</p>
+      <div class="form-floating mb-3 mt-4">
+        <input type="text" class="form-control" id="nomePersonagem" placeholder="placeholder">
+        <label for="nomePersonagem">Nome do personagem</label>
+      </div>
+      <div class="avancar-passo d-flex justify-content-between mt-5">
+        <i class="bi bi-arrow-left-square-fill"></i>
+        <i class="bi bi-arrow-right-square-fill"></i>
+      </div>
+    </div>
+    <div id="ancestralidade" class="mb-5">
+      <p class="passo text-center text-white">2º Passo:</p>
+      <p class="passo-descricao text-center text-white">Escolha uma ancestralidade.</p>
+      <select class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
+        <option selected>Escolha sua ancestralidade</option>
+        <option value="humanoNarkoviano">Humano Narkoviano</option>
+        <option value="humanoMiraniano">Humano Miraniano</option>
+        <option value="progenitoSeltino">Progênito Mun'Kai Seltino</option>
+        <option value="progenitoDunfrine">Progênito Mun'Kai Dun'frine</option>
+        <option value="progenitoTitere">Progênito Mun'Kai Títere</option>
+        <option value="progenitoCisco">Progênito Mun'Kai Cisco</option>
+        <option value="espuriaFenixy">Espúria Fenixy</option>
+        <option value="espuriaGale">Espúria Gale</option>
+        <option value="espuriaSniff">Espúria Sniff</option>
+        <option value="espuriaMuphawa">Espúria Muphawa</option>
+        <option value="espuriaDunrock">Espúria Dunrock</option>
+        <option value="comensal">Comensal</option>
+        <option value="perenal">Perenal</option>
+        <option value="sanguefrio">Sangue-Frio</option>
+        <option value="nulo">Nulo</option>
+        <option value="meandro">Meandro</option>
+        <option value="automato">Autômato</option>
+        <option value="gandulo">Gândulo</option>
+      </select>
+      <table class="table table-bordered table-striped-columns d-none">
+        <tr>
+          <td class="fw-bold">Categorias Possíveis</td>
+          <td class="categorias-possiveis"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Virtudes</td>
+          <td class="virtudes"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Vícios</td>
+          <td class="vicios"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Traços</td>
+          <td class="tracos"></td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Condutas Bloqueadas</td>
+          <td class="condutas-bloqueadas"></td>
+        </tr>
+      </table>
+      <div class="avancar-passo d-flex justify-content-between mt-5">
+        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+        <i class="bi bi-arrow-right-square-fill"></i>
+      </div>
+    </div>
+  </main>
+
+  <!-- Detalhes button trigger modal -->
+  <button id="detalhesModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#detalhesModal"></button>
+
+  <!-- Detalhes Modal -->
+  <div class="modal fade" id="detalhesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 w-100" id="exampleModalLabel" style="text-align: center;">Modal title</h1>
+          <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-description" style="padding: 10px 20px;">
+            <h2 class="w-100 text-center fs-6">Descrição</h2>
+            <p></p>
+          </div>
+          <hr class="w-50" style="margin: 0 auto; margin-bottom: 25px;">
+          <div class="modal-requirements">
+            <h2 class="w-100 text-center fs-6">Requisitos:</h2>
+            <p class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./src/scripts/criar-ficha/script.js"></script>
+</body>
+
+</html>

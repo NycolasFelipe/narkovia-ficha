@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+  background-image: url("../img/home-background.jpg");
+  background-attachment: fixed;
+}
+
 main {
   max-width: 300px;
   margin: 0 auto;
@@ -5,10 +12,18 @@ main {
   padding-bottom: 200px;
 }
 
+.modal-content {
+  max-width: 300px;
+  margin: 0 auto;
+  right: 10px;
+}
+
 header h1 {
-  font-family: "Libre Baskerville", serif;
-  font-weight: bold;
-  font-size: 1.8rem;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2.3rem;
+  pointer-events: none;
 }
 header h2 {
   font-family: "Libre Baskerville", serif;
@@ -50,6 +65,98 @@ label {
 }
 #index #idade .idade-expectativa {
   margin: 20px 0 40px 0;
+}
+
+.button-main-menu {
+  background-image: url("../img/button-default.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin-top: 40px;
+}
+.button-main-menu:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+.button-main-menu:hover > .button-main-titulo {
+  text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+  text-decoration: underline;
+}
+.button-main-menu .button-main-titulo {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.button-main-menu .button-main-descricao {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.button-main-menu-simples {
+  height: auto !important;
+}
+.button-main-menu-simples > p {
+  font-size: 1.2rem !important;
+}
+#index-button-simulador {
+  background-image: url("../img/button-simulador.jpg");
+}
+#index-button-ficha {
+  background-image: url("../img/button-ficha.jpg");
+}
+
+/* Criar Ficha */
+#criar-ficha table {
+  border-radius: 5px;
+  overflow: hidden;
+}
+#criar-ficha table .item-modal-link {
+  transition: all 0.3s ease;
+}
+#criar-ficha table .item-modal-link:hover {
+  cursor: pointer;
+  color: #3081D0;
+  border-left-color: #3081D0 !important;
+  transition: all 0.3s ease;
+}
+#criar-ficha .passo {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+}
+#criar-ficha .passo-descricao {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.9rem;
+}
+#criar-ficha .avancar-passo {
+  padding: 0 5px;
+}
+#criar-ficha .avancar-passo i {
+  font-size: 3rem;
+  cursor: not-allowed;
+  height: 48px;
+  line-height: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+#criar-ficha .avancar-passo-ok:hover, #criar-ficha .voltar-passo:hover {
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+  transition: all 0.3s ease;
+}
+#criar-ficha .avancar-passo-ok, #criar-ficha .voltar-passo {
+  color: #fff;
+  cursor: pointer !important;
 }
 
 #calculadora .campos h4 {

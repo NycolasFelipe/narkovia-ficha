@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manual Narkovia | Passo a passo</title>
+  <title>Manual de Narkóvia | Início</title>
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
@@ -13,181 +14,34 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <!-- Estilo -->
   <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 
 <body>
   <main id="index">
     <header>
-      <h1 class="text-center mb-5">Manual de criação de ficha de Narkóvia</h1>
-      <button type="button" class="btn btn-light button w-100 mb-4" onclick="location.href='calculadora.html'">
-        Calculadora de Pontos
+      <h1 class="text-center mb-5 text-white">Manual de Narkóvia</h1>
+      <button id="index-button-ficha" type="button" class="btn btn-light button button-main-menu w-100 mb-4"
+        onclick="location.href='criar-ficha.html?passo=nome'">
+        <p class="button-main-titulo">Criar Ficha</p>
+        <p class="button-main-descricao">Crie a ficha do seu personagem seguindo um passo-a-passo simples.</p>
       </button>
-      <hr class="hr border border-2 opacity-50 mb-5">
-      <div class="d-flex justify-content-between">
-        <h2 class="mb-5">Passo a passo:</h2>
-        <button id="clear" type="button" class="btn btn-light button button-sm h-75 lh-1 border-2">Limpar</button>
-      </div>
+      <button id="index-button-simulador" type="button" class="btn btn-light button button-main-menu w-100 mb-4"
+        onclick="location.href='calculadora.html'">
+        <p class="button-main-titulo">Simulador de Pontos</p>
+        <p class="button-main-descricao">Faça uma simulação de pontos de atributos e graduações sem os limites da ficha.
+        </p>
+      </button>
     </header>
-    <div id="nome" class="mb-5">
-      <p class="passo"><strong class="concluido">Passo 1:</strong> Escolha um nome para seu personagem.</p>
-    </div>
-    <div id="ancestralidade" class="mb-5">
-      <p class="passo"><strong>Passo 2:</strong> Escolha uma ancestralidade.</p>
-      <select class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
-        <option selected>Escolha sua ancestralidade</option>
-        <option value="humanoNarkoviano">Humano Narkoviano</option>
-        <option value="humanoMiraniano">Humano Miraniano</option>
-        <option value="progenitoSeltino">Progênito Mun'Kai Seltino</option>
-        <option value="progenitoDunfrine">Progênito Mun'Kai Dun'frine</option>
-        <option value="progenitoTitere">Progênito Mun'Kai Títere</option>
-        <option value="progenitoCisco">Progênito Mun'Kai Cisco</option>
-        <option value="espuriaFenixy">Espúria Fenixy</option>
-        <option value="espuriaGale">Espúria Gale</option>
-        <option value="espuriaSniff">Espúria Sniff</option>
-        <option value="espuriaMuphawa">Espúria Muphawa</option>
-        <option value="espuriaDunrock">Espúria Dunrock</option>
-        <option value="comensal">Comensal</option>
-        <option value="perenal">Perenal</option>
-        <option value="sanguefrio">Sangue-Frio</option>
-        <option value="nulo">Nulo</option>
-        <option value="meandro">Meandro</option>
-        <option value="automato">Autômato</option>
-        <option value="gandulo">Gândulo</option>
-      </select>
-      <table class="table table-bordered table-striped-columns d-none">
-        <tr>
-          <td class="fw-bold">Categorias Possíveis</td>
-          <td class="categorias-possiveis"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Virtudes</td>
-          <td class="virtudes"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Vícios</td>
-          <td class="vicios"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Traços</td>
-          <td class="tracos"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Condutas Bloqueadas</td>
-          <td class="condutas-bloqueadas"></td>
-        </tr>
-      </table>
-    </div>
-    <div id="jornada">
-      <p class="passo"><strong>Passo 3:</strong> Escolha uma jornada e depois uma conduta.</p>
-      <select id="jornadas" class="form-select form-select-md mb-3" disabled aria-label="Escolha sua jornada">
-        <option selected>Escolha sua jornada</option>
-        <option value="erudicao">Erudição</option>
-        <option value="riqueza">Riqueza</option>
-        <option value="crime">Crime</option>
-        <option value="natureza">Natureza</option>
-        <option value="oculto">Oculto</option>
-        <option value="sagrado">Sagrado</option>
-        <option value="combate">Combate</option>
-        <option value="arte">Arte</option>
-        <option value="oficio">Ofício</option>
-      </select>
-
-      <table id="jornada-ganhos" class="table table-bordered d-none">
-        <tr>
-          <td class="fw-bold text-center" colspan="2">Ganhos da Jornada</td>
-        </tr>
-        <tr>
-          <td class="jornada-ganho text-center"></td>
-        </tr>
-      </table>
-
-      <label id="condutas-label" class="d-none mt-4" for="condutas">Conduta</label>
-      <select id="condutas" class="form-select form-select-md mb-3 d-none" aria-label="Escolha sua conduta">
-      </select>
-
-      <table id="conduta-ganhos" class="table table-bordered d-none">
-        <tr>
-          <td class="fw-bold text-center" colspan="2">Ganhos da Conduta</td>
-        </tr>
-      </table>
-    </div>
-    <div id="categoria" class="my-5">
-      <p class="passo"><strong>Passo 4:</strong> Escolha uma categoria.</p>
-      <select disabled class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
-        <option selected>Escolha sua categoria</option>
-        <option value="ordinario">Ordinário</option>
-        <option value="insolito">Insólito</option>
-        <option value="extraordinario">Extraordinário</option>
-        <option value="sobrehumano">Sobrehumano</option>
-      </select>
-      <table class="table table-bordered table-sm d-none">
-        <tr class="table-light text-center">
-          <td class="fw-bold" colspan="2">Atributos Máximos</td>
-        </tr>
-        <tr>
-          <td class="atributos text-center" colspan="2">2, 2, 2, 2, 2, 2, 3, 3</td>
-        </tr>
-        <tr class="table-light">
-          <td class="text-center fw-bold w-50">Sortilégio</td>
-          <td class="text-center fw-bold">Composição</td>
-        </tr>
-        <tr>
-          <td class="sortilegio text-center"></td>
-          <td class="composicao text-center"></td>
-        </tr>
-        <tr class="table-light">
-          <td class="text-center fw-bold">Graduação</td>
-          <td class="text-center fw-bold">Maestria</td>
-        </tr>
-        <tr>
-          <td class="graduacao text-center"></td>
-          <td class="maestria text-center"></td>
-        </tr>
-      </table>
-    </div>
-    <div id="idade" class="d-none">
-      <p class="passo"><strong>Passo 5:</strong> Escolha uma idade.</p>
-      <div class="idade-buttons d-flex pb-2 justify-content-around align-items-center">
-        <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
-        <p class="text-center fs-5 mb-0"><span class="idade-value">0</span> ciclos</p>
-        <i class="idade-mais bi bi-chevron-right user-select-none" role="button"></i>
-      </div>
-      <input type="range" class="form-range" value="0" min="0" max="240">
-      <div class="idade-expectativa">
-        <p class="text-center mb-0">Expectativa de vida de <span class="expectativa"></span>:</p>
-        <p class="text-center"><span class="expectativa-valor"></span> ciclos</p>
-      </div>
-      <table class="table table-bordered table-sm">
-        <tr>
-          <td class="fw-bold text-center" colspan="3">Vivência - <span class="vivencia fw-bold text-center"></span></td>
-        </tr>
-        <tr>
-          <td class="fw-bold text-center">Sortilégio</td>
-          <td class="fw-bold text-center">Composição</td>
-          <td class="fw-bold text-center">Graduação</td>
-        </tr>
-        <tr>
-          <td class="vivenciaSortilegio text-center">-</td>
-          <td class="vivenciaComposicao text-center">-</td>
-          <td class="vivenciaGraduacao text-center">-</td>
-        </tr>
-        <tr>
-          <td class="fw-bold text-center">Vícios Max</td>
-          <td class="fw-bold text-center" colspan="2">Maestria</td>
-        </tr>
-        <tr>
-          <td class="vivenciaViciosMax text-center">-</td>
-          <td class="vivenciaMaestria text-center" colspan="2">-</td>
-        </tr>
-      </table>
-    </div>
   </main>
   <script type="module" src="script.js"></script>
 </body>
