@@ -1,7 +1,7 @@
 import contentAncestralidade from "../../content/ancestralidade.js";
 import removeDiacritics from "../common/removeDiacritics.js";
-import mostrarDetalhes from "../criar-ficha/mostrarDetalhes.js";
-import validaPasso from "../criar-ficha/validaPasso.js";
+import mostrarDetalhes from "./mostrarDetalhes.js";
+import validaPasso from "./validaPasso.js";
 
 function appendItem(tipo, element, items) {
   $(`#ancestralidade table ${element}`).html("");
@@ -35,8 +35,8 @@ function appendItem(tipo, element, items) {
 }
 
 export default function changeAncestralidade() {
-  $('#ancestralidade select').on("change", () => {
-    const tipo = $('#ancestralidade select').val();
+  $('#ancestralidade select').on("change", (e) => {
+    const tipo = $(e.currentTarget).val();
 
     if (!tipo.includes("Escolha")) {
       const ancestralidade = contentAncestralidade(tipo);
@@ -47,10 +47,6 @@ export default function changeAncestralidade() {
       appendItem(tipo, ".condutas-bloqueadas", ancestralidade.condutasBloqueadas);
 
       $('#ancestralidade table').removeClass("d-none");
-      $('#categoria select').removeAttr("disabled");
-      $('#categoria table').removeClass("d-none");
-      $('#idade').removeClass("d-none");
-
       $(".item-modal-link").on("click", (e) => mostrarDetalhes(e));
 
       //Atualiza categorias permitidas por ancestralidade

@@ -1,10 +1,11 @@
-import changeAncestralidade from "../index/changeAncestralidade.js";
+import changeAncestralidade from "./changeAncestralidade.js";
+import changeCategoria from "./changeCategoria.js";
 import changeNome from "./changeNome.js";
 import validaPasso from "./validaPasso.js";
 
 $(document).ready(() => {
-  validaPasso();
   changeNome();
   changeAncestralidade();
+  changeCategoria();
+  validaPasso();
 });
-

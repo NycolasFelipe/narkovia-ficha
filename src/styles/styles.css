@@ -15,7 +15,7 @@ main {
 .modal-content {
   max-width: 300px;
   margin: 0 auto;
-  right: 10px;
+  right: 8px;
 }
 
 header h1 {
@@ -68,7 +68,7 @@ label {
 }
 
 .button-main-menu {
-  background-image: url("../img/button-default.jpg");
+  background: transparent;
   background-position: center;
   background-size: cover;
   height: 200px;
@@ -94,7 +94,7 @@ label {
   text-decoration: underline;
 }
 .button-main-menu .button-main-titulo {
-  padding-top: 20px;
+  padding-top: 12px;
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
@@ -103,10 +103,14 @@ label {
   font-size: 0.8rem;
 }
 .button-main-menu-simples {
-  height: auto !important;
+  height: 50px !important;
+  border: 2px solid darkslategrey;
+}
+.button-main-menu-simples:hover {
+  background: transparent;
 }
 .button-main-menu-simples > p {
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
 }
 #index-button-simulador {
   background-image: url("../img/button-simulador.jpg");
@@ -159,10 +163,11 @@ label {
   cursor: pointer !important;
 }
 
+/* Simulador de Pontos */
 #calculadora .campos h4 {
   font-family: "Libre Baskerville", serif;
   font-size: 1rem;
-  color: #000;
+  color: #fff;
 }
 #calculadora .campos td {
   height: 28px;
@@ -191,6 +196,7 @@ label {
 }
 #calculadora .campos .titulo {
   font-family: "Libre Baskerville", serif;
+  color: #fff;
 }
 #calculadora .campos .subtotal {
   display: flex;
@@ -209,15 +215,20 @@ label {
   margin-bottom: 0;
   line-height: 2;
 }
+#calculadora #graduacoes h3 {
+  color: #3081D0;
+}
 #calculadora .campos .total, #calculadora .campos .total-graduacoes {
   font-family: "Libre Baskerville", serif;
-  background: #2baf71;
   color: #fff;
   text-align: center;
   font-size: 1.2rem;
   padding-top: 15px;
   margin-bottom: 30px;
   border-radius: 5px;
+}
+#calculadora .campos .total {
+  background: grey;
 }
 #calculadora .campos .total-graduacoes {
   position: fixed;
@@ -228,14 +239,22 @@ label {
   max-width: 300px;
   transform: translateX(-50%);
   left: 50%;
+  background: #3081D0;
 }
 #calculadora .campos .total-graduacoes .limpar {
   margin-bottom: 20px;
 }
-
+#calculadora h1 {
+  color: #fff;
+}
+#calculadora h2 {
+  color: #fff;
+  font-weight: 500;
+}
 #calculadora h3 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.2rem;
-  color: #3081D0;
-  font-weight: 600;
+  color: grey;
+  font-weight: 500;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
