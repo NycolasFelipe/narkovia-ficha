@@ -128,13 +128,16 @@ export default function contentAncestralidade(nome) {
   }
 
   const categorias = ["Ordinário", "Insólito", "Extraordinário", "Sobrehumano", "Ascendente", "Pilar"];
+  const categoriasKeys = ["ordinario", "insolito", "extraordinario", "sobrehumano", "ascendente", "pilar"];
 
   if (nome.includes("espuria")) {
     return conteudo["espuria"];
   }
-
   if (nome === "categorias") {
     return categorias;
+  }
+  if (nome === "categoriasKeys") {
+    return categoriasKeys;
   }
 
   return conteudo[nome];

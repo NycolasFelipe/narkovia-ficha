@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
 body {
   background-image: url("../img/home-background.jpg");
@@ -44,27 +45,6 @@ header h2 {
 label {
   font-family: "Libre Baskerville", serif;
   padding-bottom: 5px;
-}
-
-#index .passo {
-  font-family: "Libre Baskerville", serif;
-}
-#index .passo strong {
-  color: #3081D0;
-  transition: all 0.5s ease;
-}
-#index .passo .concluido {
-  color: #2baf71;
-}
-
-#index #idade .idade-buttons i {
-  font-size: 1.5rem;
-}
-#index #idade .idade-buttons p {
-  width: 100px;
-}
-#index #idade .idade-expectativa {
-  margin: 20px 0 40px 0;
 }
 
 .button-main-menu {
@@ -161,6 +141,62 @@ label {
 #criar-ficha .avancar-passo-ok, #criar-ficha .voltar-passo {
   color: #fff;
   cursor: pointer !important;
+}
+#criar-ficha #idade .idade-buttons i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+#criar-ficha #idade .idade-buttons p {
+  width: 100px;
+  color: #fff;
+}
+#criar-ficha #idade .idade-expectativa {
+  margin: 20px 0 40px 0;
+}
+#criar-ficha #idade .idade-expectativa p {
+  color: #fff;
+}
+#criar-ficha #idade .passo-descricao span {
+  display: block;
+  color: #61d461;
+
+}
+#criar-ficha #conduta .condutas {
+  display: flex;
+  align-items: center;
+}
+#criar-ficha #conduta .condutas button {
+  position: absolute;
+  z-index: 1;
+}
+#criar-ficha #conduta .condutas .slick-next {
+  right: 0;
+}
+#criar-ficha #conduta .conduta {
+  color: #fff;
+  border-width: 0;
+  font-weight: 400;
+  --bs-card-bg: transparent;
+  cursor: pointer;
+}
+#criar-ficha #conduta .conduta .card-text {
+  font-family: "La Belle Aurore", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.15rem;
+  filter: opacity(0.1);
+}
+#criar-ficha #conduta .conduta:hover img,
+#criar-ficha #conduta .conduta:hover .card-text {
+  filter: opacity(1) !important;
+  transition: all 0.3s ease;
+}
+#criar-ficha #conduta .conduta img {
+  filter: opacity(0.1);
+  transition: all 0.3s ease;
+}
+#criar-ficha #conduta .conduta .card-text {
+  text-align: center;
 }
 
 /* Simulador de Pontos */

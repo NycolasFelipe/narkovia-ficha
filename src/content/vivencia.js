@@ -7,14 +7,14 @@ export default function contentVivencia(tipo) {
       "graduacao": "-12",
       "viciosMax": "-",
       "maestria": "-4",
-      "condutas": "0"
+      "condutas": "-"
     },
     "jovem": {
       "titulo": "Jovem",
-      "sortilegio": "-",
-      "composicao": "-",
+      "sortilegio": "Suma +2",
+      "composicao": "+2",
       "graduacao": "-6",
-      "viciosMax": "+1",
+      "viciosMax": "+2",
       "maestria": "-2",
       "condutas": "1"
     },
@@ -23,7 +23,7 @@ export default function contentVivencia(tipo) {
       "sortilegio": "-",
       "composicao": "-",
       "graduacao": "-",
-      "viciosMax": "+2",
+      "viciosMax": "+4",
       "maestria": "-",
       "condutas": "2"
     },
@@ -32,7 +32,7 @@ export default function contentVivencia(tipo) {
       "sortilegio": "Suma -2",
       "composicao": "-2",
       "graduacao": "+12",
-      "viciosMax": "+4",
+      "viciosMax": "+6",
       "maestria": "+4",
       "condutas": "3"
     },

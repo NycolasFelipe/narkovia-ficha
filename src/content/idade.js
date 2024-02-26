@@ -1,9 +1,8 @@
 export default function contentIdade(nome) {
   const nomeTratado = nome.toLowerCase();
-
-  const conteudo = {
-    "humanos": {
-      "titulo": "Humanos",
+  const content = {
+    "humano": {
+      "titulo": "Humano",
       "expectativa": "80",
       "vivencia": {
         "infanteMax": 16,
@@ -11,8 +10,8 @@ export default function contentIdade(nome) {
         "maduroMax": 60,
       }
     },
-    "espurias": {
-      "titulo": "Espúrias",
+    "espuria": {
+      "titulo": "Espúria",
       "expectativa": "240",
       "vivencia": {
         "infanteMax": 16,
@@ -20,8 +19,8 @@ export default function contentIdade(nome) {
         "maduroMax": 160,
       }
     },
-    "seltinos": {
-      "titulo": "Seltinos",
+    "seltino": {
+      "titulo": "Seltino",
       "expectativa": "60",
       "vivencia": {
         "infanteMax": 16,
@@ -29,8 +28,8 @@ export default function contentIdade(nome) {
         "maduroMax": 50,
       }
     },
-    "dunfrines": {
-      "titulo": "Dun'Frines",
+    "dunfrine": {
+      "titulo": "Dun'Frine",
       "expectativa": "120",
       "vivencia": {
         "infanteMax": 16,
@@ -38,8 +37,8 @@ export default function contentIdade(nome) {
         "maduroMax": 100,
       }
     },
-    "titeres": {
-      "titulo": "Títeres",
+    "titere": {
+      "titulo": "Títere",
       "expectativa": "180",
       "vivencia": {
         "infanteMax": -1,
@@ -47,8 +46,8 @@ export default function contentIdade(nome) {
         "maduroMax": 241,
       }
     },
-    "ciscos": {
-      "titulo": "Ciscos",
+    "cisco": {
+      "titulo": "Cisco",
       "expectativa": "180",
       "vivencia": {
         "infanteMax": 3,
@@ -56,8 +55,8 @@ export default function contentIdade(nome) {
         "maduroMax": 140,
       }
     },
-    "comensais": {
-      "titulo": "Comensais",
+    "comensal": {
+      "titulo": "Comensal",
       "expectativa": "130",
       "vivencia": {
         "infanteMax": -1,
@@ -65,8 +64,8 @@ export default function contentIdade(nome) {
         "maduroMax": 241,
       }
     },
-    "perenais": {
-      "titulo": "Perenais",
+    "perenal": {
+      "titulo": "Perenal",
       "expectativa": "200",
       "vivencia": {
         "infanteMax": -1,
@@ -74,8 +73,8 @@ export default function contentIdade(nome) {
         "maduroMax": -1,
       }
     },
-    "sanguefrios": {
-      "titulo": "Sangue-Frios",
+    "sanguefrio": {
+      "titulo": "Sangue-Frio",
       "expectativa": "190",
       "vivencia": {
         "infanteMax": 1,
@@ -83,8 +82,8 @@ export default function contentIdade(nome) {
         "maduroMax": 150,
       }
     },
-    "nulos": {
-      "titulo": "Nulos",
+    "nulo": {
+      "titulo": "Nulo",
       "expectativa": "75",
       "vivencia": {
         "infanteMax": 5,
@@ -92,8 +91,8 @@ export default function contentIdade(nome) {
         "maduroMax": 241,
       }
     },
-    "meandros": {
-      "titulo": "Meandros",
+    "meandro": {
+      "titulo": "Meandro",
       "expectativa": "50",
       "vivencia": {
         "infanteMax": -1,
@@ -101,8 +100,8 @@ export default function contentIdade(nome) {
         "maduroMax": 241,
       }
     },
-    "automatos": {
-      "titulo": "Autômatos",
+    "automato": {
+      "titulo": "Autômato",
       "expectativa": "170",
       "vivencia": {
         "infanteMax": -1,
@@ -110,8 +109,8 @@ export default function contentIdade(nome) {
         "maduroMax": 241,
       }
     },
-    "gandulos": {
-      "titulo": "Gândulos",
+    "gandulo": {
+      "titulo": "Gândulo",
       "expectativa": "135",
       "vivencia": {
         "infanteMax": -1,
@@ -120,34 +119,22 @@ export default function contentIdade(nome) {
       }
     },
   }
+  const ancestralidades = Object.keys(content);
 
-  if (nomeTratado.includes("humano")) {
-    return conteudo["humanos"];
-  } else if (nomeTratado.includes("espuria")) {
-    return conteudo["espurias"];
-  } else if (nomeTratado.includes("seltino")) {
-    return conteudo["seltinos"];
-  } else if (nomeTratado.includes("dunfrine")) {
-    return conteudo["dunfrines"];
-  } else if (nomeTratado.includes("titere")) {
-    return conteudo["titeres"];
-  } else if (nomeTratado.includes("cisco")) {
-    return conteudo["ciscos"];
-  } else if (nomeTratado.includes("comensal")) {
-    return conteudo["comensais"];
-  } else if (nomeTratado.includes("perenal")) {
-    return conteudo["perenais"];
-  } else if (nomeTratado.includes("sanguefrio")) {
-    return conteudo["sanguefrios"];
-  } else if (nomeTratado.includes("nulo")) {
-    return conteudo["nulos"];
-  } else if (nomeTratado.includes("meandro")) {
-    return conteudo["meandros"];
-  } else if (nomeTratado.includes("automato")) {
-    return conteudo["automatos"];
-  } else if (nomeTratado.includes("gandulo")) {
-    return conteudo["gandulos"];
-  } else if (nome === "content") {
-    return conteudo;
+  let contentItem;
+  $.each(ancestralidades, (index, item) => {
+    if (nomeTratado.includes(item)) {
+      contentItem = content[item];
+      return false;
+    }
+  });
+
+  if (contentItem !== undefined) {
+    return contentItem;
+  } else if (nomeTratado === "content") {
+    return content;
+  } else {
+    console.error(`Não foi possível encontrar dados para a ancestralidade <${nomeTratado}>.`)
+    return {};
   }
 }

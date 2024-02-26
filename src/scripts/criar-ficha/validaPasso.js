@@ -1,4 +1,4 @@
-const PASSOS = ["nome", "ancestralidade", "categoria"];
+const PASSOS = ["nome", "ancestralidade", "categoria", "idade", "conduta"];
 
 function updateQueryParam(value, key = "passo") {
   const url = new URL(window.location.href);
@@ -91,8 +91,16 @@ function validaPasso() {
       break;
 
     case "categoria":
-      const categoria = !$("#categoria select").val().includes("Escolha");
+      const categoria = !$("#categoria select option:selected").text().includes("Escolha");
       allowPasso(categoria, proximoPassoButton);
+      break;
+
+    case "idade":
+      //Atualiza informação da ancestralidade escolhida
+      const idade = parseInt($('#idade input').val()) > 0 && !$('#idade input').is(":focus");
+      const ancestralidadeEscolhida = $("#ancestralidade option:selected").text();
+      $("#idade .passo-descricao span").text(ancestralidadeEscolhida);
+      allowPasso(idade, proximoPassoButton);
       break;
 
     default:

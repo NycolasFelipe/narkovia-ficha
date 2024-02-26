@@ -5,7 +5,6 @@ import incrementIdade from "./src/scripts/index/incrementIdade.js";
 import localStorageSave from "./src/scripts/index/localStorageSave.js";
 import localStorageLoad from "./src/scripts/index/localStorageLoad.js";
 import localStorageClear from "./src/scripts/index/localStorageClear.js";
-import contentConduta from "./src/content/conduta.js";
 
 //Local Storage
 $(document).ready(() => {

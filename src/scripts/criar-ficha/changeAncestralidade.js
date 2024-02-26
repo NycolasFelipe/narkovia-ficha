@@ -34,8 +34,34 @@ function appendItem(tipo, element, items) {
   });
 }
 
+function updateCategoriasPossiveis() {
+  let categorias = contentAncestralidade("categoriasKeys");
+  let categoriasPossiveis = [];
+  let categoriasBloqueadas;
+
+  const categoriasPossiveisElement = $("#ancestralidade .categorias-possiveis p");
+  $.each(categoriasPossiveisElement, (i, item) => {
+    let categoria = $(item).attr("data");
+    categoriasPossiveis.push(categoria);
+  })
+  categoriasBloqueadas = $(categorias).not(categoriasPossiveis).get();
+
+  //Reseta opcoes anteriores
+  $("#categoria select option").removeAttr("disabled");
+  $("#categoria select").prop("selectedIndex", 0);
+  $("#categoria select").change();
+
+  $.each($("#categoria select option"), (i, option) => {
+    $.each(categoriasBloqueadas, (j, categoriaBloqueada) => {
+      if ($(option).val() === categoriaBloqueada) {
+        $(option).attr("disabled", "disabled");
+      }
+    });
+  });
+}
+
 export default function changeAncestralidade() {
-  $('#ancestralidade select').on("change", (e) => {
+  $("#ancestralidade select").on("change", (e) => {
     const tipo = $(e.currentTarget).val();
 
     if (!tipo.includes("Escolha")) {
@@ -46,50 +72,13 @@ export default function changeAncestralidade() {
       appendItem(tipo, ".tracos", ancestralidade.tracos);
       appendItem(tipo, ".condutas-bloqueadas", ancestralidade.condutasBloqueadas);
 
-      $('#ancestralidade table').removeClass("d-none");
+      $("#ancestralidade table").removeClass("d-none");
       $(".item-modal-link").on("click", (e) => mostrarDetalhes(e));
-
-      //Atualiza categorias permitidas por ancestralidade
-      // const categorias = contentAncestralidade("categorias");
-
-      // let categoriasDisponiveis = removeDiacritics(categorias.toLowerCase()).split(", ");
-      // let categoriasPossiveis = removeDiacritics(ancestralidade.categoriasPossiveis.toLowerCase()).split(", ");
-      // categoriasPossiveis = $(categoriasDisponiveis).not(categoriasPossiveis).get();
-
-      // $(`#categoria select option`).removeAttr("disabled");
-
-      // $.each(categoriasPossiveis, (i, e) => {
-      //   disableSelectOption("categoria", categoriasPossiveis[i]);
-      // });
-
-      // //Atualiza idade
-      // const idade = contentIdade(tipo);
-      // const idadeTitulo = idade.titulo;
-      // const idadeExpectativa = idade.expectativa;
-      // $('#idade .expectativa').text(idadeTitulo);
-      // $('#idade .expectativa-valor').text(idadeExpectativa);
-
-      // //Atualiza tabela de categoria
-      // $('#categoria table').addClass("d-none");
-      // $('#categoria select').prop('selectedIndex', 0);
-
-      // //Atualiza passo
-      // $("#ancestralidade .passo strong").addClass("concluido");
     } else {
-      $('#ancestralidade table').addClass("d-none");
-      // $('#idade').addClass("d-none");
-
-      // $('#categoria select').attr("disabled", "disabled");
-      // $('#categoria select').prop('selectedIndex', 0);
-      // $('#categoria table').addClass("d-none");
-
-      // $('#condutas').addClass("d-none");
-      // $('#condutas-label').addClass("d-none");
-
-      // //Atualiza passo
-      // $("#ancestralidade .passo strong").removeClass("concluido");
+      $("#ancestralidade table").addClass("d-none");
     }
 
+    updateCategoriasPossiveis();
     validaPasso();
   });
 }
