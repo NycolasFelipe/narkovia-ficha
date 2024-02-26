@@ -103,6 +103,10 @@ function validaPasso() {
       allowPasso(idade, proximoPassoButton);
       break;
 
+    case "conduta":
+      $("#conduta .condutas").find(".bi-chevron-compact-right").click();
+      break;
+
     default:
       break;
   }

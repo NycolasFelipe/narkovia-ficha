@@ -179,6 +179,9 @@ label {
   --bs-card-bg: transparent;
   cursor: pointer;
 }
+#criar-ficha #conduta .condutas .slick-track {
+  width: 1500px !important;
+}
 #criar-ficha #conduta .conduta .card-text {
   font-family: "La Belle Aurore", cursive;
   font-weight: 400;
