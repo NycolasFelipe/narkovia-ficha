@@ -1,0 +1,10 @@
+{
+  "id": "tribal",
+  "tipo": "natureza",
+  "titulo": "Tribal",
+  "descricao": "Você é membro de um povo miraniano antigo, que vem resistindo aos constantes assédios do mundo civilizado, você é um forasteiro das tradições narkovianas, tendo sua própria cultura, costumes e crenças.",
+  "ganhos": [
+    "Especialidade: Cultura Miraniana",
+    "+4G (Técnica ou Combate)"
+  ]
+}

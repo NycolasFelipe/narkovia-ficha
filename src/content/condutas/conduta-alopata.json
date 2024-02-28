@@ -1,0 +1,10 @@
+{
+  "id": "alopata",
+  "tipo": "erudicao",
+  "titulo": "Alopata",
+  "descricao": "Você é especialista em alopatia, a arte da cura, manuseando alquímicos ou ervas para fazer tratamentos ou até cirurgias. Apesar de não demandar ser um alto erudito, alopatia é considerado uma alta erudição pelo seu alto teor de complexidade.",
+  "ganhos": [
+    "Conjuntos Alopáticos",
+    "+4G (Erudição)"
+  ]
+}

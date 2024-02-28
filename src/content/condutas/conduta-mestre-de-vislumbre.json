@@ -1,0 +1,10 @@
+{
+  "id": "mestre-de-vislumbre",
+  "tipo": "erudicao",
+  "titulo": "Mestre de Vislumbre",
+  "descricao": "Já foram grandes no passado. Líderes da Academia da Erudição, mas atualmente estão desaparecidos e perseguidos. você sabe utilizar uma joia de pulse e invocar vislumbres, poderosos feitos que podem moldar a trama da realidade.",
+  "ganhos": [
+    "Especialidade: Joia de Pulso",
+    "+4G (Agudeza ou Erudição)"
+  ]
+}

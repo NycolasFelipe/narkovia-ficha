@@ -1,0 +1,10 @@
+{
+  "id": "sacerdote",
+  "tipo": "sagrado",
+  "titulo": "Sacerdote",
+  "descricao": "Aquele que comanda. Um sacerdote precisa ser formado diretamente pela Igreja de Absolan, apesar de haver pessoas que são informalmente reconhecidas como tal. O sacerdote formado segue a vertente Kleustariana aprendendo a escrita e a leitura pra promulgar o vade-mécum, e a alguns conhecimentos teóricos, como cura, história e cosmologia. Dessa forma, pode galgar a hierarquia da Igreja, aumentando seu poder e autoridade.",
+  "ganhos": [
+    "Especialidade: Igreja de Absolan",
+    "+4G (Técnica ou Influência)"
+  ]
+}

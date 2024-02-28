@@ -18,7 +18,7 @@ function mostrarDetalhes(e) {
       }, 300);
     });
   } catch (error) {
-    console.log(`Detalhe indisponível para o item: <${item}>`);
+    console.error(`Detalhe indisponível para o item: <${item}>`);
   }
 }
 

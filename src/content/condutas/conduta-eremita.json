@@ -1,0 +1,10 @@
+{
+  "id": "eremita",
+  "tipo": "natureza",
+  "titulo": "Eremita",
+  "descricao": "Seja por escolha, por tradição ou qualquer outro motivo, você escolheu viver longe da loucura das cidades, optando pela solitude e alto descoberta. Você vaga pelo mundo sozinho, vivendo do que a natureza te oferece e buscando desvendar mais sobre os mistérios do mundo.",
+  "ganhos": [
+    "Provisões de Sobrevivência",
+    "+4G (Técnica ou Agudeza)"
+  ]
+}

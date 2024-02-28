@@ -4,6 +4,19 @@
 body {
   background-image: url("../img/home-background.jpg");
   background-attachment: fixed;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+  background: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+  --webkit-box-shadow: inset 0 0 6px #0000004d;
+  background-color: #202020;
 }
 
 main {
@@ -13,10 +26,11 @@ main {
   padding-bottom: 200px;
 }
 
+
 .modal-content {
   max-width: 300px;
   margin: 0 auto;
-  right: 8px;
+  right: 3px;
 }
 
 header h1 {
@@ -26,6 +40,7 @@ header h1 {
   font-size: 2.3rem;
   pointer-events: none;
 }
+
 header h2 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.4rem;
@@ -62,144 +77,50 @@ label {
   border: 2px solid transparent;
   margin-top: 40px;
 }
+
 .button-main-menu:hover {
   color: #fff;
   border: 2px solid #fff;
-  box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
 }
-.button-main-menu:hover > .button-main-titulo {
-  text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+
+.button-main-menu:hover>.button-main-titulo {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
   text-decoration: underline;
 }
+
 .button-main-menu .button-main-titulo {
   padding-top: 12px;
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
+
 .button-main-menu .button-main-descricao {
   text-align: center;
   font-size: 0.8rem;
 }
+
 .button-main-menu-simples {
   height: 50px !important;
   border: 2px solid darkslategrey;
 }
+
 .button-main-menu-simples:hover {
   background: transparent;
 }
-.button-main-menu-simples > p {
+
+.button-main-menu-simples>p {
   font-size: 1rem !important;
 }
+
 #index-button-simulador {
   background-image: url("../img/button-simulador.jpg");
 }
+
 #index-button-ficha {
   background-image: url("../img/button-ficha.jpg");
-}
-
-/* Criar Ficha */
-#criar-ficha table {
-  border-radius: 5px;
-  overflow: hidden;
-}
-#criar-ficha table .item-modal-link {
-  transition: all 0.3s ease;
-}
-#criar-ficha table .item-modal-link:hover {
-  cursor: pointer;
-  color: #3081D0;
-  border-left-color: #3081D0 !important;
-  transition: all 0.3s ease;
-}
-#criar-ficha .passo {
-  font-family: "Libre Baskerville", serif;
-  font-size: 1.5rem;
-}
-#criar-ficha .passo-descricao {
-  font-family: "Libre Baskerville", serif;
-  font-size: 0.9rem;
-}
-#criar-ficha .avancar-passo {
-  padding: 0 5px;
-}
-#criar-ficha .avancar-passo i {
-  font-size: 3rem;
-  cursor: not-allowed;
-  height: 48px;
-  line-height: 0;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-#criar-ficha .avancar-passo-ok:hover, #criar-ficha .voltar-passo:hover {
-  box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
-  transition: all 0.3s ease;
-}
-#criar-ficha .avancar-passo-ok, #criar-ficha .voltar-passo {
-  color: #fff;
-  cursor: pointer !important;
-}
-#criar-ficha #idade .idade-buttons i {
-  font-size: 1.5rem;
-  color: #fff;
-}
-#criar-ficha #idade .idade-buttons p {
-  width: 100px;
-  color: #fff;
-}
-#criar-ficha #idade .idade-expectativa {
-  margin: 20px 0 40px 0;
-}
-#criar-ficha #idade .idade-expectativa p {
-  color: #fff;
-}
-#criar-ficha #idade .passo-descricao span {
-  display: block;
-  color: #61d461;
-
-}
-#criar-ficha #conduta .condutas {
-  display: flex;
-  align-items: center;
-}
-#criar-ficha #conduta .condutas button {
-  position: absolute;
-  z-index: 1;
-}
-#criar-ficha #conduta .condutas .slick-next {
-  right: 0;
-}
-#criar-ficha #conduta .conduta {
-  color: #fff;
-  border-width: 0;
-  font-weight: 400;
-  --bs-card-bg: transparent;
-  cursor: pointer;
-}
-#criar-ficha #conduta .condutas .slick-track {
-  width: 1500px !important;
-}
-#criar-ficha #conduta .conduta .card-text {
-  font-family: "La Belle Aurore", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.15rem;
-  filter: opacity(0.1);
-}
-#criar-ficha #conduta .conduta:hover img,
-#criar-ficha #conduta .conduta:hover .card-text {
-  filter: opacity(1) !important;
-  transition: all 0.3s ease;
-}
-#criar-ficha #conduta .conduta img {
-  filter: opacity(0.1);
-  transition: all 0.3s ease;
-}
-#criar-ficha #conduta .conduta .card-text {
-  text-align: center;
 }
 
 /* Simulador de Pontos */
@@ -208,35 +129,44 @@ label {
   font-size: 1rem;
   color: #fff;
 }
+
 #calculadora .campos td {
   height: 28px;
   width: 25px;
 }
+
 #calculadora .campos table:not(.graduacoes) tr td:first-of-type {
   background: #494949 !important;
 }
+
 #calculadora .campos table.graduacoes tr td:first-of-type {
   background: #000;
 }
+
 #calculadora .campos table.white-bg tr td:first-of-type {
   background: #fff !important;
 }
-#calculadora .campos table + input {
+
+#calculadora .campos table+input {
   position: relative;
   top: -43px;
 }
-#calculadora .campos table + input::-webkit-slider-thumb {
+
+#calculadora .campos table+input::-webkit-slider-thumb {
   background: transparent;
   box-shadow: none !important;
   border: none;
 }
-#calculadora .campos table + input::-webkit-slider-runnable-track {
+
+#calculadora .campos table+input::-webkit-slider-runnable-track {
   background: transparent;
 }
+
 #calculadora .campos .titulo {
   font-family: "Libre Baskerville", serif;
   color: #fff;
 }
+
 #calculadora .campos .subtotal {
   display: flex;
   justify-content: space-between;
@@ -250,14 +180,18 @@ label {
   margin-bottom: 30px;
   margin-top: -10px;
 }
+
 #calculadora .campos .subtotal p {
   margin-bottom: 0;
   line-height: 2;
 }
+
 #calculadora #graduacoes h3 {
   color: #3081D0;
 }
-#calculadora .campos .total, #calculadora .campos .total-graduacoes {
+
+#calculadora .campos .total,
+#calculadora .campos .total-graduacoes {
   font-family: "Libre Baskerville", serif;
   color: #fff;
   text-align: center;
@@ -266,9 +200,11 @@ label {
   margin-bottom: 30px;
   border-radius: 5px;
 }
+
 #calculadora .campos .total {
   background: grey;
 }
+
 #calculadora .campos .total-graduacoes {
   position: fixed;
   bottom: 0;
@@ -280,20 +216,26 @@ label {
   left: 50%;
   background: #3081D0;
 }
+
 #calculadora .campos .total-graduacoes .limpar {
   margin-bottom: 20px;
 }
+
 #calculadora h1 {
   color: #fff;
 }
+
 #calculadora h2 {
   color: #fff;
   font-weight: 500;
 }
+
 #calculadora h3 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.2rem;
   color: grey;
   font-weight: 500;
   text-align: center;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

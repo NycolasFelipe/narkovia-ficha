@@ -1,0 +1,10 @@
+{
+  "id": "trapaceiro-golpista",
+  "tipo": "crime",
+  "titulo": "Trapaceiro/Golpista",
+  "descricao": "Não costuma trabalhar para ninguém, faz seu ganha-pão de forma independente, aplicando golpes, se passando por alguém que não é você ou trapaceando em jogos de carta, sua língua é mais afiada que uma faca.",
+  "ganhos": [
+    "Itens de Papelaria",
+    "+4G (Influência ou Sagacidade)"
+  ]
+}

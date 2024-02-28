@@ -1,0 +1,10 @@
+{
+  "id": "explorador",
+  "tipo": "natureza",
+  "titulo": "Explorador",
+  "descricao": "Aqueles que vivem errantes, caçando tumbas ou desvendando ruinas antigas. Exploradores vivem das riquezas que encontram perdidas na natureza ou da venda de informações desbravadas.",
+  "ganhos": [
+    "Objetos de Arqueometria",
+    "+4G (Técnica ou Sagacidade)"
+  ]
+}

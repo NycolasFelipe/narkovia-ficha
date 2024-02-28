@@ -5,6 +5,7 @@ function updateQueryParam(value, key = "passo") {
   url.searchParams.set(key, value);
   window.history.pushState({}, '', url.toString());
   $("#criar-ficha .avancar-passo i").off();
+  $(window).scrollTop(250);
   validaPasso();
 };
 
@@ -104,7 +105,33 @@ function validaPasso() {
       break;
 
     case "conduta":
-      $("#conduta .condutas").find(".bi-chevron-compact-right").click();
+      $("#conduta .condutas").find(".slick-prev").click();
+      const condutasDisponiveis = $(".vivenciaCondutas").text();
+      $("#conduta .condutas").show();
+      $(".condutas-swipe-hint").show().removeClass("d-none");
+
+      if (condutasDisponiveis === "-") {
+        $("#conduta .passo-descricao").html(`
+          <p class='mb-0'>Sem condutas disponíves</p><span class="text-warning">(restringido pela vivência)<span>
+        `);
+        $("#conduta .condutas").hide();
+        $(".condutas-swipe-hint").hide();
+        setTimeout(() => $("#conduta .slick-slider").click(), 100);
+      } else if (condutasDisponiveis === "1") {
+        $("#conduta .passo-descricao").html(`
+          <p style="color: #61d461;">Escolha 1 conduta</p>
+        `);
+      } else if (condutasDisponiveis === "2") {
+        $("#conduta .passo-descricao").html(`
+          <p style="color: #61d461;">Escolha 2 condutas</p>
+        `);
+      } else if (condutasDisponiveis === "3") {
+        $("#conduta .passo-descricao").html(`
+          <p style="color: #61d461;">Escolha 3 condutas</p>
+        `);
+      }
+
+      $("#conduta .bi-arrow-right-square-fill").hide();
       break;
 
     default:

@@ -1,0 +1,10 @@
+{
+  "id": "inspetor",
+  "tipo": "erudicao",
+  "titulo": "Inspetor",
+  "descricao": "Você treinou sua arguição ao máximo para servir a Narkovia, resolvendo todo tipo de crime e levando criminosos a penitência.",
+  "ganhos": [
+    "Objetos de Arqueometria",
+    "+4G (Técnica ou Agudeza)"
+  ]
+}

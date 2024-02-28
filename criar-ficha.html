@@ -27,6 +27,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- Estilo -->
   <link rel="stylesheet" href="./src/styles/styles.css">
+  <link rel="stylesheet" href="./src/styles/criar-ficha.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
         <p class="button-main-titulo">Voltar</p>
       </button>
     </header>
-    <hr class="hr border border-2 opacity-50 mt-5 mb-5">
+    <hr style="margin: 0 auto;" class="hr border border-1 opacity-50 mt-5 mb-5 w-50">
     <div id="nome" class="mb-5">
       <p class="passo text-center text-white">1º Passo:</p>
       <p class="passo-descricao text-center text-white">Escolha um nome para seu personagem</p>
@@ -190,42 +191,50 @@
       <p class="passo text-center text-white">5º Passo:</p>
       <p class="passo-descricao text-center text-white">Escolha uma conduta</p>
       <div class="condutas">
-        <div id="condutaNatureza" class="card conduta" style="width: 18rem;">
+        <div id="condutaNatureza" class="card conduta" data="natureza" style="width: 18rem;">
           <img src="./src/img/conduta-natureza.png" class="card-img-top" alt="Conduta da Natureza">
           <div class="card-body">
             <p class="card-text">Natureza</p>
           </div>
         </div>
-        <div id="condutaOculto" class="card conduta" style="width: 18rem;">
+        <div id="condutaOculto" class="card conduta" data="oculto" style="width: 18rem;">
           <img src="./src/img/conduta-oculto.png" class="card-img-top" alt="Conduta do Oculto">
           <div class="card-body">
             <p class="card-text">Oculto</p>
           </div>
         </div>
-        <div id="condutaSagrado" class="card conduta" style="width: 18rem;">
+        <div id="condutaSagrado" class="card conduta" data="sagrado" style="width: 18rem;">
           <img src="./src/img/conduta-sagrado.png" class="card-img-top" alt="Conduta do Sagrado">
           <div class="card-body">
             <p class="card-text">Sagrado</p>
           </div>
         </div>
-        <div id="condutaErudicao" class="card conduta" style="width: 18rem;">
+        <div id="condutaErudicao" class="card conduta" data="erudicao" style="width: 18rem;">
           <img loading="lazy" src="./src/img/conduta-erudicao.png" class="card-img-top" alt="Conduta da Erudição">
           <div class="card-body">
             <p class="card-text">Erudição</p>
           </div>
         </div>
-        <div id="condutaRiqueza" class="card conduta" style="width: 18rem;">
+        <div id="condutaRiqueza" class="card conduta" data="riqueza" style="width: 18rem;">
           <img src="./src/img/conduta-riqueza.png" class="card-img-top" alt="Conduta da Riqueza">
           <div class="card-body">
             <p class="card-text">Riqueza</p>
           </div>
         </div>
-        <div id="condutaCrime" class="card conduta" style="width: 18rem;">
+        <div id="condutaCrime" class="card conduta" data="crime" style="width: 18rem;">
           <img src="./src/img/conduta-crime.png" class="card-img-top" alt="Conduta do Crime">
           <div class="card-body">
             <p class="card-text">Crime</p>
           </div>
         </div>
+      </div>
+      <div class="condutas-swipe-hint">
+        <p class="text-center">
+          Arraste para mais condutas 
+          <i class="bi bi-chevron-double-right" style="position: relative; top: 1px;"></i>
+      </p>
+      </div>
+      <div class="condutas-descricao">
       </div>
       <div class="avancar-passo d-flex justify-content-between mt-5">
         <i class="bi bi-arrow-left-square-fill voltar-passo"></i>

@@ -1,0 +1,140 @@
+main {
+  min-height: 1200px;
+}
+
+table {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+table .item-modal-link {
+  transition: all 0.3s ease;
+}
+
+table .item-modal-link:hover {
+  cursor: pointer;
+  color: #3081D0;
+  border-left-color: #3081D0 !important;
+  transition: all 0.3s ease;
+}
+
+.passo {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+}
+
+.passo-descricao {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.9rem;
+}
+
+.avancar-passo {
+  padding: 0 5px;
+}
+
+.avancar-passo i {
+  font-size: 3rem;
+  cursor: not-allowed;
+  height: 48px;
+  line-height: 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.avancar-passo-ok:hover,
+.voltar-passo:hover {
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease;
+}
+
+.avancar-passo-ok,
+.voltar-passo {
+  color: #fff;
+  cursor: pointer !important;
+}
+
+#idade .idade-buttons i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#idade .idade-buttons p {
+  width: 100px;
+  color: #fff;
+}
+
+#idade .idade-expectativa {
+  margin: 20px 0 40px 0;
+}
+
+#idade .idade-expectativa p {
+  color: #fff;
+}
+
+#idade .passo-descricao span {
+  display: block;
+  color: #61d461;
+}
+
+#conduta .condutas {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#conduta .condutas .conduta {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-width: 0;
+  font-weight: 400;
+  --bs-card-bg: transparent;
+  cursor: pointer;
+}
+
+#conduta .condutas .conduta-selecionada .card-text,
+#conduta .condutas .conduta-selecionada img {
+  filter: opacity(1);
+}
+
+#conduta .condutas button {
+  display: none !important;
+}
+
+#conduta .condutas .slick-next {
+  right: 0;
+}
+
+#conduta .condutas .slick-track {
+  width: 1500px !important;
+}
+
+#conduta .conduta .card-text {
+  font-family: "La Belle Aurore", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.15rem;
+  filter: opacity(0.1);
+}
+
+#conduta .conduta:hover img,
+#conduta .conduta:hover .card-text {
+  filter: opacity(1) !important;
+  transition: all 0.3s ease;
+}
+
+#conduta .conduta img {
+  filter: opacity(0.1);
+  transition: all 0.3s ease;
+  width: auto !important;
+}
+
+#conduta .conduta .card-text {
+  text-align: center;
+}
+
+#conduta .condutas-swipe-hint p {
+  color: grey;
+}

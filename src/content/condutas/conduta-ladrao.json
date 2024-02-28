@@ -1,0 +1,10 @@
+{
+  "id": "ladrao",
+  "tipo": "crime",
+  "titulo": "Ladrão",
+  "descricao": "Pode ser um batedor de carteiras ou um grande furtador de peças luxuosas, o fato é que você é especialistas em tirar objetos das posses de uma pessoa e dar para outra.",
+  "ganhos": [
+    "Apetrechos de Ladroagem",
+    "+4G (Sagacidade)"
+  ]
+}

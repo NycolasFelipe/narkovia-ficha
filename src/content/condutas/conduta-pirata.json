@@ -1,0 +1,11 @@
+{
+  "id": "pirata",
+  "tipo": "crime",
+  "titulo": "Pirata",
+  "descricao": "Houve tempos em que os piratas dominaram os mares, mas graças a Confederação, pirataria já não é tão popular. Mas você pode ter se tornado um, seja por tradição ou por apreço, você é um conhecedor dos mares e está além da jurisdição de qualquer fronteira.",
+  "ganhos": [
+    "Especialidade: Navios",
+    "+2G (Combate)",
+    "+2G (Sagacidade)"
+  ]
+}

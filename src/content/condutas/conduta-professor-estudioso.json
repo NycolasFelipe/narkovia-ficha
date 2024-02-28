@@ -1,0 +1,10 @@
+{
+  "id": "professor-estudioso",
+  "tipo": "erudicao",
+  "titulo": "Professor/Estudioso",
+  "descricao": "Você é o mais comum dentre os eruditos, teve acesso a formação básica e aos conhecimentos elaborados, mas não saiu muito disso, ou se especializou em um conhecimento específico.",
+  "ganhos": [
+    "Itens de papelaria",
+    "+4G (Erudição)"
+  ]
+}

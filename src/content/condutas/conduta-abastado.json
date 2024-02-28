@@ -1,0 +1,10 @@
+{
+  "id": "abastado",
+  "tipo": "riqueza",
+  "titulo": "Abastado",
+  "descricao": "Talvez tenha nascido em berço de ouro ou conquistado sua riqueza ao longo da vida, de qualquer forma você tem posses ou irá herdá-las, tendo pessoas para te servir, guerreiros pra lhe defender e eruditos para lhe ensinar. Em alguns casos, você pode ser obscenamente rico, sendo filho de um barão ou se tornando um.",
+  "ganhos": [
+    "Itens de Papelaria",
+    "+4G (Influência ou Liderança)"
+  ]
+}
