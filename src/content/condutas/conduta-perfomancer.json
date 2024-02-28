@@ -1,0 +1,10 @@
+{
+  "id": "perfomancer",
+  "tipo": "arte",
+  "titulo": "Perfomancer",
+  "descricao": "Dançarino, ator, mimico, acrobata ou ilusionista. Você usa suas habilidades corporais para tirar o folego dos seus espectadores. Você ganha a vida com isso, tendo inúmeros fãs que o idolatram. Usando o charme, os movimentos corporais você deixa sua marca no coração das pessoas.",
+  "ganhos": [
+    "Especialidade: Alguma manifestação artística corporal",
+    "+4G (Influência ou Liderança)"
+  ]
+}

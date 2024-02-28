@@ -1,0 +1,10 @@
+{
+  "id": "servidores",
+  "tipo": "oficio",
+  "titulo": "Servidores",
+  "descricao": "Aqueles que servem. Seja como engraxate, cocheiro, cortesã ou mercador, você ganha sua vida servindo as pessoas. Sua experiencia lhe concede contatos e reputação, e por lidar com pessoas, você é muito bom se relacionando com elas, seja intuindo suas intenções ou cativando seus desejos.",
+  "ganhos": [
+    "Especialidade: Economia",
+    "+4G (Influência ou Agudeza)"
+  ]
+}

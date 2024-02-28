@@ -1,0 +1,10 @@
+{
+  "id": "guardas",
+  "tipo": "combate",
+  "titulo": "Guardas",
+  "descricao": "Aqueles que lutam pelo povo, ou não. São disciplinados, organizados e um forte compromisso com o dever, ou pelo menos é o que se espera de um guarda. Esse pertence a um exército que serve a um determinado líder, que outrora, deve proteger o povo, mas nem todos cumprem esse papel. Um guarda é um trabalhador assalariado e pode ser facilmente corruptível a depender da sua moral e de suas condições de trabalho.",
+  "ganhos": [
+    "Armaduras",
+    "+4G (Combate ou Liderança)"
+  ]
+}
