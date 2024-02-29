@@ -6,7 +6,6 @@ function changeIdadeSlide(conteudoIdade, ancestralidades) {
   $('#idade .idade-value').text($("#idade input").val());
   const valor = parseInt($('#idade input').val());
   const ancestralidadeEscolhida = $("#ancestralidade option:selected").attr("value");
-  const idade = parseInt($('#idade input').val()) > 0;
 
   if (ancestralidadeEscolhida !== undefined) {
     $.each(ancestralidades, (i, e) => {
@@ -37,10 +36,6 @@ function changeIdadeSlide(conteudoIdade, ancestralidades) {
       }
     });
   }
-
-  //Checagem para acessibilidade
-  if (idade) $("#idade .bi-arrow-right-square-fill").addClass("avancar-passo-ok");
-  else $("#idade .bi-arrow-right-square-fill").removeClass("avancar-passo-ok");
 }
 
 function changeIdadeButton(conteudoIdade, ancestralidades, value) {
@@ -75,6 +70,8 @@ export default function changeIdade() {
 
   $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(conteudoIdade, ancestralidades)));
   $("#ancestralidade select").on("change", () => changeIdadeSlide(conteudoIdade, ancestralidades));
+  $("#idade input").focusout(() => validaPasso());
+  $("#idade input").focus(() => validaPasso());
   $("#idade .idade-mais").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, 1));
   $("#idade .idade-menos").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, -1));
 
