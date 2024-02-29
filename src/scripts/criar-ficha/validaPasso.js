@@ -109,6 +109,7 @@ function validaPasso() {
       const condutasDisponiveis = $(".vivenciaCondutas").text();
       $("#conduta .condutas").show();
       $(".condutas-swipe-hint").show().removeClass("d-none");
+      $(".condutas-descricao").html("");
 
       if (condutasDisponiveis === "-") {
         $("#conduta .passo-descricao").html(`
