@@ -72,6 +72,7 @@ export default function changeIdade() {
   $("#ancestralidade select").on("change", () => changeIdadeSlide(conteudoIdade, ancestralidades));
   $("#idade input").focusout(() => validaPasso());
   $("#idade input").focus(() => validaPasso());
+  $("#idade input").on("touchend", () => validaPasso());
   $("#idade .idade-mais").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, 1));
   $("#idade .idade-menos").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, -1));
 
