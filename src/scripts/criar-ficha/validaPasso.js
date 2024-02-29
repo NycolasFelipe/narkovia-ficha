@@ -112,7 +112,10 @@ function validaPasso() {
 
       if (condutasDisponiveis === "-") {
         $("#conduta .passo-descricao").html(`
-          <p class='mb-0'>Sem condutas disponíves</p><span class="text-warning">(restringido pela vivência)<span>
+          <p class='mb-0'>Sem condutas disponíves</p>
+          <span class="text-warning">
+            (Personagens infantes não recebem conduta)
+          <span>
         `);
         $("#conduta .condutas").hide();
         $(".condutas-swipe-hint").hide();
