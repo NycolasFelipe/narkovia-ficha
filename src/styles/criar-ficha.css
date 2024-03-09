@@ -138,3 +138,90 @@ table .item-modal-link:hover {
 #conduta .condutas-swipe-hint p {
   color: grey;
 }
+
+#conduta .condutas-descricao {
+  margin-top: 20px;
+}
+
+#conduta .conduta-titulo {
+  font-family: "Libre Baskerville", serif;
+}
+
+#conduta .conduta-descricao {
+  border: 2px solid transparent;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+#conduta .conduta-descricao-selecionada {
+  border-color: #61d461;
+  transition: border 0.3s ease;
+}
+
+#conduta .conduta-descricao-selecionada .conduta-legenda {
+  color: #61d461;
+  position: relative;
+  top: -5px;
+  font-size: 0.9rem;
+}
+
+#conduta .conduta-descricao-bloqueada {
+  cursor: not-allowed;
+  border-color: #a03b3b;
+  transition: border 0.3s ease;
+}
+
+#conduta .conduta-descricao-bloqueada .conduta-legenda {
+  color: #a03b3b;
+  position: relative;
+  top: -5px;
+  font-size: 0.9rem;
+}
+
+#conduta .conduta-descricao-bloqueada i {
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+#conduta .conduta-ganho {
+  font-weight: 500;
+}
+
+#conduta .descricao-selecionada {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem !important;
+  color: #61d461;
+}
+
+#conduta .descricao-bloqueada {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem !important;
+  color: #a03b3b;
+}
+
+#conduta .conduta-indisponivel.conduta-descricao-bloqueada {
+  border-color: darkslategray !important;
+}
+
+#conduta .conduta-indisponivel * {
+  color: darkslategray !important;
+}
+
+#conduta .conduta-descricao .bi-chevron-right {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  padding-top: 1px;
+  padding-left: 10px;
+}
+
+#conduta .conduta-descricao .bi-chevron-right-rotate {
+  transform: rotate(90deg);
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}

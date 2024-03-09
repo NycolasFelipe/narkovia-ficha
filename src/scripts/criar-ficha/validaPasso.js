@@ -1,10 +1,10 @@
-const PASSOS = ["nome", "ancestralidade", "categoria", "idade", "conduta"];
+const PASSOS = ["ancestralidade", "categoria", "idade", "conduta"];
 
 function updateQueryParam(value, key = "passo") {
   const url = new URL(window.location.href);
   url.searchParams.set(key, value);
   window.history.pushState({}, '', url.toString());
-  $("#criar-ficha .avancar-passo i").off();
+  $("#criar-ficha .avancar-passo i").off("click");
   $(window).scrollTop(250);
   validaPasso();
 };
@@ -63,7 +63,7 @@ function allowPasso(allowed, passoButton) {
     $(passoButton).addClass("avancar-passo-ok");
   } else {
     $(passoButton).removeClass("avancar-passo-ok");
-    $(passoButton).off();
+    $(passoButton).off("click");
   }
 }
 
@@ -81,11 +81,6 @@ function validaPasso() {
   checkPasso(ultimoPasso, ultimoPassoButton);
 
   switch (passoAtual) {
-    case "nome":
-      const nome = $("#nomePersonagem").val().length > 0;
-      allowPasso(nome, proximoPassoButton);
-      break;
-
     case "ancestralidade":
       const ancestralidade = !$("#ancestralidade select").val().includes("Escolha");
       allowPasso(ancestralidade, proximoPassoButton);
@@ -106,36 +101,14 @@ function validaPasso() {
 
     case "conduta":
       $("#conduta .condutas").find(".slick-prev").click();
-      const condutasDisponiveis = $(".vivenciaCondutas").text();
-      $("#conduta .condutas").show();
-      $(".condutas-swipe-hint").show().removeClass("d-none");
-      $(".condutas-descricao").html("");
-
-      if (condutasDisponiveis === "-") {
-        $("#conduta .passo-descricao").html(`
-          <p class='mb-0'>Sem condutas disponíves</p>
-          <span class="text-warning">
-            (Personagens infantes não recebem conduta)
-          <span>
-        `);
-        $("#conduta .condutas").hide();
-        $(".condutas-swipe-hint").hide();
-        setTimeout(() => $("#conduta .slick-slider").click(), 100);
-      } else if (condutasDisponiveis === "1") {
-        $("#conduta .passo-descricao").html(`
-          <p style="color: #61d461;">Escolha 1 conduta</p>
-        `);
-      } else if (condutasDisponiveis === "2") {
-        $("#conduta .passo-descricao").html(`
-          <p style="color: #61d461;">Escolha 2 condutas</p>
-        `);
-      } else if (condutasDisponiveis === "3") {
-        $("#conduta .passo-descricao").html(`
-          <p style="color: #61d461;">Escolha 3 condutas</p>
-        `);
-      }
-
       $("#conduta .bi-arrow-right-square-fill").hide();
+
+      $(".loading").show();
+      $(".condutas").css("filter", "opacity(0.0)");
+      setTimeout(() => {
+        $(".loading").hide();
+        $(".condutas").css("filter", "opacity(1.0)");
+      }, 500);
       break;
 
     default:
@@ -144,7 +117,7 @@ function validaPasso() {
 
   if (passoAtual === proximoPasso) {
     $(proximoPassoButton).removeClass("avancar-passo-ok");
-    $(proximoPassoButton).off();
+    $(proximoPassoButton).off("click");
   }
 }
 

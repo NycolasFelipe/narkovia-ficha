@@ -1,0 +1,34 @@
+{
+  "id": "progenitoDunfrine",
+  "titulo": "Dun'Frine",
+  "categoriasPossiveis": [
+    "Ordinário",
+    "Insólito",
+    "Extraordinário"
+  ],
+  "virtudes": [
+    "Forma Animal*",
+    "Sentidos Aguçados",
+    "Percepção Inatural"
+  ],
+  "vicios": [
+    "Costume Selvagem"
+  ],
+  "tracos": [
+    "Versatilidade",
+    "Metamorfose"
+  ],
+  "condutasBloqueadas": [
+    "Mestre de Vislumbres",
+    "Mun'Kai",
+    "Espúria",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "120",
+    "infanteMax": 16,
+    "jovemMax": 38,
+    "maduroMax": 100
+  },
+  "viciosMax": 6
+}

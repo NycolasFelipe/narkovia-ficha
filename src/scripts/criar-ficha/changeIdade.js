@@ -1,17 +1,17 @@
-import contentIdade from "../../content/idade.js";
+import contentAncestralidade from "../../content/ancestralidade.js";
 import contentVivencia from "../../content/vivencia.js";
 import validaPasso from "./validaPasso.js";
 
-function changeIdadeSlide(conteudoIdade, ancestralidades) {
+function changeIdadeSlide(ancestralidades) {
   $('#idade .idade-value').text($("#idade input").val());
   const valor = parseInt($('#idade input').val());
   const ancestralidadeEscolhida = $("#ancestralidade option:selected").attr("value");
 
   if (ancestralidadeEscolhida !== undefined) {
     $.each(ancestralidades, (i, e) => {
-      if (ancestralidadeEscolhida.toLowerCase().includes(ancestralidades[i])) {
-        const vivencia = conteudoIdade[ancestralidades[i]].vivencia;
-        let vivenciaTipo = "";
+      if (ancestralidadeEscolhida.toLowerCase().includes(e.id.toLowerCase())) {
+        const vivencia = e.vivencia;
+        let vivenciaTipo;
 
         if (valor <= vivencia.infanteMax) {
           vivenciaTipo = "infante";
@@ -38,9 +38,9 @@ function changeIdadeSlide(conteudoIdade, ancestralidades) {
   }
 }
 
-function changeIdadeButton(conteudoIdade, ancestralidades, value) {
+function changeIdadeButton(ancestralidades, value) {
   incrementIdade(value);
-  changeIdadeSlide(conteudoIdade, ancestralidades);
+  changeIdadeSlide(ancestralidades);
   validaPasso();
 }
 
@@ -52,29 +52,30 @@ function updateExpectativa() {
   $("#ancestralidade select").on("change", () => {
     const option = $("#ancestralidade option:selected").attr("value");
     if (option !== undefined) {
-      const expectativaDeVida = contentIdade(option).expectativa;
+      const expectativaDeVida = contentAncestralidade(option).vivencia.expectativa;
       $("#idade .expectativa-valor").text(expectativaDeVida);
     }
   });
 }
 
-export default function changeIdade() {
-  const conteudoIdade = contentIdade("content");
-  const ancestralidades = Object.keys(conteudoIdade);
+function changeIdade() {
+  const ancestralidades = contentAncestralidade();
 
   //Atualiza expectativa de vida quando a ancestralidade muda
   updateExpectativa();
 
-  //Atualiza idade ao mover slide
-  changeIdadeSlide(conteudoIdade, ancestralidades);
+  // //Atualiza idade ao mover slide
+  changeIdadeSlide(ancestralidades);
 
-  $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(conteudoIdade, ancestralidades)));
-  $("#ancestralidade select").on("change", () => changeIdadeSlide(conteudoIdade, ancestralidades));
+  $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
+  $("#ancestralidade select").on("change", () => changeIdadeSlide(ancestralidades));
   $("#idade input").focusout(() => validaPasso());
   $("#idade input").focus(() => validaPasso());
   $("#idade input").on("touchend", () => validaPasso());
-  $("#idade .idade-mais").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, 1));
-  $("#idade .idade-menos").on("click", () => changeIdadeButton(conteudoIdade, ancestralidades, -1));
+  $("#idade .idade-mais").on("click", () => changeIdadeButton(ancestralidades, 1));
+  $("#idade .idade-menos").on("click", () => changeIdadeButton(ancestralidades, -1));
 
   changeIdadeSlide();
 }
+
+export default changeIdade;

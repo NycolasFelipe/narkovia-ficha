@@ -1,0 +1,35 @@
+{
+  "id": "progenitoSeltino",
+  "titulo": "Seltino",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente"
+  ],
+  "virtudes": [
+    "Forma Híbrida",
+    "Presença Ameaçadora"
+  ],
+  "vicios": [
+    "Ira de Seltan*",
+    "Maldição do Rakta*"
+  ],
+  "tracos": [
+    "Fortitude",
+    "Rapidez",
+    "Metamorfose",
+    "Mutação"
+  ],
+  "condutasBloqueadas": [
+    "Mestre de Vislumbres",
+    "Mun'Kai",
+    "Espúria",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "60",
+    "infanteMax": 16,
+    "jovemMax": 25,
+    "maduroMax": 50
+  },
+  "viciosMax": 6
+}

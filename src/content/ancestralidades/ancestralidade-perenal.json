@@ -1,0 +1,36 @@
+{
+  "id": "perenal",
+  "titulo": "Perenal",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente",
+    "Pilar"
+  ],
+  "virtudes": [
+    "Partes desmontáveis",
+    "Imortal",
+    "Insensibilidade"
+  ],
+  "vicios": [
+    "Melancolia",
+    "Aparência Monstruosa",
+    "Loucura",
+    "Incurável"
+  ],
+  "tracos": [
+    "Inumano",
+    "Mutação"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "200",
+    "infanteMax": -1,
+    "jovemMax": -1,
+    "maduroMax": -1
+  },
+  "viciosMax": 6
+}

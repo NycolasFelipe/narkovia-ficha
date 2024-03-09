@@ -1,0 +1,30 @@
+{
+  "id": "gandulo",
+  "titulo": "Gândulo",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente",
+    "Pilar"
+  ],
+  "virtudes": [
+    "Sobrepujança mental*",
+    "Insensibilidade"
+  ],
+  "vicios": [
+    "Vulnerabilidade a Eletricidade*",
+    "Sensível ao Som*",
+    "Forma de Verme"
+  ],
+  "tracos": [
+    "Inumano",
+    "Rapidez e Receptáculo"
+  ],
+  "condutasBloqueadas": [],
+  "vivencia": {
+    "expectativa": "135",
+    "infanteMax": -1,
+    "jovemMax": -1,
+    "maduroMax": -1
+  },
+  "viciosMax": 6
+}

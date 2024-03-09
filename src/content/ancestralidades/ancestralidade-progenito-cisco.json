@@ -1,0 +1,36 @@
+{
+  "id": "progenitoCisco",
+  "titulo": "Cisco",
+  "categoriasPossiveis": [
+    "Insólito",
+    "Extraordinário",
+    "Sobrehumano",
+    "Ascendente"
+  ],
+  "virtudes": [
+    "Fotossíntese*",
+    "Conexão Floral",
+    "Comunhão com a Natureza"
+  ],
+  "vicios": [
+    "Pirofóricos*",
+    "Aparência Monstruosa"
+  ],
+  "tracos": [
+    "Inumano",
+    "Mutação"
+  ],
+  "condutasBloqueadas": [
+    "Mestre de Vislumbres",
+    "Mun'Kai",
+    "Espúria",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "180",
+    "infanteMax": 3,
+    "jovemMax": 70,
+    "maduroMax": 140
+  },
+  "viciosMax": 6
+}

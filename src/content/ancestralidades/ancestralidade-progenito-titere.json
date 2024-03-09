@@ -1,0 +1,37 @@
+{
+  "id": "progenitoTitere",
+  "titulo": "Títere",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente"
+  ],
+  "virtudes": [
+    "Rito de Sangue*",
+    "Insensibilidade",
+    "Partes desmontáveis",
+    "Expansão de Periféricos"
+  ],
+  "vicios": [
+    "Aparência Monstruosa",
+    "Incurável",
+    "Influxo de Éter*"
+  ],
+  "tracos": [
+    "Inumano",
+    "Mutação",
+    "Receptáculo"
+  ],
+  "condutasBloqueadas": [
+    "Mestre de Vislumbres",
+    "Mun'Kai",
+    "Espúria",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "180",
+    "infanteMax": -1,
+    "jovemMax": 240,
+    "maduroMax": 241
+  },
+  "viciosMax": 6
+}

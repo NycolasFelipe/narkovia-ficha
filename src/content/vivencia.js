@@ -1,42 +1,21 @@
-export default function contentVivencia(tipo) {
-  const content = {
-    "infante": {
-      "titulo": "Infante",
-      "sortilegio": "Suma +4",
-      "composicao": "-2",
-      "graduacao": "-12",
-      "viciosMax": "-",
-      "maestria": "-4",
-      "condutas": "-"
-    },
-    "jovem": {
-      "titulo": "Jovem",
-      "sortilegio": "Suma +2",
-      "composicao": "+2",
-      "graduacao": "-6",
-      "viciosMax": "+2",
-      "maestria": "-2",
-      "condutas": "1"
-    },
-    "maduro": {
-      "titulo": "Maduro",
-      "sortilegio": "-",
-      "composicao": "-",
-      "graduacao": "-",
-      "viciosMax": "+4",
-      "maestria": "-",
-      "condutas": "2"
-    },
-    "senior": {
-      "titulo": "Sênior",
-      "sortilegio": "Suma -2",
-      "composicao": "-2",
-      "graduacao": "+12",
-      "viciosMax": "+6",
-      "maestria": "+4",
-      "condutas": "3"
-    },
-  };
+import getContentItem from "../scripts/common/getContentItem.js";
+import loadJsonFiles from "../scripts/common/loadJsonFiles.js";
 
-  return content[tipo];
+const files = ['vivencia-infante.json', 'vivencia-jovem.json', 'vivencia-maduro.json', 'vivencia-senior.json'];
+const vivencias = loadJsonFiles("vivencias", files);
+
+function contentVivencia(vivencia) {
+  if (!vivencia) return vivencias;
+
+  const vivenciaEscolhida = getContentItem(vivencias, vivencia);
+
+  if (vivenciaEscolhida === undefined) {
+    const errorMsg = `Erro: vivencia "${vivencia}" inválida.`;
+    console.error(errorMsg);
+    return [{ "vivencia": "vivencia_invalida" }];
+  } else {
+    return vivenciaEscolhida;
+  }
 }
+
+export default contentVivencia;

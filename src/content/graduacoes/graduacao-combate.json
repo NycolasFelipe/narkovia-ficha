@@ -1,0 +1,9 @@
+{
+  "id": "combate",
+  "titulo": "Habilidades de Combate",
+  "itens": [
+    "Ataque",
+    "Mira",
+    "Proteção"
+  ]
+}

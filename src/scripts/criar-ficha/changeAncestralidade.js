@@ -1,4 +1,5 @@
 import contentAncestralidade from "../../content/ancestralidade.js";
+import contentCategoria from "../../content/categoria.js";
 import removeDiacritics from "../common/removeDiacritics.js";
 import mostrarDetalhes from "./mostrarDetalhes.js";
 import validaPasso from "./validaPasso.js";
@@ -17,13 +18,13 @@ function appendItem(tipo, element, items) {
       }
 
       $(`#ancestralidade table ${element}`).append(`
-      <p class="item-modal-link" data=${itemId} style="margin-bottom: 10px; border-left: 2px solid lightgrey; padding-left: 5px; font-weight: 500;">
-        ${item}
-        <span class="d-block w-100" style="font-weight: 500; font-size: 0.8rem; color: red;">
-          ${aviso}
-        </span>
-      </p>
-    `);
+        <p class="item-modal-link" data=${itemId} style="margin-bottom: 10px; border-left: 2px solid lightgrey; padding-left: 5px; font-weight: 500;">
+          ${item}
+          <span class="d-block w-100" style="font-weight: 500; font-size: 0.8rem; color: red;">
+            ${aviso}
+          </span>
+        </p>
+      `);
     } else {
       $(`#ancestralidade table ${element}`).append(`
         <p class="item-modal-link" data=${itemId}  style="margin-bottom: 10px; border-left: 2px solid lightgrey; padding-left: 5px;">
@@ -35,7 +36,7 @@ function appendItem(tipo, element, items) {
 }
 
 function updateCategoriasPossiveis() {
-  let categorias = contentAncestralidade("categoriasKeys");
+  let categorias = contentCategoria("keys");
   let categoriasPossiveis = [];
   let categoriasBloqueadas;
 

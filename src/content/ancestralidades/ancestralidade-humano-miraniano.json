@@ -1,0 +1,28 @@
+{
+  "id": "humanoMiraniano",
+  "titulo": "Humano Miraniano",
+  "categoriasPossiveis": [
+    "Ordinário",
+    "Insólito",
+    "Extraordinário"
+  ],
+  "virtudes": [
+    "Legado Ancestral"
+  ],
+  "vicios": [
+    "Marcas de Mira"
+  ],
+  "tracos": [
+    "Versatilidade"
+  ],
+  "condutasBloqueadas": [
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "80",
+    "infanteMax": 16,
+    "jovemMax": 30,
+    "maduroMax": 60
+  },
+  "viciosMax": 10
+}

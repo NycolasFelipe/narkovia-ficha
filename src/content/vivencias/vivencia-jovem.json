@@ -1,0 +1,10 @@
+{
+  "id": "jovem",
+  "titulo": "Jovem",
+  "sortilegio": "Suma +2",
+  "composicao": "+2",
+  "graduacao": "-6",
+  "viciosMax": "+2",
+  "maestria": "-2",
+  "condutas": "1"
+}

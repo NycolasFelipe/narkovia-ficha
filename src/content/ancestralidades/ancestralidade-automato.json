@@ -1,0 +1,36 @@
+{
+  "id": "automato",
+  "titulo": "Autômato",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente"
+  ],
+  "virtudes": [
+    "Transferência de Consciência*",
+    "Partes desmontáveis",
+    "Carapaça Revestida",
+    "Insensibilidade"
+  ],
+  "vicios": [
+    "Lataria",
+    "Córtex Defeituoso",
+    "Dependência Energética*"
+  ],
+  "tracos": [
+    "Inumano",
+    "Fortitude",
+    "Receptáculo"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "170",
+    "infanteMax": -1,
+    "jovemMax": 240,
+    "maduroMax": 241
+  },
+  "viciosMax": 6
+}

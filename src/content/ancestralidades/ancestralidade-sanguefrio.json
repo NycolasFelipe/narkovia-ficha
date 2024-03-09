@@ -1,0 +1,36 @@
+{
+  "id": "sanguefrio",
+  "titulo": "Sangue-Frio",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente",
+    "Pilar"
+  ],
+  "virtudes": [
+    "Casulo de Embrionagem*",
+    "Regeneração Acelerada",
+    "Regeneração Instantânea"
+  ],
+  "vicios": [
+    "Vulnerabilidade ao Frio*",
+    "Olhos refratores*"
+  ],
+  "tracos": [
+    "Inumano",
+    "Fortitude",
+    "Rapidez",
+    "Deslocação"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "190",
+    "infanteMax": 1,
+    "jovemMax": 100,
+    "maduroMax": 150
+  },
+  "viciosMax": 6
+}

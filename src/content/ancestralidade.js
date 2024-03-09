@@ -1,145 +1,33 @@
-export default function contentAncestralidade(nome) {
-  const conteudo = {
-    // Humano Narkoviano
-    humanoNarkoviano: {
-      categoriasPossiveis: ["Ordinário", "Insólito", "Extraordinário"],
-      virtudes: ["Nenhum"],
-      vicios: ["Nenhum"],
-      tracos: ["Versatilidade"],
-      condutasBloqueadas: ["Mun'Kai", "Espúria"]
-    },
+import loadJsonFiles from "../scripts/common/loadJsonFiles.js";
+import getContentItem from "../scripts/common/getContentItem.js";
 
-    // Humano Miraniano
-    humanoMiraniano: {
-      categoriasPossiveis: ["Ordinário", "Insólito", "Extraordinário"],
-      virtudes: ["Legado Ancestral"],
-      vicios: ["Marcas de Mira"],
-      tracos: ["Versatilidade"],
-      condutasBloqueadas: ["Profeta"]
-    },
+const files = ['ancestralidade-automato.json', 'ancestralidade-comensal.json', 'ancestralidade-espuria.json', 'ancestralidade-gandulo.json', 'ancestralidade-humano-miraniano.json', 'ancestralidade-humano-narkoviano.json', 'ancestralidade-meandro.json', 'ancestralidade-nulo.json', 'ancestralidade-perenal.json', 'ancestralidade-progenito-cisco.json', 'ancestralidade-progenito-dunfrine.json', 'ancestralidade-progenito-seltino.json', 'ancestralidade-progenito-titere.json', 'ancestralidade-sanguefrio.json'];
+const ancestralidades = loadJsonFiles("ancestralidades", files);
 
-    // Progenito Seltino
-    progenitoSeltino: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente"],
-      virtudes: ["Forma Híbrida", "Presença Ameaçadora"],
-      vicios: ["Ira de Seltan*", "Maldição do Rakta*"],
-      tracos: ["Fortitude", "Rapidez", "Metamorfose", "Mutação"],
-      condutasBloqueadas: ["Mestre de Vislumbres", "Mun'Kai", "Espúria", "Profeta"]
-    },
-
-    // Progenito Dunfrine
-    progenitoDunfrine: {
-      categoriasPossiveis: ["Ordinário", "Insólito", "Extraordinário"],
-      virtudes: ["Forma Animal*", "Sentidos Aguçados", "Percepção Inatural"],
-      vicios: ["Costume Selvagem"],
-      tracos: ["Versatilidade", "Metamorfose"],
-      condutasBloqueadas: ["Mestre de Vislumbres", "Mun'Kai", "Espúria", "Profeta"]
-    },
-
-    // Progenito Titere
-    progenitoTitere: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente"],
-      virtudes: ["Rito de Sangue*", "Insensibilidade", "Partes desmontáveis", "Expansão de Periféricos"],
-      vicios: ["Aparência Monstruosa", "Incurável", "Influxo de Éter*"],
-      tracos: ["Inumano", "Mutação", "Receptáculo"],
-      condutasBloqueadas: ["Mestre de Vislumbres", "Mun'Kai", "Espúria", "Profeta"]
-    },
-
-    // Progenito Cisco
-    progenitoCisco: {
-      categoriasPossiveis: ["Insólito", "Extraordinário", "Sobrehumano", "Ascendente"],
-      virtudes: ["Fotossíntese*", "Conexão Floral", "Comunhão com a Natureza"],
-      vicios: ["Pirofóricos*", "Aparência Monstruosa"],
-      tracos: ["Inumano", "Mutação"],
-      condutasBloqueadas: ["Mestre de Vislumbres", "Mun'Kai", "Espúria", "Profeta"]
-    },
-
-    // Espúria
-    espuria: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente", "Pilar"],
-      virtudes: ["Herança de Lamuria*", "Magnificência Herdada – Linhagem Superior*"],
-      vicios: ["Angústia do Miasma*"],
-      tracos: ["Nenhum"],
-      condutasBloqueadas: ["Mun'Kai", "Profeta"]
-    },
-
-    // Comensal
-    comensal: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente"],
-      virtudes: ["Âncora de Humanidade*", "Sentidos Aguçados", "Viajante Vertical"],
-      vicios: ["Vicio em Sangue*", "Vulnerável a Ferrugem*", "Sensibilidade Ao sol"],
-      tracos: ["Inumano", "Fortitude", "Rapidez"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Perenal
-    perenal: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente", "Pilar"],
-      virtudes: ["Partes desmontáveis", "Imortal", "Insensibilidade"],
-      vicios: ["Melancolia", "Aparência Monstruosa", "Loucura", "Incurável"],
-      tracos: ["Inumano", "Mutação"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Sanguefrio
-    sanguefrio: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente", "Pilar"],
-      virtudes: ["Casulo de Embrionagem*", "Regeneração Acelerada", "Regeneração Instantânea"],
-      vicios: ["Vulnerabilidade ao Frio*", "Olhos refratores*"],
-      tracos: ["Inumano", "Fortitude", "Rapidez", "Deslocação"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Nulo
-    nulo: {
-      categoriasPossiveis: ["Sobrehumano"],
-      virtudes: ["Criança de Barro*"],
-      vicios: ["Demanda por Servidão", "Corpo Frágil*", "Vazio Identitário"],
-      tracos: ["Versatilidade e Metamorfose"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Meandro
-    meandro: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente", "Pilar"],
-      virtudes: ["Qualquer um (a critério do Mestre)"],
-      vicios: ["Qualquer um (a critério do Mestre)"],
-      tracos: ["Nenhum"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Automato
-    automato: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente"],
-      virtudes: ["Transferência de Consciência*", "Partes desmontáveis", "Carapaça Revestida", "Insensibilidade"],
-      vicios: ["Lataria", "Córtex Defeituoso", "Dependência Energética*"],
-      tracos: ["Inumano", "Fortitude", "Receptáculo"],
-      condutasBloqueadas: ["Espúria", "Mun'kai", "Profeta"]
-    },
-
-    // Gandulo
-    gandulo: {
-      categoriasPossiveis: ["Sobrehumano", "Ascendente", "Pilar"],
-      virtudes: ["Sobrepujança mental*", "Insensibilidade"],
-      vicios: ["Vulnerabilidade a Eletricidade*", "Sensível ao Som*", "Forma de Verme"],
-      tracos: ["Inumano", "Rapidez e Receptáculo"],
-      condutasBloqueadas: []
-    }
+function contentAncestralidade(ancestralidade) {
+  if (!ancestralidade) return ancestralidades;
+  
+  if (ancestralidade === "keys") {
+    const keys = [];
+    $.each(ancestralidades, (index, item) => {
+      keys.push(item.id);
+    });
+    return keys;
   }
 
-  const categorias = ["Ordinário", "Insólito", "Extraordinário", "Sobrehumano", "Ascendente", "Pilar"];
-  const categoriasKeys = ["ordinario", "insolito", "extraordinario", "sobrehumano", "ascendente", "pilar"];
-
-  if (nome.includes("espuria")) {
-    return conteudo["espuria"];
-  }
-  if (nome === "categorias") {
-    return categorias;
-  }
-  if (nome === "categoriasKeys") {
-    return categoriasKeys;
+  if (ancestralidade.includes("espuria")) {
+    ancestralidade = "espuria";
   }
 
-  return conteudo[nome];
+  const ancestralidadeEscolhida = getContentItem(ancestralidades, ancestralidade);
+
+  if (ancestralidadeEscolhida === undefined) {
+    const errorMsg = `Erro: ancestralidade "${ancestralidade}" inválida.`;
+    console.error(errorMsg);
+    return [{ "ancestralidade": "ancestralidade_invalida" }];
+  } else {
+    return ancestralidadeEscolhida;
+  }
 }
 
+export default contentAncestralidade;
