@@ -53,6 +53,14 @@ function loadCondutas(container) {
           </div>
         </div>
       `);
+      $.each(ganhos, (index, ganho) => {
+        $(`#conduta #${id}.conduta-descricao-selecionada`).append(`
+          <div class="descricao-ganhos d-flex d-none">
+            <i class="bi bi-lightbulb" style="color: #fff;"></i>
+            <p class="conduta-ganho text-white ps-2">${ganho}</div>
+          </div>
+        `);
+      });
     } else {
       $(container).append(`
         <div 
@@ -78,16 +86,15 @@ function loadCondutas(container) {
           </div>
         </div>
       `);
+      $.each(ganhos, (index, ganho) => {
+        $(`#conduta #${id}.conduta-descricao:not(.conduta-descricao-selecionada)`).append(`
+          <div class="descricao-ganhos d-flex d-none">
+            <i class="bi bi-lightbulb" style="color: #fff;"></i>
+            <p class="conduta-ganho text-white ps-2">${ganho}</div>
+          </div>
+        `);
+      });
     }
-
-    $.each(ganhos, (index, ganho) => {
-      $(`#conduta #${id}`).append(`
-        <div class="descricao-ganhos d-flex d-none">
-          <i class="bi bi-lightbulb" style="color: #fff;"></i>
-          <p class="conduta-ganho text-white ps-2">${ganho}</div>
-        </div>
-      `);
-    });
   });
 
   $(`${container} .descricao-titulo *:not(.conduta-check)`).off("click");
