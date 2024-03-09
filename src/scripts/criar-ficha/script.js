@@ -6,7 +6,7 @@ import changeTamanho from "./changeTamanho.js";
 import changeAtributo from "./changeAtributo.js";
 import slickSlider from "../../scripts/common/slickSlider.js";
 import validaPasso from "./validaPasso.js";
-import ___debug from "./___debug.js";
+// import ___debug from "./___debug.js";
 
 $(document).ready(() => {
   changeAncestralidade();
@@ -18,5 +18,5 @@ $(document).ready(() => {
 
   slickSlider("#conduta .condutas");
   validaPasso();
-  ___debug();
+  // ___debug();
 });
