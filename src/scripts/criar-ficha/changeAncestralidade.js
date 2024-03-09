@@ -6,6 +6,7 @@ import validaPasso from "./validaPasso.js";
 
 function appendItem(tipo, element, items) {
   $(`#ancestralidade table ${element}`).html("");
+
   $.each(items, (index, item) => {
     let itemId = removeDiacritics(item).toLowerCase().replaceAll(" – ", " ").replaceAll(" ", "-").replace("*", "");
 
@@ -25,6 +26,16 @@ function appendItem(tipo, element, items) {
           </span>
         </p>
       `);
+
+      //Atualiza preview da ficha
+      if (element.includes("vicio")) {
+        $(".preview-vicios-empty").addClass("d-none");
+        $(".preview-vicios-obrigatorios + ul").append(`<li>${item.replace("*", "")}</li>`);
+      } else if (element.includes("virtude")) {
+        $(".preview-virtudes-empty").addClass("d-none");
+        $(".preview-virtudes-obrigatorias + ul").append(`<li>${item.replace("*", "")}</li>`);
+      }
+
     } else {
       $(`#ancestralidade table ${element}`).append(`
         <p class="item-modal-link" data=${itemId}  style="margin-bottom: 10px; border-left: 2px solid lightgrey; padding-left: 5px;">
@@ -33,6 +44,17 @@ function appendItem(tipo, element, items) {
       `);
     }
   });
+
+  //Atualiza preview da ficha
+  if (element.includes("vicio")) {
+    if ($(".preview-vicios-obrigatorios + ul li").length === 0) {
+      $(".preview-vicios-empty").removeClass("d-none");
+    }
+  } else if (element.includes("virtude")) {
+    if ($(".preview-virtudes-obrigatorias + ul li").length === 0) {
+      $(".preview-virtudes-empty").removeClass("d-none");
+    }
+  }
 }
 
 function updateCategoriasPossiveis() {
@@ -67,6 +89,14 @@ export default function changeAncestralidade() {
 
     if (!tipo.includes("Escolha")) {
       const ancestralidade = contentAncestralidade(tipo);
+
+      //Atualiza preview da ficha
+      $(".preview").removeClass("d-none");
+      $(".preview-warning").addClass("d-none");
+      $(".preview-ancestralidade").text(ancestralidade.titulo);
+      $(".preview-virtudes-obrigatorias + ul").html("");
+      $(".preview-vicios-obrigatorios + ul").html("");
+
       appendItem(tipo, ".categorias-possiveis", ancestralidade.categoriasPossiveis);
       appendItem(tipo, ".virtudes", ancestralidade.virtudes);
       appendItem(tipo, ".vicios", ancestralidade.vicios);
@@ -75,8 +105,13 @@ export default function changeAncestralidade() {
 
       $("#ancestralidade table").removeClass("d-none");
       $(".item-modal-link").on("click", (e) => mostrarDetalhes(e));
+
     } else {
       $("#ancestralidade table").addClass("d-none");
+
+      //Atualiza preview da ficha
+      $(".preview").addClass("d-none");
+      $(".preview-warning").removeClass("d-none");
     }
 
     updateCategoriasPossiveis();

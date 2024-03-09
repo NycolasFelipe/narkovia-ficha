@@ -1,6 +1,7 @@
 {
   "id": "cacador-de-cabecas",
   "tipo": "crime",
+  "tipoTitulo": "Crime",
   "titulo": "Caçador de Cabeças",
   "descricao": "Recebendo quantias generosa de NARKS para matar pessoas importantes, afinal, essa sua especialidade, encontrar e matar pessoas desavisadas.",
   "ganhos": [

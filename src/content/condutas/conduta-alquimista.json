@@ -1,6 +1,7 @@
 {
   "id": "alquimista",
   "tipo": "erudicao",
+  "tipoTitulo": "Erudição",
   "titulo": "Alquimista",
   "descricao": "Você é especialista em Alquimia. Criar remédios, drogas, venenos e todo tipo de reagentes usando componentes da natureza. É necessário ser um alto erudito ou ter aprendido informalmente pelo mundo do crime para dominar isso.",
   "ganhos": [

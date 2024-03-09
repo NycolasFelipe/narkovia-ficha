@@ -1,7 +1,8 @@
 {
-  "id": "filhas-da-primeira-luz",
+  "id": "filha-da-primeira-luz",
   "tipo": "oculto",
-  "titulo": "Filhas da primeira Luz",
+  "tipoTitulo": "Oculto",
+  "titulo": "Filha da primeira Luz",
   "descricao": "As espúrias que escolhem esse caminho, implica em que você optou pelos interesses do consulado, em servir a ele e aos interesses de preservação da dominação velada. Você tem obrigações a seguir, mas foi treinada para ter controle sobre sua herança, a dadiva recebida pela sua família. Sua família, pode te auxiliar em momentos de necessidade, mas você deve seguir seus dogmas e tradições. Espúrias são tão poderosas quanto mun’kais, porém conseguem ter maior discernimento e orientação sobre como usar suas habilidades e por isso tendem a manifestar feitos mais grandiosos.",
   "ganhos": [
     "Especialidade: Miasma",

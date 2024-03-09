@@ -1,6 +1,7 @@
 {
   "id": "artifice",
   "tipo": "arte",
+  "tipoTitulo": "Arte",
   "titulo": "Artífice",
   "descricao": "Pintor, escultor ou arquiteto. Você se expressa através da estética, optando pela linguagem do que observável, criando obras cativantes e encantadoras que ornamentam as casas dos ricos e embelezam os templos.",
   "ganhos": [

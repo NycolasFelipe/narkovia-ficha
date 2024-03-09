@@ -1,6 +1,7 @@
 {
   "id": "falsificador",
   "tipo": "crime",
+  "tipoTitulo": "Crime",
   "titulo": "Falsificador",
   "descricao": "Um pedaço de papel pode ser mais valioso do que ouro, há depender da circunstância. Você sabe como falsificar inúmeros documentos, copiar caligrafia e até recriar objetos, fazendo ser indistinguíveis do original.",
   "ganhos": [

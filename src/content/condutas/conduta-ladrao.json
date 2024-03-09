@@ -1,6 +1,7 @@
 {
   "id": "ladrao",
   "tipo": "crime",
+  "tipoTitulo": "Crime",
   "titulo": "Ladrão",
   "descricao": "Pode ser um batedor de carteiras ou um grande furtador de peças luxuosas, o fato é que você é especialistas em tirar objetos das posses de uma pessoa e dar para outra.",
   "ganhos": [

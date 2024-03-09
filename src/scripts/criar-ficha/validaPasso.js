@@ -1,4 +1,4 @@
-const PASSOS = ["ancestralidade", "categoria", "idade", "conduta"];
+const PASSOS = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo"];
 
 function updateQueryParam(value, key = "passo") {
   const url = new URL(window.location.href);
@@ -100,15 +100,29 @@ function validaPasso() {
       break;
 
     case "conduta":
-      $("#conduta .condutas").find(".slick-prev").click();
-      $("#conduta .bi-arrow-right-square-fill").hide();
+      const conduta = $("#conduta").data("valid");
+      const loaded = $("#conduta").data("loaded");
+      
+      if (!loaded) {
+        $("#conduta .condutas").find(".slick-prev").click();
+        $("#conduta .loading").show();
+        $("#conduta .condutas").css("filter", "opacity(0.0)");
+        setTimeout(() => {
+          $("#conduta .loading").hide();
+          $("#conduta .condutas").css("filter", "opacity(1.0)");
+        }, 500);
+      }
+      $("#conduta").data("loaded", true);
 
-      $(".loading").show();
-      $(".condutas").css("filter", "opacity(0.0)");
-      setTimeout(() => {
-        $(".loading").hide();
-        $(".condutas").css("filter", "opacity(1.0)");
-      }, 500);
+      allowPasso(conduta, proximoPassoButton);
+      break;
+
+    case "tamanho":
+      const tamanho = $("#tamanho").data("valid");
+      allowPasso(tamanho, proximoPassoButton);
+      break;
+
+    case "atributo":
       break;
 
     default:

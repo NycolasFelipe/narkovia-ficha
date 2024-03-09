@@ -7,6 +7,12 @@ function changeIdadeSlide(ancestralidades) {
   const valor = parseInt($('#idade input').val());
   const ancestralidadeEscolhida = $("#ancestralidade option:selected").attr("value");
 
+  //Atualiza preview
+  const url = window.location.search.split("=")[1];
+  if (url === "idade") {
+    $(".preview-vivencia").prev().removeClass("d-none");
+  }
+
   if (ancestralidadeEscolhida !== undefined) {
     $.each(ancestralidades, (i, e) => {
       if (ancestralidadeEscolhida.toLowerCase().includes(e.id.toLowerCase())) {
@@ -31,6 +37,14 @@ function changeIdadeSlide(ancestralidades) {
         $("#idade .vivenciaViciosMax").text(vivenciaInformacoes.viciosMax);
         $("#idade .vivenciaMaestria").text(vivenciaInformacoes.maestria);
         $("#idade .vivenciaCondutas").text(vivenciaInformacoes.condutas);
+
+        if (valor !== 0) {
+          let previewText = `${valor} ciclos (${vivenciaInformacoes.titulo.toLowerCase()})`;
+          if (valor === 1) previewText = `${valor} ciclo (${vivenciaTipo})`;
+          $(".preview-vivencia").text(previewText);
+        } else {
+          $(".preview-vivencia").text("");
+        }
 
         return false;
       }

@@ -1,6 +1,7 @@
 {
   "id": "inventor",
   "tipo": "erudicao",
+  "tipoTitulo": "Erudição",
   "titulo": "Inventor",
   "descricao": "Você é especialista em Mecânica. Sabe manusear os mais complexos itens de bronze, criando engenhocas e quinquilharias que podem ter inúmeras utilidades.",
   "ganhos": [

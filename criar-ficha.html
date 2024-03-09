@@ -245,15 +245,40 @@
           <i class="bi bi-chevron-double-right" style="position: relative; top: 1px;"></i>
       </p>
       </div>
-      <div class="condutas-selecionadas mt-3">
-
-      </div>
-      <div class="condutas-descricao">
-      </div>
+      <div class="condutas-selecionadas mt-3"></div>
+      <div class="condutas-descricao"></div>
       <div class="avancar-passo d-flex justify-content-between mt-5">
         <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
         <i class="bi bi-arrow-right-square-fill"></i>
       </div>
+    </div>
+    <div id="tamanho">
+      <p class="passo text-center text-white">5º Passo:</p>
+      <p class="passo-descricao text-center text-white">Escolha seu tamanho</p>
+      <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
+        <option selected>Escolha um tamanho</option>
+        <option value="-1">Altura baixa (até 1,3m)</option>
+        <option value="0">Altura mediana (1,3m - 2m)</option>
+        <option value="1">Altura grande (2m até 2,5m)</option>
+      </select>
+      <div class="avancar-passo d-flex justify-content-between mt-5">
+        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+        <i class="bi bi-arrow-right-square-fill"></i>
+      </div>
+    </div>
+    <div id="atributo">
+      <p class="passo text-center text-white">6º Passo:</p>
+      <p class="passo-descricao text-center text-white">Distribua seus pontos de atributo</p>
+      <div class="avancar-passo d-flex justify-content-between mt-5">
+        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+        <i class="bi bi-arrow-right-square-fill"></i>
+      </div>
+    </div>
+    <div id="resumo-preview">
+      <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#resumoPreviewModal">
+        <i class="bi bi-person-lines-fill" style="color: #fff;"></i>
+        Resumo da ficha
+      </button>
     </div>
   </main>
 
@@ -262,11 +287,11 @@
     data-bs-target="#detalhesModal"></button>
 
   <!-- Detalhes Modal -->
-  <div class="modal fade" id="detalhesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="detalhesModal" tabindex="-1" aria-labelledby="detalhesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 w-100" id="exampleModalLabel" style="text-align: center;">Título</h1>
+          <h1 class="modal-title fs-6 w-100" id="detalhesModalLabel" style="text-align: center;">Título</h1>
           <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
@@ -279,6 +304,52 @@
           <div class="modal-requirements">
             <h2 class="w-100 text-center fs-6">Requisitos:</h2>
             <p class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumo Preview -->
+  <div class="modal fade" id="resumoPreviewModal" tabindex="-1" aria-labelledby="resumoPreviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 w-100" id="resumoPreviewModalLabel" style="text-align: center;">Resumo da ficha</h1>
+          <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-description" style="padding: 10px 20px;">
+            <div class="preview-warning text-danger">
+              <i class="bi bi-exclamation-circle pe-1"></i>
+              Nenhum dado preenchido
+            </div>
+            <div class="preview d-none">
+              <p class="preview-label">Ancestralidade</p>
+              <p class="preview-value preview-ancestralidade"></p>
+              <p class="preview-label">Virtudes obrigatórias</p>
+              <p class="preview-value preview-virtudes-obrigatorias pb-2">
+                <span class="preview-virtudes-empty">-</span>
+              </p>
+              <ul></ul>
+              <p class="preview-label">Vícios obrigatórios</p>
+              <p class="preview-value preview-vicios-obrigatorios pb-2">
+                <span class="preview-vicios-empty">-</span>
+              </p>
+              <ul></ul>
+              <p class="preview-label d-none">Categoria</p>
+              <p class="preview-value preview-categoria"></p>
+              <p class="preview-label d-none">Vivência</p>
+              <p class="preview-value preview-vivencia"></p>
+              <p class="preview-label d-none">Conduta</p>
+              <p class="preview-value preview-conduta">
+                <span class="preview-conduta-empty d-none">-</span>
+              </p>
+              <ul></ul>
+              <p class="preview-label d-none">Tamanho</p>
+              <p class="preview-value preview-tamanho"></p>
+            </div>
           </div>
         </div>
       </div>

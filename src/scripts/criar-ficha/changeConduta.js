@@ -1,4 +1,5 @@
 import contentConduta from "../../content/conduta.js";
+import validaPasso from "./validaPasso.js";
 
 let condutas = [];
 let condutasDisponiveis = 0;
@@ -98,9 +99,37 @@ function loadCondutas(container) {
   });
 }
 
+function validate() {
+  if (condutasDisponiveis === condutasSelecionadas) {
+    $("#conduta").data("valid", true);
+
+    //Atualiza preview
+    const condutas = $(".conduta-descricao-selecionada:not(.d-none)");
+    $.each(condutas, (index, conduta) => {
+      let titulo = $(conduta).find(".conduta-titulo").text().trim();
+      let tipoConduta = contentConduta($(conduta).attr("id")).tipoTitulo;
+      let previewText = `${titulo} (${tipoConduta.toLowerCase()})`;
+      $(".preview-conduta + ul").append(`<li>${previewText}</li>`);
+    });
+    $(".preview-conduta-empty").addClass("d-none");
+    
+  } else {
+    $("#conduta").data("valid", false);
+   
+    //Atualiza preview
+    $(".preview-conduta + ul").html("");
+    const url = window.location.search.split("=")[1];
+    if (url === "conduta") {
+      $(".preview-conduta").prev().removeClass("d-none");
+    }
+  }
+  
+  validaPasso();
+}
+
 function tratamentoConduta(id) {
   switch (id) {
-    case "filhas-da-primeira-luz":
+    case "filha-da-primeira-luz":
       return "espuria";
 
     case "mestre-munkai":
@@ -175,6 +204,7 @@ function updateCondutas() {
       const condutaId = $(conduta).attr("id");
       $("#conduta").find(`.condutas-descricao #${condutaId}`).addClass("d-none");
       $("#conduta").find(`.condutas-selecionadas #${condutaId}`).removeClass("d-none");
+      validate();
     }
   });
   //Update conduta selecionada
@@ -184,9 +214,10 @@ function updateCondutas() {
     const condutaId = $(conduta).attr("id");
     $("#conduta").find(`.condutas-descricao #${condutaId}`).removeClass("d-none");
     $("#conduta").find(`.condutas-selecionadas #${condutaId}`).addClass("d-none");
-
+    
     const condutaSlideAtual = $(".conduta-selecionada").attr("id");
     filterCondutas(condutaSlideAtual);
+    validate();
   });
 }
 
@@ -228,9 +259,18 @@ function handleCondutasDisponiveis() {
     `);
   }
 
-  $(".voltar-passo").on("mouseup", () => {
-    $(".condutas-descricao").hide();
+  if (disponiveisHtml === "-") {
+    $("#conduta .loading:not(.loaded)").css("filter", "opacity(0.0)");
+  } else {
+    $("#conduta .loading:not(.loaded)").css("filter", "opacity(1.0)");
+  }
+
+  $("#conduta .voltar-passo").on("mouseup", () => {
+    $("#conduta .condutas-descricao").hide();
+    $("#conduta .conduta.conduta-selecionada").removeClass("conduta-selecionada");
   });
+
+  validate();
 }
 
 function handleEscolhaConduta() {
@@ -259,7 +299,9 @@ function changeConduta() {
     condutas = contentConduta();
     handleHint();
     handleEscolhaConduta();
+    $("#conduta").data("loaded", false);
   });
+
   $("#ancestralidade select").on("change", () => handleCondutasBloqueadas());
   $("#idade input").on("focusout", () => handleCondutasDisponiveis());
   $("#idade input").on("focusout", () => resetCondutas());
