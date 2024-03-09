@@ -82,6 +82,7 @@ function changeIdade() {
   changeIdadeSlide(ancestralidades);
 
   $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
+  $("#idade input").on("touchend", () => changeIdadeSlide(ancestralidades));
   $("#ancestralidade select").on("change", () => changeIdadeSlide(ancestralidades));
   $("#idade input").focusout(() => validaPasso());
   $("#idade input").focus(() => validaPasso());

@@ -203,8 +203,10 @@ function filterCondutas(condutaSlideAtual) {
 }
 
 function updateCondutas() {
+  // $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
   //Update conduta 
-  $("#conduta .conduta-descricao:not(.conduta-descricao-selecionada) .conduta-check").on("click", (e) => {
+  const conduta = $("#conduta .conduta-descricao:not(.conduta-descricao-selecionada) .conduta-check");
+  $.each(["click", "touchend"], (k, v) => $(conduta).on(v, (e) => {
     if (condutasSelecionadas < condutasDisponiveis) {
       condutasSelecionadas++;
       const conduta = $(e.currentTarget).parent().parent();
@@ -213,9 +215,11 @@ function updateCondutas() {
       $("#conduta").find(`.condutas-selecionadas #${condutaId}`).removeClass("d-none");
       validate();
     }
-  });
+  }));
+
   //Update conduta selecionada
-  $("#conduta .conduta-descricao-selecionada .conduta-check").on("click", (e) => {
+  const condutaSelecionada = $("#conduta .conduta-descricao-selecionada .conduta-check");
+  $.each(["click", "touchend"], (k, v) => $(condutaSelecionada).on(v, (e) => {
     condutasSelecionadas--;
     const conduta = $(e.currentTarget).parent().parent();
     const condutaId = $(conduta).attr("id");
@@ -225,7 +229,7 @@ function updateCondutas() {
     const condutaSlideAtual = $(".conduta-selecionada").attr("id");
     filterCondutas(condutaSlideAtual);
     validate();
-  });
+  }));
 }
 
 function resetCondutas() {
@@ -312,6 +316,8 @@ function changeConduta() {
   $("#ancestralidade select").on("change", () => handleCondutasBloqueadas());
   $("#idade input").on("focusout", () => handleCondutasDisponiveis());
   $("#idade input").on("focusout", () => resetCondutas());
+  $("#idade input").on("touchend", () => handleCondutasDisponiveis());
+  $("#idade input").on("touchend", () => resetCondutas());
   $("#idade .idade-buttons i").on("click", () => handleCondutasDisponiveis());
   $("#idade .idade-buttons i").on("click", () => resetCondutas());
 }
