@@ -41,244 +41,249 @@
       </button>
     </header>
     <hr style="margin: 0 auto;" class="hr border border-1 opacity-50 mt-5 mb-5 w-50">
-    <div id="ancestralidade">
-      <p class="passo text-center text-white">1º Passo:</p>
-      <p class="passo-descricao text-center text-white">Escolha uma ancestralidade</p>
-      <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
-        <option selected>Escolha sua ancestralidade</option>
-        <option value="humanoNarkoviano">Humano Narkoviano</option>
-        <option value="humanoMiraniano">Humano Miraniano</option>
-        <option value="progenitoSeltino">Progênito Mun'Kai Seltino</option>
-        <option value="progenitoDunfrine">Progênito Mun'Kai Dun'frine</option>
-        <option value="progenitoTitere">Progênito Mun'Kai Títere</option>
-        <option value="progenitoCisco">Progênito Mun'Kai Cisco</option>
-        <option value="espuriaFenixy">Espúria Fenixy</option>
-        <option value="espuriaGale">Espúria Gale</option>
-        <option value="espuriaSniff">Espúria Sniff</option>
-        <option value="espuriaMuphawa">Espúria Muphawa</option>
-        <option value="espuriaDunrock">Espúria Dunrock</option>
-        <option value="comensal">Comensal</option>
-        <option value="perenal">Perenal</option>
-        <option value="sanguefrio">Sangue-Frio</option>
-        <option value="nulo">Nulo</option>
-        <option value="meandro">Meandro</option>
-        <option value="automato">Autômato</option>
-        <option value="gandulo">Gândulo</option>
-      </select>
-      <table class="table table-bordered table-striped-columns d-none">
-        <tr>
-          <td class="fw-bold">Categorias Possíveis</td>
-          <td class="categorias-possiveis"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Virtudes</td>
-          <td class="virtudes"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Vícios</td>
-          <td class="vicios"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Traços</td>
-          <td class="tracos"></td>
-        </tr>
-        <tr>
-          <td class="fw-bold">Condutas Bloqueadas</td>
-          <td class="condutas-bloqueadas"></td>
-        </tr>
-      </table>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
-      </div>
+    <div class="loading-page w-100 text-center" style="position: relative; top: 40px;">
+      <div class="spinner-border text-light" role="status"><span class="sr-only"></span></div>
     </div>
-    <div id="categoria">
-      <p class="passo text-center text-white">2º Passo:</p>
-      <p class="passo-descricao text-center text-white">Escolha uma categoria</p>
-      <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
-        <option selected>Escolha sua categoria</option>
-        <option value="ordinario">Ordinário</option>
-        <option value="insolito">Insólito</option>
-        <option value="extraordinario">Extraordinário</option>
-        <option value="sobrehumano">Sobrehumano</option>
-      </select>
-      <table class="table table-bordered table-sm d-none">
-        <tr class="table-light text-center">
-          <td class="fw-bold" colspan="2">Atributos Máximos</td>
-        </tr>
-        <tr>
-          <td class="atributos text-center" colspan="2"></td>
-        </tr>
-        <tr class="table-light">
-          <td class="text-center fw-bold w-50">Sortilégio</td>
-          <td class="text-center fw-bold">Composição</td>
-        </tr>
-        <tr>
-          <td class="sortilegio text-center"></td>
-          <td class="composicao text-center"></td>
-        </tr>
-        <tr class="table-light">
-          <td class="text-center fw-bold">Graduação</td>
-          <td class="text-center fw-bold">Maestria</td>
-        </tr>
-        <tr>
-          <td class="graduacao text-center"></td>
-          <td class="maestria text-center"></td>
-        </tr>
-      </table>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
+    <div id="content" class="d-none">
+      <div id="ancestralidade">
+        <p class="passo text-center text-white">1º Passo:</p>
+        <p class="passo-descricao text-center text-white">Escolha uma ancestralidade</p>
+        <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua ancestralidade">
+          <option selected>Escolha sua ancestralidade</option>
+          <option value="humanoNarkoviano">Humano Narkoviano</option>
+          <option value="humanoMiraniano">Humano Miraniano</option>
+          <option value="progenitoSeltino">Progênito Mun'Kai Seltino</option>
+          <option value="progenitoDunfrine">Progênito Mun'Kai Dun'frine</option>
+          <option value="progenitoTitere">Progênito Mun'Kai Títere</option>
+          <option value="progenitoCisco">Progênito Mun'Kai Cisco</option>
+          <option value="espuriaFenixy">Espúria Fenixy</option>
+          <option value="espuriaGale">Espúria Gale</option>
+          <option value="espuriaSniff">Espúria Sniff</option>
+          <option value="espuriaMuphawa">Espúria Muphawa</option>
+          <option value="espuriaDunrock">Espúria Dunrock</option>
+          <option value="comensal">Comensal</option>
+          <option value="perenal">Perenal</option>
+          <option value="sanguefrio">Sangue-Frio</option>
+          <option value="nulo">Nulo</option>
+          <option value="meandro">Meandro</option>
+          <option value="automato">Autômato</option>
+          <option value="gandulo">Gândulo</option>
+        </select>
+        <table class="table table-bordered table-striped-columns d-none">
+          <tr>
+            <td class="fw-bold">Categorias Possíveis</td>
+            <td class="categorias-possiveis"></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Virtudes</td>
+            <td class="virtudes"></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Vícios</td>
+            <td class="vicios"></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Traços</td>
+            <td class="tracos"></td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Condutas Bloqueadas</td>
+            <td class="condutas-bloqueadas"></td>
+          </tr>
+        </table>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
       </div>
-    </div>
-    <div id="idade">
-      <p class="passo text-center text-white">3º Passo:</p>
-      <p class="passo-descricao text-center text-white">Escolha uma idade <span class="w-100"></span></p>
-      <div class="idade-buttons d-flex pb-2 justify-content-around align-items-center">
-        <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
-        <p class="text-center fs-5 mb-0"><span class="idade-value">0</span> ciclos</p>
-        <i class="idade-mais bi bi-chevron-right user-select-none" role="button"></i>
+      <div id="categoria">
+        <p class="passo text-center text-white">2º Passo:</p>
+        <p class="passo-descricao text-center text-white">Escolha uma categoria</p>
+        <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
+          <option selected>Escolha sua categoria</option>
+          <option value="ordinario">Ordinário</option>
+          <option value="insolito">Insólito</option>
+          <option value="extraordinario">Extraordinário</option>
+          <option value="sobrehumano">Sobrehumano</option>
+        </select>
+        <table class="table table-bordered table-sm d-none">
+          <tr class="table-light text-center">
+            <td class="fw-bold" colspan="2">Atributos Máximos</td>
+          </tr>
+          <tr>
+            <td class="atributos text-center" colspan="2"></td>
+          </tr>
+          <tr class="table-light">
+            <td class="text-center fw-bold w-50">Sortilégio</td>
+            <td class="text-center fw-bold">Composição</td>
+          </tr>
+          <tr>
+            <td class="sortilegio text-center"></td>
+            <td class="composicao text-center"></td>
+          </tr>
+          <tr class="table-light">
+            <td class="text-center fw-bold">Graduação</td>
+            <td class="text-center fw-bold">Maestria</td>
+          </tr>
+          <tr>
+            <td class="graduacao text-center"></td>
+            <td class="maestria text-center"></td>
+          </tr>
+        </table>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
       </div>
-      <input type="range" class="form-range" value="0" min="0" max="240">
-      <div class="idade-expectativa">
-        <p class="mb-0 text-center"><i class="bi bi-question-circle-fill pe-2"></i>Expectativa de vida: <span
-            class="expectativa-valor">0</span> ciclos
+      <div id="idade">
+        <p class="passo text-center text-white">3º Passo:</p>
+        <p class="passo-descricao text-center text-white">Escolha uma idade <span class="w-100"></span></p>
+        <div class="idade-buttons d-flex pb-2 justify-content-around align-items-center">
+          <i class="idade-menos bi bi-chevron-left user-select-none" role="button"></i>
+          <p class="text-center fs-5 mb-0"><span class="idade-value">0</span> ciclos</p>
+          <i class="idade-mais bi bi-chevron-right user-select-none" role="button"></i>
+        </div>
+        <input type="range" class="form-range" value="0" min="0" max="240">
+        <div class="idade-expectativa">
+          <p class="mb-0 text-center"><i class="bi bi-question-circle-fill pe-2"></i>Expectativa de vida: <span
+              class="expectativa-valor">0</span> ciclos
+          </p>
+        </div>
+        <table class="table table-bordered table-sm">
+          <tr>
+            <td class="fw-bold text-center" colspan="3">Vivência - <span class="vivencia fw-bold text-center"></span></td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-center">Sortilégio</td>
+            <td class="fw-bold text-center">Composição</td>
+            <td class="fw-bold text-center">Graduação</td>
+          </tr>
+          <tr>
+            <td class="vivenciaSortilegio text-center">-</td>
+            <td class="vivenciaComposicao text-center">-</td>
+            <td class="vivenciaGraduacao text-center">-</td>
+          </tr>
+          <tr>
+            <td class="fw-bold text-center">Vícios Max</td>
+            <td class="fw-bold text-center">Maestria</td>
+            <td class="fw-bold text-center">Condutas</td>
+          </tr>
+          <tr>
+            <td class="vivenciaViciosMax text-center">-</td>
+            <td class="vivenciaMaestria text-center">-</td>
+            <td class="vivenciaCondutas text-center">-</td>
+          </tr>
+        </table>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
+      </div>
+      <div id="conduta">
+        <p class="passo text-center text-white">4º Passo:</p>
+        <p class="passo-descricao text-center text-white">Escolha uma conduta</p>
+        <div class="loading w-100 text-center" style="position: relative; top: 40px;">
+          <div class="spinner-border text-light" role="status">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+        <div class="condutas">
+          <div id="condutaNatureza" class="card conduta" data="natureza" style="width: 18rem;">
+            <img src="./src/img/conduta-natureza.png" class="card-img-top" alt="Conduta da Natureza">
+            <div class="card-body">
+              <p class="card-text">Natureza</p>
+            </div>
+          </div>
+          <div id="condutaOculto" class="card conduta" data="oculto" style="width: 18rem;">
+            <img src="./src/img/conduta-oculto.png" class="card-img-top" alt="Conduta do Oculto">
+            <div class="card-body">
+              <p class="card-text">Oculto</p>
+            </div>
+          </div>
+          <div id="condutaSagrado" class="card conduta" data="sagrado" style="width: 18rem;">
+            <img src="./src/img/conduta-sagrado.png" class="card-img-top" alt="Conduta do Sagrado">
+            <div class="card-body">
+              <p class="card-text">Sagrado</p>
+            </div>
+          </div>
+          <div id="condutaErudicao" class="card conduta" data="erudicao" style="width: 18rem;">
+            <img loading="lazy" src="./src/img/conduta-erudicao.png" class="card-img-top" alt="Conduta da Erudição">
+            <div class="card-body">
+              <p class="card-text">Erudição</p>
+            </div>
+          </div>
+          <div id="condutaRiqueza" class="card conduta" data="riqueza" style="width: 18rem;">
+            <img src="./src/img/conduta-riqueza.png" class="card-img-top" alt="Conduta da Riqueza">
+            <div class="card-body">
+              <p class="card-text">Riqueza</p>
+            </div>
+          </div>
+          <div id="condutaCrime" class="card conduta" data="crime" style="width: 18rem;">
+            <img src="./src/img/conduta-crime.png" class="card-img-top" alt="Conduta do Crime">
+            <div class="card-body">
+              <p class="card-text">Crime</p>
+            </div>
+          </div>
+          <div id="condutaCombate" class="card conduta" data="combate" style="width: 18rem;">
+            <img src="./src/img/conduta-combate.png" class="card-img-top" alt="Conduta do Combate">
+            <div class="card-body">
+              <p class="card-text">Combate</p>
+            </div>
+          </div>
+          <div id="condutaOficio" class="card conduta" data="oficio" style="width: 18rem;">
+            <img src="./src/img/conduta-oficio.png" class="card-img-top" alt="Conduta do Ofício">
+            <div class="card-body">
+              <p class="card-text">Ofício</p>
+            </div>
+          </div>
+          <div id="condutaArte" class="card conduta" data="arte" style="width: 18rem;">
+            <img src="./src/img/conduta-arte.png" class="card-img-top" alt="Conduta da Arte">
+            <div class="card-body">
+              <p class="card-text">Arte</p>
+            </div>
+          </div>
+        </div>
+        <div class="condutas-swipe-hint">
+          <p class="text-center">
+            Arraste para mais condutas 
+            <i class="bi bi-chevron-double-right" style="position: relative; top: 1px;"></i>
         </p>
-      </div>
-      <table class="table table-bordered table-sm">
-        <tr>
-          <td class="fw-bold text-center" colspan="3">Vivência - <span class="vivencia fw-bold text-center"></span></td>
-        </tr>
-        <tr>
-          <td class="fw-bold text-center">Sortilégio</td>
-          <td class="fw-bold text-center">Composição</td>
-          <td class="fw-bold text-center">Graduação</td>
-        </tr>
-        <tr>
-          <td class="vivenciaSortilegio text-center">-</td>
-          <td class="vivenciaComposicao text-center">-</td>
-          <td class="vivenciaGraduacao text-center">-</td>
-        </tr>
-        <tr>
-          <td class="fw-bold text-center">Vícios Max</td>
-          <td class="fw-bold text-center">Maestria</td>
-          <td class="fw-bold text-center">Condutas</td>
-        </tr>
-        <tr>
-          <td class="vivenciaViciosMax text-center">-</td>
-          <td class="vivenciaMaestria text-center">-</td>
-          <td class="vivenciaCondutas text-center">-</td>
-        </tr>
-      </table>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
-      </div>
-    </div>
-    <div id="conduta">
-      <p class="passo text-center text-white">4º Passo:</p>
-      <p class="passo-descricao text-center text-white">Escolha uma conduta</p>
-      <div class="loading w-100 text-center" style="position: relative; top: 40px;">
-        <div class="spinner-border text-light" role="status">
-          <span class="sr-only"></span>
+        </div>
+        <div class="condutas-selecionadas mt-3"></div>
+        <div class="condutas-descricao"></div>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
         </div>
       </div>
-      <div class="condutas">
-        <div id="condutaNatureza" class="card conduta" data="natureza" style="width: 18rem;">
-          <img src="./src/img/conduta-natureza.png" class="card-img-top" alt="Conduta da Natureza">
-          <div class="card-body">
-            <p class="card-text">Natureza</p>
-          </div>
-        </div>
-        <div id="condutaOculto" class="card conduta" data="oculto" style="width: 18rem;">
-          <img src="./src/img/conduta-oculto.png" class="card-img-top" alt="Conduta do Oculto">
-          <div class="card-body">
-            <p class="card-text">Oculto</p>
-          </div>
-        </div>
-        <div id="condutaSagrado" class="card conduta" data="sagrado" style="width: 18rem;">
-          <img src="./src/img/conduta-sagrado.png" class="card-img-top" alt="Conduta do Sagrado">
-          <div class="card-body">
-            <p class="card-text">Sagrado</p>
-          </div>
-        </div>
-        <div id="condutaErudicao" class="card conduta" data="erudicao" style="width: 18rem;">
-          <img loading="lazy" src="./src/img/conduta-erudicao.png" class="card-img-top" alt="Conduta da Erudição">
-          <div class="card-body">
-            <p class="card-text">Erudição</p>
-          </div>
-        </div>
-        <div id="condutaRiqueza" class="card conduta" data="riqueza" style="width: 18rem;">
-          <img src="./src/img/conduta-riqueza.png" class="card-img-top" alt="Conduta da Riqueza">
-          <div class="card-body">
-            <p class="card-text">Riqueza</p>
-          </div>
-        </div>
-        <div id="condutaCrime" class="card conduta" data="crime" style="width: 18rem;">
-          <img src="./src/img/conduta-crime.png" class="card-img-top" alt="Conduta do Crime">
-          <div class="card-body">
-            <p class="card-text">Crime</p>
-          </div>
-        </div>
-        <div id="condutaCombate" class="card conduta" data="combate" style="width: 18rem;">
-          <img src="./src/img/conduta-combate.png" class="card-img-top" alt="Conduta do Combate">
-          <div class="card-body">
-            <p class="card-text">Combate</p>
-          </div>
-        </div>
-        <div id="condutaOficio" class="card conduta" data="oficio" style="width: 18rem;">
-          <img src="./src/img/conduta-oficio.png" class="card-img-top" alt="Conduta do Ofício">
-          <div class="card-body">
-            <p class="card-text">Ofício</p>
-          </div>
-        </div>
-        <div id="condutaArte" class="card conduta" data="arte" style="width: 18rem;">
-          <img src="./src/img/conduta-arte.png" class="card-img-top" alt="Conduta da Arte">
-          <div class="card-body">
-            <p class="card-text">Arte</p>
-          </div>
+      <div id="tamanho">
+        <p class="passo text-center text-white">5º Passo:</p>
+        <p class="passo-descricao text-center text-white">Escolha seu tamanho</p>
+        <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
+          <option selected>Escolha um tamanho</option>
+          <option value="-1">Altura baixa (até 1,3m)</option>
+          <option value="0">Altura mediana (1,3m - 2m)</option>
+          <option value="1">Altura grande (2m até 2,5m)</option>
+        </select>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
         </div>
       </div>
-      <div class="condutas-swipe-hint">
-        <p class="text-center">
-          Arraste para mais condutas 
-          <i class="bi bi-chevron-double-right" style="position: relative; top: 1px;"></i>
-      </p>
+      <div id="atributo">
+        <p class="passo text-center text-white">6º Passo:</p>
+        <p class="passo-descricao text-center text-white">Distribua seus pontos de atributo</p>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
       </div>
-      <div class="condutas-selecionadas mt-3"></div>
-      <div class="condutas-descricao"></div>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
+      <div id="resumo-preview">
+        <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#resumoPreviewModal">
+          <i class="bi bi-person-lines-fill" style="color: #fff;"></i>
+          Resumo da ficha
+        </button>
       </div>
-    </div>
-    <div id="tamanho">
-      <p class="passo text-center text-white">5º Passo:</p>
-      <p class="passo-descricao text-center text-white">Escolha seu tamanho</p>
-      <select style="cursor: pointer;" class="form-select form-select-md mb-3" aria-label="Escolha sua categoria">
-        <option selected>Escolha um tamanho</option>
-        <option value="-1">Altura baixa (até 1,3m)</option>
-        <option value="0">Altura mediana (1,3m - 2m)</option>
-        <option value="1">Altura grande (2m até 2,5m)</option>
-      </select>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
-      </div>
-    </div>
-    <div id="atributo">
-      <p class="passo text-center text-white">6º Passo:</p>
-      <p class="passo-descricao text-center text-white">Distribua seus pontos de atributo</p>
-      <div class="avancar-passo d-flex justify-content-between mt-5">
-        <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
-        <i class="bi bi-arrow-right-square-fill"></i>
-      </div>
-    </div>
-    <div id="resumo-preview">
-      <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#resumoPreviewModal">
-        <i class="bi bi-person-lines-fill" style="color: #fff;"></i>
-        Resumo da ficha
-      </button>
     </div>
   </main>
 
