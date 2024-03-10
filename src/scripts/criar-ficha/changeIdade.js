@@ -66,8 +66,12 @@ function updateExpectativa() {
   $("#ancestralidade select").on("change", () => {
     const option = $("#ancestralidade option:selected").attr("value");
     if (option !== undefined) {
-      const expectativaDeVida = contentAncestralidade(option).vivencia.expectativa;
+      const ancestralidade = contentAncestralidade(option);
+      const expectativaDeVida = ancestralidade.vivencia.expectativa;
       $("#idade .expectativa-valor").text(expectativaDeVida);
+
+      const expectativaInt = parseInt(expectativaDeVida);
+      $("#idade input").attr("max", expectativaInt + 10);
     }
   });
 }
