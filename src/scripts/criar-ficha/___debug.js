@@ -9,31 +9,37 @@ function setUrl(passo) {
 }
 
 function ___debug() {
-  // $("#ancestralidade select option:eq(1)").prop("selected", "selected");
-  // setTimeout(() => {
-  //   $("#ancestralidade select").change();
-  //   setUrl("categoria");
-  // }, 100);
+  $("#ancestralidade select option:eq(1)").prop("selected", "selected");
+  setTimeout(() => {
+    $("#ancestralidade select").change();
+    setUrl("categoria");
+  }, 100);
 
-  // setTimeout(() => {
-  //   $("#categoria select option:eq(1)").prop("selected", "selected");
-  // }, 200);
-  // setTimeout(() => {
-  //   $("#categoria select").change();
-  //   setUrl("idade");
-  // }, 300);
+  setTimeout(() => {
+    $("#categoria select option:eq(1)").prop("selected", "selected");
+  }, 200);
+  setTimeout(() => {
+    $("#categoria select").change();
+    setUrl("idade");
+  }, 300);
 
-  // setTimeout(() => {
-  //   $("#idade .idade-mais").click();
-  // }, 400);
-  // setTimeout(() => {
-  //   setUrl("conduta");
-  // }, 500);
+  setTimeout(() => {
+    $("#idade .idade-mais").click();
+  }, 400);
+  setTimeout(() => {
+    setUrl("conduta");
+  }, 500);
 
-  // setTimeout(() => {
-  //   setUrl("tamanho");
-    
-  // }, 600);
+  setTimeout(() => {
+    setUrl("tamanho");
+    $("#tamanho select option:eq(1)").prop("selected", "selected");
+    $("#tamanho select").change();
+  }, 600);
+
+  setTimeout(() => {
+    setUrl("atributo");
+    $("#tamanho .bi-arrow-right-square-fill").mouseup();
+  }, 700);
 }
 
 export default ___debug;

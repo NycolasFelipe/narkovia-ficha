@@ -273,17 +273,41 @@
       <div id="atributo">
         <p class="passo text-center text-white">6º Passo:</p>
         <p class="passo-descricao text-center text-white">Distribua seus pontos de atributo</p>
+        <div class="pontos-composicao text-center pontos-composicao-mb">
+          <p>Pontos de composição:</p>
+          <span class="pontos-restantes">0</span>
+          <span>/</span>
+          <span class="pontos-disponiveis">0</span>
+          <span class="pontos-alerta" style="display: none;">
+            <i class="bi bi-exclamation-triangle"></i>
+            Pontos excedentes
+          </span>
+          <span class="pontos-ok" style="display: none;">
+            <i class="bi bi-check-circle"></i>
+            Pontos distribuídos
+          </span>
+        </div>
+        <div class="atributos"></div>
         <div class="avancar-passo d-flex justify-content-between mt-5">
           <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
           <i class="bi bi-arrow-right-square-fill"></i>
         </div>
       </div>
-      <div id="resumo-preview">
-        <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#resumoPreviewModal">
-          <i class="bi bi-person-lines-fill" style="color: #fff;"></i>
-          Resumo da ficha
-        </button>
+      <div id="graduacao">
+        <p class="passo text-center text-white">7º Passo:</p>
+        <p class="passo-descricao text-center text-white">Distribua seus pontos de graduação</p>
+        <div class="pontos-composicao text-center pontos-composicao-mb">
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
       </div>
+    </div>
+    <div id="resumo-preview">
+      <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#resumoPreviewModal">
+        <i class="bi bi-person-lines-fill" style="color: #fff;"></i>
+        Resumo da ficha
+      </button>
     </div>
   </main>
 

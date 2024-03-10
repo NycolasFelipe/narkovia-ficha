@@ -1,4 +1,4 @@
-const PASSOS = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo"];
+const PASSOS = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo", "graduacao"];
 
 function updateQueryParam(value, key = "passo") {
   const url = new URL(window.location.href);
@@ -123,6 +123,8 @@ function validaPasso() {
       break;
 
     case "atributo":
+      const atributo = $("#atributo").data("valid");
+      allowPasso(atributo, proximoPassoButton);
       break;
 
     default:

@@ -203,7 +203,6 @@ function filterCondutas(condutaSlideAtual) {
 }
 
 function updateCondutas() {
-  // $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
   //Update conduta 
   const conduta = $("#conduta .conduta-descricao:not(.conduta-descricao-selecionada) .conduta-check");
   $.each(["click", "touchend"], (k, v) => $(conduta).on(v, (e) => {

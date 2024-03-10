@@ -4,6 +4,7 @@ import changeIdade from "./changeIdade.js";
 import changeConduta from "./changeConduta.js";
 import changeTamanho from "./changeTamanho.js";
 import changeAtributo from "./changeAtributo.js";
+import changeGraduacao from "./changeGraduacao.js";
 import slickSlider from "../../scripts/common/slickSlider.js";
 import validaPasso from "./validaPasso.js";
 import handleLoading from "./handleLoading.js";
@@ -18,6 +19,7 @@ $(document).ready(() => {
   changeConduta();
   changeTamanho();
   changeAtributo();
+  changeGraduacao()
 
   slickSlider("#conduta .condutas");
   validaPasso();
