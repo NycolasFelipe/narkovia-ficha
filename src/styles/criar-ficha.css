@@ -18,6 +18,10 @@ table .item-modal-link:hover {
   transition: all 0.3s ease;
 }
 
+.modal-title {
+  font-weight: bold;
+}
+
 .passo {
   font-family: "Libre Baskerville", serif;
   font-size: 1.5rem;
@@ -244,13 +248,19 @@ table .item-modal-link:hover {
   border-color: #fff !important;
 }
 
-#resumo-preview button:hover > i {
+#resumo-preview button:hover>i {
   filter: opacity(1);
   transition: all 0.3s ease;
 }
 
 #resumoPreviewModal {
   font-family: "Libre Baskerville", serif;
+}
+
+#resumoPreviewModal .preview {
+  display: flex;
+  flex-direction: column;
+  margin-left: -20px;
 }
 
 #resumoPreviewModal .preview-warning {
@@ -286,7 +296,7 @@ table .item-modal-link:hover {
   margin-bottom: 15px;
 }
 
-#resumoPreviewModal .preview-value + ul {
+#resumoPreviewModal .preview-value+ul {
   list-style: none;
   pointer-events: none;
   padding-left: 0;
@@ -295,7 +305,7 @@ table .item-modal-link:hover {
   margin-left: 20px;
 }
 
-#resumoPreviewModal .preview-value + ul li {
+#resumoPreviewModal .preview-value+ul li {
   font-weight: 500;
   border-left: 2px solid lightgrey;
   margin-bottom: 5px;
@@ -303,13 +313,88 @@ table .item-modal-link:hover {
   line-height: 1.2;
 }
 
-#resumoPreviewModal .preview-conduta + ul {
+#resumoPreviewModal .preview-conduta+ul {
   margin-top: -12px !important;
+}
+
+#resumoPreviewModal .preview-atributo+ul {
+  margin-top: -12px;
+}
+
+#resumoPreviewModal .preview-atributo+ul li {
+  display: flex;
+  border-left: none;
+  margin-left: -5px;
+}
+
+#resumoPreviewModal .preview-atributo-line {
+  flex: 1;
+  border-bottom: 1px dotted lightgrey;
+  margin: 5px;
+}
+
+#resumoPreviewModal .preview-conduta-empty,
+#resumoPreviewModal .preview-vicios-empty,
+#resumoPreviewModal .preview-virtudes-empty,
+#resumoPreviewModal .preview-atributo-empty {
+  border-left: none !important;
+}
+
+#resumoPreviewModal .preview-conduta-item+.preview-conduta-empty,
+#resumoPreviewModal .preview-vicios-item+.preview-vicios-empty,
+#resumoPreviewModal .preview-virtudes-item+.preview-virtudes-empty,
+#resumoPreviewModal .preview-atributo-item+.preview-atributo-empty {
+  display: none;
 }
 
 /* Atributos */
 #atributo {
   font-family: "Libre Baskerville", serif;
+}
+
+#atributo .atributos {
+  display: flex;
+  flex-direction: column;
+}
+
+#atributo .atributos .aura,
+#resumoPreviewModal .aura {
+  order: 1;
+}
+
+#atributo .atributos .captacao,
+#resumoPreviewModal .captacao {
+  order: 2;
+}
+
+#atributo .atributos .celeridade,
+#resumoPreviewModal .celeridade {
+  order: 3;
+}
+
+#atributo .atributos .eteressencia,
+#resumoPreviewModal .eteressencia {
+  order: 4;
+}
+
+#atributo .atributos .idoneidade,
+#resumoPreviewModal .idoneidade {
+  order: 5;
+}
+
+#atributo .atributos .pujanca,
+#resumoPreviewModal .pujanca {
+  order: 6;
+}
+
+#atributo .atributos .tenacidade,
+#resumoPreviewModal .tenacidade {
+  order: 7;
+}
+
+#atributo .atributos .sapiencia,
+#resumoPreviewModal .sapiencia {
+  order: 8;
 }
 
 #atributo .pontos-composicao {
@@ -343,7 +428,7 @@ table .item-modal-link:hover {
   justify-content: space-between;
   padding: 0 36px;
   margin-bottom: -10px;
-} 
+}
 
 #atributo .atributo-pontos {
   cursor: default;

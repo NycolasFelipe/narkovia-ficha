@@ -9,6 +9,7 @@ function setUrl(passo) {
 }
 
 function ___debug() {
+  /*
   $("#ancestralidade select option:eq(1)").prop("selected", "selected");
   setTimeout(() => {
     $("#ancestralidade select").change();
@@ -24,7 +25,11 @@ function ___debug() {
   }, 300);
 
   setTimeout(() => {
-    $("#idade .idade-mais").click();
+    for (let i = 0; i < 10; i++) {
+      $("#idade .idade-mais").click();
+      $("#idade .idade-mais").click();
+      $("#idade .idade-mais").click();
+    }
   }, 400);
   setTimeout(() => {
     setUrl("conduta");
@@ -40,6 +45,7 @@ function ___debug() {
     setUrl("atributo");
     $("#tamanho .bi-arrow-right-square-fill").mouseup();
   }, 700);
+  */
 }
 
 export default ___debug;

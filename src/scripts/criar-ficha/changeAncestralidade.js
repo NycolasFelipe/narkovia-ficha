@@ -29,11 +29,9 @@ function appendItem(tipo, element, items) {
 
       //Atualiza preview da ficha
       if (element.includes("vicio")) {
-        $(".preview-vicios-empty").addClass("d-none");
-        $(".preview-vicios-obrigatorios + ul").append(`<li>${item.replace("*", "")}</li>`);
+        $(".preview-vicios-obrigatorios + ul").prepend(`<li class="preview-vicios-item">${item.replace("*", "")}</li>`);
       } else if (element.includes("virtude")) {
-        $(".preview-virtudes-empty").addClass("d-none");
-        $(".preview-virtudes-obrigatorias + ul").append(`<li>${item.replace("*", "")}</li>`);
+        $(".preview-virtudes-obrigatorias + ul").prepend(`<li class="preview-virtudes-item">${item.replace("*", "")}</li>`);
       }
 
     } else {
@@ -44,17 +42,6 @@ function appendItem(tipo, element, items) {
       `);
     }
   });
-
-  //Atualiza preview da ficha
-  if (element.includes("vicio")) {
-    if ($(".preview-vicios-obrigatorios + ul li").length === 0) {
-      $(".preview-vicios-empty").removeClass("d-none");
-    }
-  } else if (element.includes("virtude")) {
-    if ($(".preview-virtudes-obrigatorias + ul li").length === 0) {
-      $(".preview-virtudes-empty").removeClass("d-none");
-    }
-  }
 }
 
 function updateCategoriasPossiveis() {
@@ -83,7 +70,7 @@ function updateCategoriasPossiveis() {
   });
 }
 
-export default function changeAncestralidade() {
+function changeAncestralidade() {
   $("#ancestralidade select").on("change", (e) => {
     const tipo = $(e.currentTarget).val();
 
@@ -94,8 +81,8 @@ export default function changeAncestralidade() {
       $(".preview").removeClass("d-none");
       $(".preview-warning").addClass("d-none");
       $(".preview-ancestralidade").text(ancestralidade.titulo);
-      $(".preview-virtudes-obrigatorias + ul").html("");
-      $(".preview-vicios-obrigatorios + ul").html("");
+      $(".preview-virtudes-obrigatorias + ul li:not(.preview-virtudes-empty)").remove();
+      $(".preview-vicios-obrigatorios + ul li:not(.preview-vicios-empty)").remove();
 
       appendItem(tipo, ".categorias-possiveis", ancestralidade.categoriasPossiveis);
       appendItem(tipo, ".virtudes", ancestralidade.virtudes);
@@ -118,3 +105,5 @@ export default function changeAncestralidade() {
     validaPasso();
   });
 }
+
+export default changeAncestralidade;

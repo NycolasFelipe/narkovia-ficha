@@ -3,15 +3,8 @@ import contentVivencia from "../../content/vivencia.js";
 import validaPasso from "./validaPasso.js";
 
 function changeIdadeSlide(ancestralidades) {
-  $('#idade .idade-value').text($("#idade input").val());
   const valor = parseInt($('#idade input').val());
   const ancestralidadeEscolhida = $("#ancestralidade option:selected").attr("value");
-
-  //Atualiza preview
-  const url = window.location.search.split("=")[1];
-  if (url === "idade") {
-    $(".preview-vivencia").prev().removeClass("d-none");
-  }
 
   if (ancestralidadeEscolhida !== undefined) {
     $.each(ancestralidades, (i, e) => {
@@ -38,6 +31,7 @@ function changeIdadeSlide(ancestralidades) {
         $("#idade .vivenciaMaestria").text(vivenciaInformacoes.maestria);
         $("#idade .vivenciaCondutas").text(vivenciaInformacoes.condutas);
 
+        //Atualiza preview
         if (valor !== 0) {
           let previewText = `${valor} ciclos (${vivenciaInformacoes.titulo.toLowerCase()})`;
           if (valor === 1) previewText = `${valor} ciclo (${vivenciaTipo})`;
@@ -50,6 +44,12 @@ function changeIdadeSlide(ancestralidades) {
       }
     });
   }
+
+  // Atualiza preview
+  const url = window.location.search.split("=")[1];
+  if (url === "idade") {
+    $(".preview-vivencia").prev().removeClass("d-none");
+  }
 }
 
 function changeIdadeButton(ancestralidades, value) {
@@ -60,6 +60,10 @@ function changeIdadeButton(ancestralidades, value) {
 
 function incrementIdade(num) {
   $("#idade input").val(parseInt($("#idade input").val()) + num);
+}
+
+function updateIdade() {
+  $('#idade .idade-value').text($("#idade input").val());
 }
 
 function updateExpectativa() {
@@ -82,10 +86,11 @@ function changeIdade() {
   //Atualiza expectativa de vida quando a ancestralidade muda
   updateExpectativa();
 
-  // //Atualiza idade ao mover slide
+  //Atualiza idade ao mover slide
   changeIdadeSlide(ancestralidades);
 
-  $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
+  $.each(["mouseup", "touch"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
+  $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => updateIdade()));
   $("#idade input").on("touchend", () => changeIdadeSlide(ancestralidades));
   $("#ancestralidade select").on("change", () => changeIdadeSlide(ancestralidades));
   $("#idade input").focusout(() => validaPasso());
@@ -93,6 +98,12 @@ function changeIdade() {
   $("#idade input").on("touchend", () => validaPasso());
   $("#idade .idade-mais").on("click", () => changeIdadeButton(ancestralidades, 1));
   $("#idade .idade-menos").on("click", () => changeIdadeButton(ancestralidades, -1));
+
+  //Atualiza preview
+  $("#idade .bi-arrow-right-square-fill").one("mouseup", () => {
+    $(".preview-conduta").prev().removeClass("d-none");
+    $(".preview-conduta-empty").removeClass("d-none");
+  });
 
   changeIdadeSlide();
 }

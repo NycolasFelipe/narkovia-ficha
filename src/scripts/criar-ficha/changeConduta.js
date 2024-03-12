@@ -116,19 +116,13 @@ function validate() {
       let titulo = $(conduta).find(".conduta-titulo").text().trim();
       let tipoConduta = contentConduta($(conduta).attr("id")).tipoTitulo;
       let previewText = `${titulo} (${tipoConduta.toLowerCase()})`;
-      $(".preview-conduta + ul").append(`<li>${previewText}</li>`);
+      $(".preview-conduta + ul").prepend(`<li class="preview-conduta-item">${previewText}</li>`);
     });
-    $(".preview-conduta-empty").addClass("d-none");
-    
   } else {
     $("#conduta").data("valid", false);
-   
+  
     //Atualiza preview
-    $(".preview-conduta + ul").html("");
-    const url = window.location.search.split("=")[1];
-    if (url === "conduta") {
-      $(".preview-conduta").prev().removeClass("d-none");
-    }
+    $(".preview-conduta + ul li:not(.preview-conduta-empty)").remove();
   }
   
   validaPasso();
@@ -212,6 +206,24 @@ function updateCondutas() {
       const condutaId = $(conduta).attr("id");
       $("#conduta").find(`.condutas-descricao #${condutaId}`).addClass("d-none");
       $("#conduta").find(`.condutas-selecionadas #${condutaId}`).removeClass("d-none");
+
+      //Replica estado de exibição
+      const corpoVisivel = !$(conduta).find(".descricao-corpo").hasClass("d-none");
+      const chevronClasslist = $(conduta).find(".conduta-titulo + i").attr("class");
+      const nodeDescricao = $(`#${condutaId}.conduta-descricao-selecionada .descricao-corpo`);
+      const nodeGanhos = $(`#${condutaId}.conduta-descricao-selecionada .descricao-ganhos`);
+      const nodeChevron = $(`#${condutaId}.conduta-descricao-selecionada .conduta-titulo + i`);
+
+      if (corpoVisivel) {
+        $(nodeDescricao).removeClass("d-none");
+        $(nodeGanhos).removeClass("d-none");
+      } else {
+        $(nodeDescricao).addClass("d-none");
+        $(nodeGanhos).addClass("d-none");
+      }
+      $(nodeChevron).removeClass();
+      $(nodeChevron).addClass(chevronClasslist);
+
       validate();
     }
   }));
@@ -224,6 +236,23 @@ function updateCondutas() {
     const condutaId = $(conduta).attr("id");
     $("#conduta").find(`.condutas-descricao #${condutaId}`).removeClass("d-none");
     $("#conduta").find(`.condutas-selecionadas #${condutaId}`).addClass("d-none");
+
+    //Replica estado de exibição
+    const corpoVisivel = !$(conduta).find(".descricao-corpo").hasClass("d-none");
+    const chevronClasslist = $(conduta).find(".conduta-titulo + i").attr("class");
+    const nodeDescricao = $(`#${condutaId}.conduta-descricao:not(.conduta-descricao-selecionada) .descricao-corpo`);
+    const nodeGanhos = $(`#${condutaId}.conduta-descricao:not(.conduta-descricao-selecionada) .descricao-ganhos`);
+    const nodeChevron = $(`#${condutaId}.conduta-descricao:not(.conduta-descricao-selecionada) .conduta-titulo + i`);
+    
+    if (corpoVisivel) {
+      $(nodeDescricao).removeClass("d-none");
+      $(nodeGanhos).removeClass("d-none");
+    } else {
+      $(nodeDescricao).addClass("d-none");
+      $(nodeGanhos).addClass("d-none");
+    }    
+    $(nodeChevron).removeClass();
+    $(nodeChevron).addClass(chevronClasslist);
     
     const condutaSlideAtual = $(".conduta-selecionada").attr("id");
     filterCondutas(condutaSlideAtual);

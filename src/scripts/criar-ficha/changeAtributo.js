@@ -87,6 +87,30 @@ function checkPontos() {
     $("#atributo .pontos-composicao").addClass("pontos-composicao-mb");
     $("#atributo").data("valid", false);
   }
+
+  if ($("#atributo").data("valid")) {
+    $("#resumoPreviewModal .preview-atributo + ul li:not(.preview-atributo-empty)").remove();
+
+    let atributos = $("#atributo .atributo").get().reverse();
+    $.each(atributos, (index, atributo) => {
+      const classe = $(atributo).attr("class").split(" ")[0];
+      console.log(classe);
+      const tipo = $(atributo).find(".atributo-titulo p:first").text();
+      const valor = $(atributo).find(".bi-square-fill").length;
+      let pontos = `<i class="bi bi-slash-square-fill"></i>`;
+      for (let i = 0; i < valor; i++) pontos += `<i class="bi bi-square-fill ps-1"></i>`;
+
+      const atributoResumoItem = `
+        <li class="${classe} preview-atributo-item">
+          <span>${tipo}</span>
+          <span class="preview-atributo-line"></span>
+          <span>${pontos}</span>
+        </li>
+      `;
+      $("#resumoPreviewModal .preview-atributo + ul").prepend(atributoResumoItem);
+    });
+  }
+
   validaPasso();
 }
 
@@ -130,7 +154,7 @@ function updatePontosDisponiveis() {
 function changeAtributo() {
   const atributos = contentAtributo();
   const contentLoaded = setInterval(() => {
-    if (atributos.length > 0) {
+    if (atributos.length === 8) {
       clearInterval(contentLoaded);
       loadPontos(atributos);
       updatePontosDisponiveis();
@@ -145,6 +169,13 @@ function changeAtributo() {
   $("#idade input").on("touchend", () => resetPontos());
   $("#idade .idade-mais").on("click", () => resetPontos());
   $("#idade .idade-menos").on("click", () => resetPontos());
+
+  // Atualiza preview
+  $("#tamanho .bi-arrow-right-square-fill").one("mouseup", () => {
+    $(".preview-atributo").prev().removeClass("d-none");
+    $(".preview-atributo").next().removeClass("d-none");
+    $(".preview-atributo-empty").removeClass("d-none");
+  });
 }
 
 export default changeAtributo;
