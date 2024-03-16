@@ -1,0 +1,29 @@
+{
+  "id": "cacador-da-noite",
+  "tipo": "natureza",
+  "tipoTitulo": "Natureza",
+  "titulo": "Caçador da Noite",
+  "descricao": "Outrora foram considerados grandiosos heróis nos séculos passados, atualmente, vivem em condições precárias e insalubres. São aqueles que caçam as criaturas da noite, muitas vezes sendo motivado não por riqueza ou gratidão, mas por puro ódio. Nem todos os caçadores seguem esse paradigma, mas a maioria vem de uma tradição, ou crença purificadora de fazer o que for necessário para limpar o mundo do mal que assola sobre ele. Dedicam sua vida para entender as fraquezas dessas criaturas e como explorar isso, sabem usar alquímicos e se adaptar as mais diversas condições. Já não existe, mas tanta demanda para esses serviços então eles vivem com muita pouco e como vivem nos ermos não são muito bem-vindos nas cidades, sob a premissa de trazerem mal agouro.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Artefatos & Relicários",
+        "id": "maestria-artefatos-e-relicarios"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Técnica ou Sagacidade)",
+          "opcoes": [
+            "tecnica",
+            "sagacidade"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "humanoNarkoviano",
+  "titulo": "Humano Narkoviano",
+  "categoriasPossiveis": [
+    "Ordinário",
+    "Insólito",
+    "Extraordinário"
+  ],
+  "virtudes": [
+    "Nenhum"
+  ],
+  "vicios": [
+    "Nenhum"
+  ],
+  "tracos": [
+    "Versatilidade"
+  ],
+  "condutasBloqueadas": [
+    "Mun'Kai",
+    "Espúria"
+  ],
+  "vivencia": {
+    "expectativa": "80",
+    "infanteMax": 16,
+    "jovemMax": 30,
+    "maduroMax": 60
+  },
+  "viciosMax": 10
+}

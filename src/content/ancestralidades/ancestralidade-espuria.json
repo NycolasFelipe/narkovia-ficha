@@ -1,0 +1,30 @@
+{
+  "id": "espuria",
+  "titulo": "Espúria",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente",
+    "Pilar"
+  ],
+  "virtudes": [
+    "Herança de Lamuria*",
+    "Magnificência Herdada – Linhagem Superior*"
+  ],
+  "vicios": [
+    "Angústia do Miasma*"
+  ],
+  "tracos": [
+    "Nenhum"
+  ],
+  "condutasBloqueadas": [
+    "Mun'Kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "240",
+    "infanteMax": 16,
+    "jovemMax": 80,
+    "maduroMax": 160
+  },
+  "viciosMax": 6
+}

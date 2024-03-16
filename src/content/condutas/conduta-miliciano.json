@@ -1,0 +1,29 @@
+{
+  "id": "miliciano",
+  "tipo": "combate",
+  "tipoTitulo": "Combate",
+  "titulo": "Miliciano",
+  "descricao": "Aqueles que lutam pelo contratante. Apenas os barões ou outros figurões conseguem dispor do serviço desses homens. São como os guardas, mas menos apegados ao dever. Servindo aos interesses de uma pessoa, família ou grupo. Ou seja, um componente de um exército particular.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Armas",
+        "id": "maestria-armas"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Combate ou Influência)",
+          "opcoes": [
+            "combate",
+            "influencia"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

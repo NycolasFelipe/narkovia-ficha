@@ -1,0 +1,30 @@
+{
+  "id": "meandro",
+  "titulo": "Meandro",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente",
+    "Pilar"
+  ],
+  "virtudes": [
+    "Qualquer um (a critério do Mestre)"
+  ],
+  "vicios": [
+    "Qualquer um (a critério do Mestre)"
+  ],
+  "tracos": [
+    "Nenhum"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "50",
+    "infanteMax": -1,
+    "jovemMax": -1,
+    "maduroMax": 241
+  },
+  "viciosMax": 6
+}

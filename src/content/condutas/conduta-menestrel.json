@@ -1,0 +1,29 @@
+{
+  "id": "menestrel",
+  "tipo": "arte",
+  "tipoTitulo": "Arte",
+  "titulo": "Menestrel",
+  "descricao": "Contadores de história, musicistas ou poetas. Viajam o mundo a fim de conhecê-lo e contar para outras pessoas sobre suas aventuras e viagens. São adorados e bem recebidos em cada taverna que vão. Costumam usar de instrumentos, prestidigitação, canto e sagacidade pra deixar suas histórias cativantes. Suas viagens garante uma vasta lista de contatos, podendo haver dentre eles pessoas bem poderosas.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Instrumentos Musicais",
+        "id": "maestria-instrumentos-musicais"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Influência ou Técnica)",
+          "opcoes": [
+            "influencia",
+            "tecnica"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

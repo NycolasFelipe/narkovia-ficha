@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+body {
+  background-image: url("../../img/home-background.jpg");
+  background-attachment: fixed;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+  background: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+  --webkit-box-shadow: inset 0 0 6px #0000004d;
+  background-color: #202020;
+}
+
+main {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 200px;
+}
+
+
+.modal-content {
+  max-width: 300px;
+  margin: 0 auto;
+  right: 3px;
+}
+
+header h1 {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2.3rem;
+  pointer-events: none;
+}
+
+header h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.button {
+  font-family: "Libre Baskerville", serif;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.button-sm {
+  font-size: 0.9rem;
+}
+
+label {
+  font-family: "Libre Baskerville", serif;
+  padding-bottom: 5px;
+}
+
+.button-main-menu {
+  background: transparent;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin-top: 40px;
+}
+
+.button-main-menu:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+}
+
+.button-main-menu:hover>.button-main-titulo {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+}
+
+.button-main-menu .button-main-titulo {
+  padding-top: 12px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.button-main-menu .button-main-descricao {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.button-main-menu-simples {
+  height: 50px !important;
+  border: 2px solid darkslategrey;
+}
+
+.button-main-menu-simples:hover {
+  background: transparent;
+}
+
+.button-main-menu-simples>p {
+  font-size: 1rem !important;
+}
+
+#index-button-simulador {
+  background-image: url("../../img/button-simulador.jpg");
+}
+
+#index-button-ficha {
+  background-image: url("../../img/button-ficha.jpg");
+}

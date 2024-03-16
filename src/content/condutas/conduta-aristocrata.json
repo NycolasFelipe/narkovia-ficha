@@ -1,0 +1,35 @@
+{
+  "id": "aristocrata",
+  "tipo": "riqueza",
+  "tipoTitulo": "Riqueza",
+  "titulo": "Aristocrata",
+  "descricao": "Desde que Iran I cedeu território para famílias, essa ideia persiste até atualidade. Você faz parte de uma família nobre, isso significa ser proprietário de uma determinada faixa de terra, que ainda segue o modelo aristocrático, regendo autoridade ali e cobrando impostos para aqueles trabalharem no seu espaço. Seu sobrenome significa poder, status e influência, tendo uma guarda inteira a sua disposição. Em contrapartida, precisa assumir responsabilidades, garantir o legado e alianças para fortalecer suas posses e garantir a paz em seu território.",
+  "ganhos": {
+    "maestria": [],
+    "especialidade": [
+      {
+        "nome": "Heráldica",
+        "id": "especialidade-heraldica"
+      }
+    ],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+2G (Agudeza)",
+          "opcoes": [
+            "agudeza"
+          ],
+          "pontos": 2
+        },
+        {
+          "nome": "+2G (Liderança)",
+          "opcoes": [
+            "lideranca"
+          ],
+          "pontos": 2
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "pinceiro",
+  "tipo": "combate",
+  "tipoTitulo": "Combate",
+  "titulo": "Pinceiro",
+  "descricao": "Aqueles que lutam pelo espetáculo. Um caminho não tão nobre a se seguir, mas que pode ser uma via para a riqueza e a fama é a pinça. Nome dado as lutas de espetáculo, sendo clandestina ou não, a depender do lugar ou da época. Pode ser um artista marcial, ou um guarda frustrado, você enfrenta rivais numa arena pelo dinheiro das apostas e o entretenimento dos seus espectadores são seu ganha pão.",
+  "ganhos": {
+    "maestria": [],
+    "especialidade": [
+      {
+        "nome": "Pinças",
+        "id": "especialidade-pincas"
+      }
+    ],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Combate ou Técnica)",
+          "opcoes": [
+            "combate",
+            "tecnica"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

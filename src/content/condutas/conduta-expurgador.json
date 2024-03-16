@@ -1,0 +1,29 @@
+{
+  "id": "expurgador",
+  "tipo": "sagrado",
+  "tipoTitulo": "Sagrado",
+  "titulo": "Expurgador",
+  "descricao": "Aquele que executa. Viajantes errantes, que outrora já foram reverenciados pela igreja de Absolan, agora lutam por migalhas, enquanto executam sua missão sagrada de limpar o mundo. Os expurgadores detêm conhecimento avançado de Indultos e Técnicas de expurgação, sabem afastar maldições, lutar com forças invisíveis e proteger-se de todo tipo de coisa sombria. No entanto, acabam flertando demais com a escuridão e por isso acabam não sendo bem-vistos.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Artefatos & Relicários",
+        "id": "maestria-artefatos-e-relicarios"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Combate ou Técnica)",
+          "opcoes": [
+            "combate",
+            "tecnica"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

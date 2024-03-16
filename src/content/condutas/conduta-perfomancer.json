@@ -1,0 +1,29 @@
+{
+  "id": "perfomancer",
+  "tipo": "arte",
+  "tipoTitulo": "Arte",
+  "titulo": "Perfomancer",
+  "descricao": "Dançarino, ator, mimico, acrobata ou ilusionista. Você usa suas habilidades corporais para tirar o folego dos seus espectadores. Você ganha a vida com isso, tendo inúmeros fãs que o idolatram. Usando o charme, os movimentos corporais você deixa sua marca no coração das pessoas.",
+  "ganhos": {
+    "maestria": [],
+    "especialidade": [
+      {
+        "nome": "Alguma manifestação artística corporal",
+        "id": "especialidade-manifestacao-artistica-corporal"
+      }
+    ],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Influência ou Liderança)",
+          "opcoes": [
+            "influencia",
+            "lideranca"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

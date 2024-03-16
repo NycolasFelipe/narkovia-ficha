@@ -1,0 +1,29 @@
+{
+  "id": "mercenario",
+  "tipo": "combate",
+  "tipoTitulo": "Combate",
+  "titulo": "Mercenário",
+  "descricao": "Aqueles que lutam por dinheiro, matam, caçam, protegem, sequestram ou qualquer outra coisa que o contratante lhe requisitar. Alguns podem ser apegados a alguns valores, mas ainda assim é um trabalho que exige certa flexibilidade moral.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Armas",
+        "id": "maestria-armas"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Combate ou Sagacidade)",
+          "opcoes": [
+            "combate",
+            "sagacidade"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "escritor",
+  "tipo": "arte",
+  "tipoTitulo": "Arte",
+  "titulo": "Escritor",
+  "descricao": "Apesar dos eruditos escreverem muitas coisas, não é deles que estamos falando, um escritor é alguém que tenta captar o mundo sob uma ótica muito especifica, registrando histórias reais ou criando fantasia e encantando os leitores com suas obras.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Itens de Papelaria",
+        "id": "maestria-itens-de-papelaria"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+2G (Agudeza)",
+          "opcoes": [
+            "agudeza"
+          ],
+          "pontos": 2
+        },
+        {
+          "nome": "+2G (Influência)",
+          "opcoes": [
+            "influencia"
+          ],
+          "pontos": 2
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

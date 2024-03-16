@@ -1,0 +1,10 @@
+{
+  "id": "senior",
+  "titulo": "Sênior",
+  "sortilegio": "Suma -2",
+  "composicao": "-2",
+  "graduacao": "+12",
+  "viciosMax": "+6",
+  "maestria": "+4",
+  "condutas": "3"
+}

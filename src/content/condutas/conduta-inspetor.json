@@ -1,0 +1,29 @@
+{
+  "id": "inspetor",
+  "tipo": "erudicao",
+  "tipoTitulo": "Erudição",
+  "titulo": "Inspetor",
+  "descricao": "Você treinou sua arguição ao máximo para servir a Narkovia, resolvendo todo tipo de crime e levando criminosos a penitência.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Objetos de Arqueometria",
+        "id": "maestria-objetos-de-arqueometria"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Técnica ou Agudeza)",
+          "opcoes": [
+            "tecnica",
+            "agudeza"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

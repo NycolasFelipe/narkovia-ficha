@@ -1,0 +1,35 @@
+{
+  "id": "comensal",
+  "titulo": "Comensal",
+  "categoriasPossiveis": [
+    "Sobrehumano",
+    "Ascendente"
+  ],
+  "virtudes": [
+    "Âncora de Humanidade*",
+    "Sentidos Aguçados",
+    "Viajante Vertical"
+  ],
+  "vicios": [
+    "Vicio em Sangue*",
+    "Vulnerável a Ferrugem*",
+    "Sensibilidade Ao sol"
+  ],
+  "tracos": [
+    "Inumano",
+    "Fortitude",
+    "Rapidez"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "200",
+    "infanteMax": -1,
+    "jovemMax": -1,
+    "maduroMax": -1
+  },
+  "viciosMax": 6
+}

@@ -1,0 +1,29 @@
+{
+  "id": "abastado",
+  "tipo": "riqueza",
+  "tipoTitulo": "Riqueza",
+  "titulo": "Abastado",
+  "descricao": "Talvez tenha nascido em berço de ouro ou conquistado sua riqueza ao longo da vida, de qualquer forma você tem posses ou irá herdá-las, tendo pessoas para te servir, guerreiros pra lhe defender e eruditos para lhe ensinar. Em alguns casos, você pode ser obscenamente rico, sendo filho de um barão ou se tornando um.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Itens de Papelaria",
+        "id": "maestria-itens-de-papelaria"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Influência ou Liderança)",
+          "opcoes": [
+            "influencia",
+            "lideranca"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

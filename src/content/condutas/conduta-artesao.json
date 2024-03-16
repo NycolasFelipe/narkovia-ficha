@@ -1,0 +1,29 @@
+{
+  "id": "artesao",
+  "tipo": "oficio",
+  "tipoTitulo": "Ofício",
+  "titulo": "Artesão",
+  "descricao": "Aqueles que criam. Ferreiro, Cozinheiros, Coureiros, carpinteiros dentre outros. Seu ofício é o de transformar os materiais retirados da natureza em instrumentos utilitários para o cotidiano das pessoas em Narkovia. A sutilize do seu trabalho aprimorou seus sentidos, sua coordenação e concentração.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Ferramentas de Ofício",
+        "id": "maestria-ferramentas-de-oficio"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Técnica ou Sagacidade)",
+          "opcoes": [
+            "tecnica",
+            "sagacidade"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "explorador",
+  "tipo": "natureza",
+  "tipoTitulo": "Natureza",
+  "titulo": "Explorador",
+  "descricao": "Aqueles que vivem errantes, caçando tumbas ou desvendando ruinas antigas. Exploradores vivem das riquezas que encontram perdidas na natureza ou da venda de informações desbravadas.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Objetos de Arqueometria",
+        "id": "maestria-objetos-de-arqueometria"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Técnica ou Sagacidade)",
+          "opcoes": [
+            "tecnica",
+            "sagacidade"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "nulo",
+  "titulo": "Nulo",
+  "categoriasPossiveis": [
+    "Sobrehumano"
+  ],
+  "virtudes": [
+    "Criança de Barro*"
+  ],
+  "vicios": [
+    "Demanda por Servidão",
+    "Corpo Frágil*",
+    "Vazio Identitário"
+  ],
+  "tracos": [
+    "Versatilidade e Metamorfose"
+  ],
+  "condutasBloqueadas": [
+    "Espúria",
+    "Mun'kai",
+    "Profeta"
+  ],
+  "vivencia": {
+    "expectativa": "75",
+    "infanteMax": 5,
+    "jovemMax": 15,
+    "maduroMax": 241
+  },
+  "viciosMax": 6
+}

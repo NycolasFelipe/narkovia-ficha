@@ -1,0 +1,29 @@
+{
+  "id": "servidor",
+  "tipo": "oficio",
+  "tipoTitulo": "Ofício",
+  "titulo": "Servidor",
+  "descricao": "Aqueles que servem. Seja como engraxate, cocheiro, cortesã ou mercador, você ganha sua vida servindo as pessoas. Sua experiencia lhe concede contatos e reputação, e por lidar com pessoas, você é muito bom se relacionando com elas, seja intuindo suas intenções ou cativando seus desejos.",
+  "ganhos": {
+    "maestria": [],
+    "especialidade": [
+      {
+        "nome": "Economia",
+        "id": "especialidade-economia"
+      }
+    ],
+    "graduacao": {
+      "simples": [],
+      "escolha": [
+        {
+          "nome": "+4G (Influência ou Agudeza)",
+          "opcoes": [
+            "influencia",
+            "agudeza"
+          ],
+          "pontos": 4
+        }
+      ]
+    }
+  }
+}

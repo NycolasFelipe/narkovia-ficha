@@ -1,0 +1,28 @@
+{
+  "id": "alopata",
+  "tipo": "erudicao",
+  "tipoTitulo": "Erudição",
+  "titulo": "Alopata",
+  "descricao": "Você é especialista em alopatia, a arte da cura, manuseando alquímicos ou ervas para fazer tratamentos ou até cirurgias. Apesar de não demandar ser um alto erudito, alopatia é considerado uma alta erudição pelo seu alto teor de complexidade.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Conjuntos Alopáticos",
+        "id": "maestria-conjuntos-alopaticos"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+4G (Erudição)",
+          "opcoes": [
+            "erudicao"
+          ],
+          "pontos": 4
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "extrator",
+  "tipo": "oficio",
+  "tipoTitulo": "Ofício",
+  "titulo": "Extrator",
+  "descricao": "Aqueles que pegam. Mineradores, Pescadores, Fazendeiros, Lenhadores, dentre outros. Você é um grande conhecedor das técnicas de retirada de um determinado recurso da natureza, sua função corresponde a base dos produtos que serão fabricados adiante. Costumam ser vigorosos, pois se expõem a fúria da natureza dia após dia e a experiencia junto a sabedoria da sua família lhe concede intuição sobre os ermos selvagens.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Provisões de Sobrevivência",
+        "id": "maestria-provisoes-de-sobrevivencia"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+2G (Sagacidade)",
+          "opcoes": [
+            "sagacidade"
+          ],
+          "pontos": 2
+        },
+        {
+          "nome": "+2G (Técnica)",
+          "opcoes": [
+            "tecnica"
+          ],
+          "pontos": 2
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

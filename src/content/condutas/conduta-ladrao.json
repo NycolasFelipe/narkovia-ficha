@@ -1,0 +1,28 @@
+{
+  "id": "ladrao",
+  "tipo": "crime",
+  "tipoTitulo": "Crime",
+  "titulo": "Ladrão",
+  "descricao": "Pode ser um batedor de carteiras ou um grande furtador de peças luxuosas, o fato é que você é especialistas em tirar objetos das posses de uma pessoa e dar para outra.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Apetrechos de Ladroagem",
+        "id": "maestria-apetrechos-de-ladroagem"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+4G (Sagacidade)",
+          "opcoes": [
+            "sagacidade"
+          ],
+          "pontos": 4
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

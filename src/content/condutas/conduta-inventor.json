@@ -1,0 +1,28 @@
+{
+  "id": "inventor",
+  "tipo": "erudicao",
+  "tipoTitulo": "Erudição",
+  "titulo": "Inventor",
+  "descricao": "Você é especialista em Mecânica. Sabe manusear os mais complexos itens de bronze, criando engenhocas e quinquilharias que podem ter inúmeras utilidades.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Dispositivos Mecânicos",
+        "id": "maestria-dispositivos-mecanicos"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+4G (Erudição)",
+          "opcoes": [
+            "erudicao"
+          ],
+          "pontos": 4
+        }
+      ],
+      "escolha": []
+    }
+  }
+}

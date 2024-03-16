@@ -1,0 +1,35 @@
+{
+  "id": "artifice",
+  "tipo": "arte",
+  "tipoTitulo": "Arte",
+  "titulo": "Artífice",
+  "descricao": "Pintor, escultor ou arquiteto. Você se expressa através da estética, optando pela linguagem do que observável, criando obras cativantes e encantadoras que ornamentam as casas dos ricos e embelezam os templos.",
+  "ganhos": {
+    "maestria": [
+      {
+        "nome": "Ferramentas de Ofício",
+        "id": "maestria-ferramentas-de-oficio"
+      }
+    ],
+    "especialidade": [],
+    "graduacao": {
+      "simples": [
+        {
+          "nome": "+2G (Técnica)",
+          "opcoes": [
+            "tecnica"
+          ],
+          "pontos": 2
+        },
+        {
+          "nome": "+2G (Influência)",
+          "opcoes": [
+            "influencia"
+          ],
+          "pontos": 2
+        }
+      ],
+      "escolha": []
+    }
+  }
+}
