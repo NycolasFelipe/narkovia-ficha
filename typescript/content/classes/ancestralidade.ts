@@ -7,6 +7,9 @@ const ancestralidades = loadJsonFiles("ancestralidades", files) as unknown as Co
 
 class Ancestralidade {
   static getItemById = function (id: string) {
+    if (id.includes("espuria")) {
+      id = "espuria";
+    }
     const item = getContentItem(ancestralidades, id) as unknown as ContentAncestralidade;
     if (typeof item === "undefined") {
       console.error(`Erro: ancestralidade <${id}> inválida`);

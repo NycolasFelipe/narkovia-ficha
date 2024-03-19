@@ -302,6 +302,24 @@
       <div id="graduacao-conduta">
         <p class="passo text-center text-white">7º Passo:</p>
         <p class="passo-descricao text-center text-white">Distribua seus pontos de graduação de condutas</p>
+        <div class="graduacao-conduta-ganhos"></div>
+        <div class="graduacao-button-holder">
+          <button class="btn btn-primary w-100 disabled" type="button">
+            Próxima conduta
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+        <div class="graduacao-sucesso d-none">
+          <span class="title">Graduações distribuídas</span>
+          <span class="refazer-button">
+            Refazer
+            <i class="bi bi-pencil-square"></i>
+          </span>
+        </div>
+        <hr class="w-50" style="margin: 0 auto; margin-bottom: 10px;">
+        <div class="graduacao-resultado d-none">
+          <span class="title">Resultado:</span>
+        </div>
         <div class="avancar-passo d-flex justify-content-between mt-5">
           <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
           <i class="bi bi-arrow-right-square-fill"></i>
@@ -342,13 +360,67 @@
     </div>
   </div>
 
+  <!-- Descricao Habilidade Modal -->
+  <button id="habilidadeModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#habilidadeModal"></button>
+
+  <div class="modal fade" id="habilidadeModal" tabindex="-1" aria-labelledby="habilidadeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100" id="habilidadeModalLabel" style="text-align: center;">Descrição da habilidade
+          </h1>
+          <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-habilidade-nome" style="padding: 10px 20px;">
+            <h2 class="w-100 text-center fs-6"></h2>
+          </div>
+          <hr class="w-50" style="margin: 0 auto; margin-bottom: 10px;">
+          <div class="modal-habilidade-descricao">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal confirmação refazer graduações de conduta -->
+  <button id="refazerGraduacaoModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#refazerGraduacaoModal"></button>
+
+  <div class="modal fade" id="refazerGraduacaoModal" tabindex="-1" aria-labelledby="refazerGraduacaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100" id="refazerGraduacaoModalLabel" style="text-align: center;">Refazer distribuição
+          </h1>
+          <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title" style="padding: 10px 20px;">
+            <h2 class="w-100 text-center fs-6">Tem certeza disso?</h2>
+          </div>
+          <hr class="w-50" style="margin: 0 auto; margin-bottom: 25px;">
+          <div class="modal-text">
+            <p>Todas as distribuições feitas nesse passo serão <b>perdidas</b>.</p>
+          </div>
+          <button type="button" class="btn btn-primary button-confirm" data-bs-dismiss="modal"
+            aria-label="Close">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Resumo Preview -->
   <div class="modal fade" id="resumoPreviewModal" tabindex="-1" aria-labelledby="resumoPreviewModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-6 w-100" id="resumoPreviewModalLabel" style="text-align: center;">Resumo da ficha
+          <h1 class="modal-title w-100" id="resumoPreviewModalLabel" style="text-align: center;">Resumo da ficha
           </h1>
           <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
             aria-label="Close"></button>

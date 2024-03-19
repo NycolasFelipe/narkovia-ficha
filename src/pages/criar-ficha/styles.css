@@ -247,7 +247,7 @@ i {
 #conduta .descricao-ganhos-titulo {
   color: #fff;
   font-size: 0.9rem;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 3px;
   color: darkgray;
 }
@@ -277,6 +277,11 @@ i {
 
 #resumoPreviewModal {
   font-family: "Libre Baskerville", serif;
+}
+
+#resumoPreviewModal .modal-title {
+  font-size: 0.8rem !important;
+  font-weight: lighter;
 }
 
 #resumoPreviewModal .preview {
@@ -454,13 +459,13 @@ i {
 
 #atributo .atributo-pontos {
   cursor: default;
+  user-select: none;
 }
 
 #atributo .atributo-pontos i {
   cursor: pointer;
   transition: color 0.3s ease;
   font-size: 42px;
-  user-select: none;
 }
 
 #atributo .atributo-pontos i:hover {
@@ -541,34 +546,268 @@ i {
   color: #fff;
 }
 
-#graduacao-conduta .graduacoes-conduta-nome {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-top: 60px;
-  margin-bottom: 0;
+#graduacao-conduta .graduacao-pontos .bi-slash-square {
+  color: #808080;
+  cursor: default;
 }
 
-#graduacao-conduta .graduacoes-conduta-ganhos {
-  list-style: none;
-  padding-left: 0;
+#graduacao-conduta .graduacao-pontos .bi-slash-square:hover {
+  color: #808080;
 }
 
-#graduacao-conduta .graduacoes-conduta-ganhos li {
+#graduacao-conduta .conduta-ganho:not(.current) {
+  display: none !important;
+}
+
+#graduacao-conduta .conduta-ganho-titulo {
+  text-align: center;
   color: #61d461;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  margin-top: 60px;
+}
+
+#graduacao-conduta .conduta-ganho-titulo+div {
+  display: flex;
+  flex-direction: column;
+}
+
+#graduacao-conduta .conduta-ganho-item .bi-info-circle {
+  padding-left: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#graduacao-conduta .conduta-ganho-item .bi-info-circle:hover {
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+#graduacao-conduta .conduta-ganho-item-nome {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
   line-height: 2;
 }
 
-#graduacao-conduta .graduacao-tipo {
-  color: #91bce7;
+#graduacao-conduta .conduta-ganho-tipo {
+  color: #5889b9;
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#graduacao-conduta .graduacao-titulo {
+  margin-left: -5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 #graduacao-conduta .graduacao-titulo-nulo {
   color: #808080 !important;
 }
 
+#graduacao-conduta .graduacao-gastos {
+  position: relative;
+  top: 20px;
+  color: #fff;
+}
+
 #graduacao-conduta .graduacao-gasto-nulo {
   display: none;
 }
+
+#graduacao-conduta .graduacao-pontos {
+  display: flex;
+  justify-content: center;
+}
+
+#graduacao-conduta .graduacao-pontos i {
+  margin: 0 2.5px;
+}
+
+#graduacao-conduta .graduacao-pontos-habilidade {
+  margin-bottom: 0;
+}
+
+#graduacao-conduta .graduacao-pontos-habilidade-mb {
+  margin-bottom: 25px;
+}
+
+
+#graduacao-conduta .graduacao-pontos-habilidade span {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+#graduacao-conduta .conduta-ganho-item .pontos-ok {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #3081D0;
+}
+
+#graduacao-conduta .conduta-ganho-item .pontos-alerta {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #dc3545;
+}
+
+#graduacao-conduta .graduacao-sucesso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#graduacao-conduta .graduacao-sucesso .title {
+  font-size: 1.2rem;
+  color: #61d461;
+  margin-bottom: 20px;
+}
+
+#graduacao-conduta .graduacao-sucesso .refazer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #424242;
+  border-radius: 5px;
+  width: 140px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#graduacao-conduta .graduacao-sucesso .refazer-button i {
+  display: block;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+#graduacao-conduta .graduacao-sucesso .refazer-button:hover {
+  border-color: #fff;
+}
+
+#graduacao-conduta .graduacao-button-holder {
+  margin-top: 20px;
+  padding: 36px;
+}
+
+#graduacao-conduta .graduacao-button-holder i {
+  position: relative;
+  top: 1px;
+  left: 5px;
+}
+
+#graduacao-conduta .graduacao-resultado {
+  margin-top: 30px;
+  padding: 0 15px;
+  pointer-events: none;
+  user-select: none;
+}
+
+#graduacao-conduta .graduacao-resultado .conduta-ganho-resultado-pontos {
+  display: flex;
+  justify-content: space-between;
+}
+
+#graduacao-conduta .graduacao-resultado .title {
+  display: block;
+  color: #3081D0;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+#graduacao-conduta .graduacao-resultado .bi-square-fill {
+  color: #fff;
+}
+
+@keyframes animation-graduacao-button {
+  0% {
+    background-color: #0d6efd;
+  }
+
+  50% {
+    background-color: #0d274e;
+  }
+
+  100% {
+    background-color: #0d6efd;
+  }
+}
+
+#graduacao-conduta .graduacao-button-holder button {
+  line-height: 2;
+}
+
+#graduacao-conduta .graduacao-button-holder button:not(.disabled) {
+  animation-name: animation-graduacao-button;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Modal Descrição da habilidade */
+#habilidadeModal {
+  font-family: "Libre Baskerville", serif;
+}
+
+#habilidadeModal .modal-title {
+  font-size: 0.8rem !important;
+  font-weight: lighter;
+}
+
+#habilidadeModal .modal-habilidade-nome h2 {
+  color: #0d6efd;
+  font-size: 1.2rem !important;
+  user-select: none;
+}
+
+#habilidadeModal .modal-habilidade-descricao {
+  text-align: center;
+  padding: 10px;
+  user-select: none;
+}
+
+/*****/
+
+/* Modal refazer graduações de conduta */
+#refazerGraduacaoModal {
+  font-family: "Libre Baskerville", serif;
+}
+
+#refazerGraduacaoModal .modal-title {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+#refazerGraduacaoModal .modal-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#refazerGraduacaoModal .modal-text b {
+  color: red;
+}
+
+#refazerGraduacaoModal .button-confirm {
+  background: #808080;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#refazerGraduacaoModal .button-confirm:hover {
+  background-color: #424242;
+}
+
+/*****/

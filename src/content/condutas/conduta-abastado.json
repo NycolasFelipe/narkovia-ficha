@@ -13,17 +13,16 @@
     ],
     "especialidade": [],
     "graduacao": {
-      "simples": [],
-      "escolha": [
+      "simples": [
         {
-          "nome": "+4G (Influência ou Liderança)",
+          "nome": "+4G (Influência)",
           "opcoes": [
-            "influencia",
-            "lideranca"
+            "influencia"
           ],
           "pontos": 4
         }
-      ]
+      ],
+      "escolha": []
     }
   }
 }

@@ -7,7 +7,7 @@ function updateQueryParam(value: string, key: string = "passo") {
   $("#criar-ficha .avancar-passo i").off("click");
   $(window).scrollTop(250);
   validaFicha();
-};
+}
 
 function exibirPassoAtual(passoAtual: string) {
   $.each(PASSOS, (_index, passo) => {

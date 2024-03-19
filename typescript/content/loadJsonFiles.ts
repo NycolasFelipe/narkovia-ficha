@@ -2,6 +2,7 @@ import ContentAncestralidade from "./interfaces/ancestralidade.js";
 import ContentAtributo from "./interfaces/atributo.js";
 import ContentCategoria from "./interfaces/categoria.js";
 import ContentConduta from "./interfaces/conduta.js";
+import ContentGraduacao from "./interfaces/graduacao.js";
 import ContentVivencia from "./interfaces/vivencia.js";
 
 function loadJsonFiles(folder: string, files: Array<string>) {
@@ -28,7 +29,7 @@ function loadJsonFiles(folder: string, files: Array<string>) {
       break;
 
     case "graduacoes":
-      jsonItems = [] as ContentAtributo[];
+      jsonItems = [] as ContentGraduacao[];
       break;
   }
 

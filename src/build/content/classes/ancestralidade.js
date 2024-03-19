@@ -4,6 +4,9 @@ const files = ['ancestralidade-automato.json', 'ancestralidade-comensal.json', '
 const ancestralidades = loadJsonFiles("ancestralidades", files);
 class Ancestralidade {
     static getItemById = function (id) {
+        if (id.includes("espuria")) {
+            id = "espuria";
+        }
         const item = getContentItem(ancestralidades, id);
         if (typeof item === "undefined") {
             console.error(`Erro: ancestralidade <${id}> inválida`);

@@ -2,13 +2,40 @@
   "id": "influencia",
   "titulo": "Habilidades de Influência",
   "itens": [
-    "Dissuasão",
-    "Blefe",
-    "Intimidação",
-    "Provocação",
-    "Prestígio",
-    "Performance",
-    "Etiqueta",
-    "Charme"
+    {
+      "id": "dissuasao",
+      "titulo": "Dissuasão",
+      "descricao": "Capacidade de convencer outros a recuar de um conflito ou mudar de ideia através de argumentação astuta."
+    },
+    {
+      "id": "blefe",
+      "titulo": "Blefe",
+      "descricao": "Habilidade em enganar e iludir, seja para ocultar informações, confundir inimigos ou ganhar vantagem em situações sociais."
+    },
+    {
+      "id": "intimidacao",
+      "titulo": "Intimidação",
+      "descricao": "Presença imponente que impõe medo e respeito nos outros, podendo influenciar suas ações e decisões."
+    },
+    {
+      "id": "prestigio",
+      "titulo": "Prestígio",
+      "descricao": "Utilização habilidosa da sua influência e renome para conquistar favores, recursos e reconhecimento."
+    },
+    {
+      "id": "performance",
+      "titulo": "Performance",
+      "descricao": "Habilidade em entretenimento e atuação, cativando plateias e influenciando o humor das pessoas."
+    },
+    {
+      "id": "etiqueta",
+      "titulo": "Etiqueta",
+      "descricao": "Conhecimento das normas sociais, regras de conduta e formalidades em diferentes contextos e culturas."
+    },
+    {
+      "id": "charme",
+      "titulo": "Charme",
+      "descricao": "Carisma envolvente que atrai e encanta os outros, facilitando interações sociais positivas."
+    }
   ]
 }

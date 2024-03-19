@@ -2,9 +2,25 @@
   "id": "agudeza",
   "titulo": "Habilidades de Agudeza",
   "itens": [
-    "Sabedoria",
-    "Determinação",
-    "Intuição",
-    "Percepção"
+    {
+      "id": "sabedoria",
+      "titulo": "Sabedoria",
+      "descricao": "A habilidade de discernir a verdade nas entrelinhas e tomar decisões sábias baseadas em insights profundos e conhecimento acumulado."
+    },
+    {
+      "id": "determinacao",
+      "titulo": "Determinação",
+      "descricao": "Força interior que impulsiona a superação de desafios, resistência contra adversidades e a capacidade de manter o foco mesmo sob pressão."
+    },
+    {
+      "id": "intuicao",
+      "titulo": "Intuição",
+      "descricao": "Percepção instintiva que permite captar sutilezas do ambiente, prever perigos iminentes e tomar decisões rápidas e confiantes."
+    },
+    {
+      "id": "percepcao",
+      "titulo": "Percepção",
+      "descricao": "Atenção aguçada aos detalhes, permitindo a detecção de elementos ocultos, armadilhas e pistas em qualquer situação."
+    }
   ]
 }

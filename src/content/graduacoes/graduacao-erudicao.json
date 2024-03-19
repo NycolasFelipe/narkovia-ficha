@@ -2,9 +2,25 @@
   "id": "erudicao",
   "titulo": "Habilidades de Erudição",
   "itens": [
-    "Educação",
-    "Alopatia",
-    "Alquimia",
-    "Mecânica"
+    {
+      "id": "educacao",
+      "titulo": "Educação",
+      "descricao": "Conhecimento amplo em diversas áreas acadêmicas, permitindo compreensão avançada de história, ciência, cultura e muito mais."
+    },
+    {
+      "id": "alopatia",
+      "titulo": "Alopatia",
+      "descricao": "Conhecimento sobre tratamentos convencionais, acadêmicos e científicos para cura e recuperação."
+    },
+    {
+      "id": "alquimia",
+      "titulo": "Alquimia",
+      "descricao": "Conhecimento sobre tratamentos convencionais, acadêmicos e científicos para cura e recuperação."
+    },
+    {
+      "id": "mecanica",
+      "titulo": "Mecânica",
+      "descricao": "Conhecimento e habilidade no uso, conserto e fabricação de dispositivos mecânicos."
+    }
   ]
 }

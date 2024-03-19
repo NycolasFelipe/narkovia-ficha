@@ -2,8 +2,20 @@
   "id": "combate",
   "titulo": "Habilidades de Combate",
   "itens": [
-    "Ataque",
-    "Mira",
-    "Proteção"
+    {
+      "id": "ataque",
+      "titulo": "Ataque",
+      "descricao": "Proficiência em desferir golpes precisos e poderosos contra inimigos, causando danos eficazmente."
+    },
+    {
+      "id": "mira",
+      "titulo": "Mira",
+      "descricao": "Destreza em apontar e atingir alvos à distância, seja com arcos, armas de fogo ou outros projéteis."
+    },
+    {
+      "id": "protecao",
+      "titulo": "Proteção",
+      "descricao": "Habilidade em se posicionar estrategicamente para minimizar danos recebidos e proteger a si mesmo e aos aliados em batalha."
+    }
   ]
 }

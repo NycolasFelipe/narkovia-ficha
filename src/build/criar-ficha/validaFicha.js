@@ -7,7 +7,6 @@ function updateQueryParam(value, key = "passo") {
     $(window).scrollTop(250);
     validaFicha();
 }
-;
 function exibirPassoAtual(passoAtual) {
     $.each(PASSOS, (_index, passo) => {
         $(`#${passoAtual}`).removeClass("d-none");

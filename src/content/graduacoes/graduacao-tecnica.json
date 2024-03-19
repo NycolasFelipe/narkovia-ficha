@@ -2,10 +2,30 @@
   "id": "tecnica",
   "titulo": "Habilidades de Técnica",
   "itens": [
-    "Arguição",
-    "Sobrevivência",
-    "Laboração",
-    "Ocultismo",
-    "Hierática"
+    {
+      "id": "arguicao",
+      "titulo": "Arguição",
+      "descricao": "Habilidade de investigar, pesquisar e analisar informações com rigor, desvendando mistérios e desdobrando segredos ocultos."
+    },
+    {
+      "id": "laboracao",
+      "titulo": "Laboração",
+      "descricao": "Proficiência em criar objetos, reparar equipamentos e realizar tarefas práticas com as mãos."
+    },
+    {
+      "id": "ocultismo",
+      "titulo": "Ocultismo",
+      "descricao": "Conhecimento de práticas e rituais místicos, permitindo interações com o sobrenatural e o desconhecido."
+    },
+    {
+      "id": "hieratica",
+      "titulo": "Hierática",
+      "descricao": "Entendimento das religiões, crenças sagradas e rituais, permitindo uma conexão profunda com o divino e a capacidade de interpretar símbolos místicos."
+    },
+    {
+      "id": "sobrevivencia",
+      "titulo": "Sobrevivência",
+      "descricao": "Habilidade em se adaptar e prosperar em ambientes hostis, obtendo recursos naturais e evitando perigos."
+    }
   ]
 }

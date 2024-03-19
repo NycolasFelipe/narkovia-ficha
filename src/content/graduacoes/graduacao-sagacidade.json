@@ -2,8 +2,20 @@
   "id": "sagacidade",
   "titulo": "Habilidades de Sagacidade",
   "itens": [
-    "Artimanha",
-    "Sutilidade",
-    "Mobilidade"
+    {
+      "id": "artimanha",
+      "titulo": "Artimanha",
+      "descricao": "Capacidade de manipular objetos com precisão e delicadeza, como abrir fechaduras ou desarmar armadilhas."
+    },
+    {
+      "id": "sutilidade",
+      "titulo": "Sutilidade",
+      "descricao": "Habilidade em se esgueirar, camuflar e realizar ações furtivas, evitando detecção"
+    },
+    {
+      "id": "mobilidade",
+      "titulo": "Mobilidade",
+      "descricao": "Agilidade, destreza e capacidade acrobática para se mover rapidamente pelo ambiente, escapar de perigos e alcançar locais elevados."
+    }
   ]
 }

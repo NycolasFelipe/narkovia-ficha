@@ -1,7 +1,11 @@
 import Content from "./_content";
 
 interface ContentGraduacao extends Content {
-  itens: string[]
+  itens: {
+    id: string;
+    titulo: string;
+    descricao: string;
+  }
 }
 
 export default ContentGraduacao;

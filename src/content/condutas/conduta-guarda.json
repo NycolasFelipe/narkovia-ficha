@@ -13,17 +13,16 @@
     ],
     "especialidade": [],
     "graduacao": {
-      "simples": [],
-      "escolha": [
+      "simples": [
         {
-          "nome": "+4G (Combate ou Liderança)",
+          "nome": "+4G (Combate)",
           "opcoes": [
-            "combate",
-            "lideranca"
+            "combate"
           ],
           "pontos": 4
         }
-      ]
+      ],
+      "escolha": []
     }
   }
 }
