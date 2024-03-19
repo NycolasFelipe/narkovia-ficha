@@ -7,7 +7,10 @@ function loadPontos(atributos: ContentAtributo[]) {
     $("#atributo .atributos").append(`
       <div class="${atributo.id} atributo mt-4">
         <div class="atributo-titulo text-white text-center">
-          <p>${atributo.titulo}</p>
+          <p>
+            ${atributo.titulo}
+            <i class="bi bi-info-circle ps-1" title="${atributo.descricao}" style="color: #808080;"></i>
+          </p>
           <p class="atributo-gastos">0</p>
         </div>
         <div class="atributo-pontos text-center">

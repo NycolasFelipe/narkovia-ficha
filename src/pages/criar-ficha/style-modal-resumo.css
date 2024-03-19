@@ -1,0 +1,152 @@
+#resumo-preview {
+  font-family: "Libre Baskerville", serif;
+  padding: 0 5px;
+  margin-top: 60px;
+}
+
+#resumo-preview i {
+  filter: opacity(0.5);
+  padding-right: 5px;
+  transition: all 0.3s ease;
+}
+
+#resumo-preview button:hover {
+  background: transparent;
+  border-color: #fff !important;
+}
+
+#resumo-preview button:hover>i {
+  filter: opacity(1);
+  transition: all 0.3s ease;
+}
+
+#resumoPreviewModal {
+  font-family: "Libre Baskerville", serif;
+}
+
+#resumoPreviewModal .modal-title {
+  font-size: 0.8rem !important;
+  font-weight: lighter;
+}
+
+#resumoPreviewModal .preview {
+  display: flex;
+  flex-direction: column;
+  margin-left: -20px;
+}
+
+#resumoPreviewModal .preview-warning {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#resumoPreviewModal .preview-label,
+#resumoPreviewModal .preview-value {
+  text-align: left;
+  pointer-events: none;
+}
+
+#resumoPreviewModal .preview-label {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  color: #808080;
+}
+
+#resumoPreviewModal .preview-label::before {
+  content: '⟴';
+  padding-right: 3px;
+}
+
+#resumoPreviewModal .preview-value {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+#resumoPreviewModal .preview-value span {
+  display: block;
+  margin-bottom: 15px;
+}
+
+#resumoPreviewModal .preview-value+ul {
+  list-style: none;
+  pointer-events: none;
+  padding-left: 0;
+  font-size: 1rem;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+#resumoPreviewModal .preview-value+ul li {
+  font-weight: 500;
+  border-left: 2px solid lightgrey;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  line-height: 1.2;
+}
+
+#resumoPreviewModal .preview-conduta+ul {
+  margin-top: -12px !important;
+}
+
+#resumoPreviewModal .preview-atributo+ul {
+  margin-top: -12px;
+}
+
+#resumoPreviewModal .preview-atributo+ul li {
+  display: flex;
+  border-left: none;
+  margin-left: -5px;
+}
+
+#resumoPreviewModal .preview-atributo-line {
+  flex: 1;
+  border-bottom: 1px dotted lightgrey;
+  margin: 5px;
+}
+
+#resumoPreviewModal .preview-conduta-empty,
+#resumoPreviewModal .preview-vicios-empty,
+#resumoPreviewModal .preview-virtudes-empty,
+#resumoPreviewModal .preview-atributo-empty {
+  border-left: none !important;
+}
+
+#resumoPreviewModal .preview-conduta-item+.preview-conduta-empty,
+#resumoPreviewModal .preview-vicios-item+.preview-vicios-empty,
+#resumoPreviewModal .preview-virtudes-item+.preview-virtudes-empty,
+#resumoPreviewModal .preview-atributo-item+.preview-atributo-empty {
+  display: none;
+}
+
+#resumoPreviewModal .aura {
+  order: 1;
+}
+
+#resumoPreviewModal .captacao {
+  order: 2;
+}
+
+#resumoPreviewModal .celeridade {
+  order: 3;
+}
+
+#resumoPreviewModal .eteressencia {
+  order: 4;
+}
+
+#resumoPreviewModal .idoneidade {
+  order: 5;
+}
+
+#resumoPreviewModal .pujanca {
+  order: 6;
+}
+
+#resumoPreviewModal .tenacidade {
+  order: 7;
+}
+
+#resumoPreviewModal .sapiencia {
+  order: 8;
+}

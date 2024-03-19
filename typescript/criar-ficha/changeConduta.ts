@@ -169,7 +169,7 @@ function handleCondutasBloqueadas() {
   let condutas = $(".conduta-descricao:not(.conduta-descricao-selecionada)");
 
   $.each(condutas, (i, conduta) => {
-    $.each(condutasBloqueadas, (j, condutaBloqueada) => {      
+    $.each(condutasBloqueadas, (j, condutaBloqueada) => {
       const id = $(conduta).attr("id");
       if (typeof id !== "undefined") {
         const condutaId = tratamentoConduta(id);
@@ -217,9 +217,13 @@ function filterCondutas(condutaSlideAtual: string) {
 }
 
 function updateCondutas() {
+  //@ts-ignore
+  const deviceDesktop = $(window).width() >= 1024;
+  const eventType = deviceDesktop ? "click" : "touchend";
+
   //Update conduta 
   const conduta = $("#conduta .conduta-descricao:not(.conduta-descricao-selecionada) .conduta-check");
-  $.each(["click", "touchend"], (k, v) => $(conduta).on(v, (e) => {
+  $(conduta).on(eventType, (e) => {
     if (condutasSelecionadas < condutasDisponiveis) {
       condutasSelecionadas++;
       const conduta = $(e.currentTarget).parent().parent();
@@ -252,11 +256,11 @@ function updateCondutas() {
 
       validate();
     }
-  }));
+  });
 
   //Update conduta selecionada
   const condutaSelecionada = $("#conduta .conduta-descricao-selecionada .conduta-check");
-  $.each(["click", "touchend"], (k, v) => $(condutaSelecionada).on(v, (e) => {
+  $(condutaSelecionada).on(eventType, (e) => {
     condutasSelecionadas--;
     const conduta = $(e.currentTarget).parent().parent();
     const condutaId = $(conduta).attr("id");
@@ -291,7 +295,7 @@ function updateCondutas() {
       filterCondutas(condutaSlideAtual);
       validate();
     }
-  }));
+  });
 }
 
 function resetCondutas() {

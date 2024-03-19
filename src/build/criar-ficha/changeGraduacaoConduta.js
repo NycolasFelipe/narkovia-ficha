@@ -1,5 +1,7 @@
 import Conduta from "../content/classes/conduta.js";
 import Graduacao from "../content/classes/graduacao.js";
+const deviceDesktop = $(window).width() >= 1024;
+const eventType = deviceDesktop ? "click" : "touchend";
 let graduacoesListValue = [];
 var Pontos;
 (function (Pontos) {
@@ -138,7 +140,6 @@ function updatePontos(graduacaoId, pontos) {
             item.value = pontos;
             return false;
         }
-        ;
     });
 }
 function calculatePontos() {
@@ -166,7 +167,7 @@ function calculatePontos() {
 }
 function handleProximaConduta() {
     $("#graduacao-conduta .graduacao-button-holder button").off();
-    $("#graduacao-conduta .graduacao-button-holder button").on("click", () => {
+    $("#graduacao-conduta .graduacao-button-holder button").on(eventType, () => {
         $("#graduacao-conduta .conduta-ganho.current").next().addClass("current");
         $("#graduacao-conduta .conduta-ganho.current:first").removeClass("current");
         $("#graduacao-conduta .graduacao-button-holder button").addClass("disabled");
@@ -283,8 +284,8 @@ function handlePontosEscolha(e) {
 }
 function handlePontos() {
     const selector = $("#graduacao-conduta .graduacao-pontos i");
-    $.each(["click", "touch"], (k, v) => $(selector).on(v, (e) => $(e).off()));
-    $.each(["click", "touch"], (k, v) => $(selector).on(v, (e) => {
+    $(selector).on(eventType, (e) => $(e).off());
+    $(selector).on(eventType, (e) => {
         $(e.currentTarget).toggleClass("bi-square");
         $(e.currentTarget).toggleClass("bi-square-fill");
         const prevAll = $(e.currentTarget).prevAll();
@@ -326,7 +327,7 @@ function handlePontos() {
         }
         handlePontosSimples(e);
         handlePontosEscolha(e);
-    }));
+    });
 }
 function resetPontos() {
     graduacoesListValue = "";
@@ -373,7 +374,7 @@ function handleModalInfo() {
         $(infoButton).off();
     });
     $.each(modalInfoButtons, (_index, infoButton) => {
-        $(infoButton).on("click", (e) => {
+        $(infoButton).on(eventType, (e) => {
             const habilidade = $(e.currentTarget).parents(".graduacao-titulo").text().trim();
             const descricao = $(e.currentTarget).attr("title")?.toString();
             if (typeof habilidade !== "undefined" && typeof descricao !== "undefined") {
@@ -435,14 +436,14 @@ function changeGraduacaoConduta() {
         condutas = $("#conduta .condutas-descricao .conduta-descricao").get();
         if (condutas.length > 0) {
             clearInterval(condutasLoaded);
-            $("#conduta .conduta-descricao .conduta-check").on("click", () => {
+            $("#conduta .conduta-descricao .conduta-check").on(eventType, () => {
                 graduacoesLoaded = false;
                 resetPontos();
             });
-            $("#graduacao-conduta .graduacao-sucesso .refazer-button").on("click", () => {
+            $("#graduacao-conduta .graduacao-sucesso .refazer-button").on(eventType, () => {
                 $("#refazerGraduacaoModalButton").trigger("click");
             });
-            $("#refazerGraduacaoModal .button-confirm").on("click", () => {
+            $("#refazerGraduacaoModal .button-confirm").on(eventType, () => {
                 graduacoesLoaded = false;
                 resetPontos();
             });

@@ -1,0 +1,20 @@
+#habilidadeModal {
+  font-family: "Libre Baskerville", serif;
+}
+
+#habilidadeModal .modal-title {
+  font-size: 0.8rem !important;
+  font-weight: lighter;
+}
+
+#habilidadeModal .modal-habilidade-nome h2 {
+  color: #0d6efd;
+  font-size: 1.2rem !important;
+  user-select: none;
+}
+
+#habilidadeModal .modal-habilidade-descricao {
+  text-align: center;
+  padding: 10px;
+  user-select: none;
+}

@@ -1,0 +1,22 @@
+#idade .idade-buttons i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#idade .idade-buttons p {
+  width: 100px;
+  color: #fff;
+}
+
+#idade .idade-expectativa {
+  margin: 20px 0 40px 0;
+}
+
+#idade .idade-expectativa p {
+  color: #fff;
+}
+
+#idade .passo-descricao span {
+  display: block;
+  color: #61d461;
+}

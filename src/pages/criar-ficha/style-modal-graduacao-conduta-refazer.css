@@ -1,0 +1,28 @@
+#refazerGraduacaoModal {
+  font-family: "Libre Baskerville", serif;
+}
+
+#refazerGraduacaoModal .modal-title {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+#refazerGraduacaoModal .modal-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#refazerGraduacaoModal .modal-text b {
+  color: red;
+}
+
+#refazerGraduacaoModal .button-confirm {
+  background: #808080;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#refazerGraduacaoModal .button-confirm:hover {
+  background-color: #424242;
+}

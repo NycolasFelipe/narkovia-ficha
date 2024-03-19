@@ -1,0 +1,128 @@
+#atributo {
+  font-family: "Libre Baskerville", serif;
+}
+
+#atributo .atributos {
+  display: flex;
+  flex-direction: column;
+}
+
+#atributo .atributos .aura {
+  order: 1;
+}
+
+#atributo .atributos .captacao {
+  order: 2;
+}
+
+#atributo .atributos .celeridade {
+  order: 3;
+}
+
+#atributo .atributos .eteressencia {
+  order: 4;
+}
+
+#atributo .atributos .idoneidade {
+  order: 5;
+}
+
+#atributo .atributos .pujanca {
+  order: 6;
+}
+
+#atributo .atributos .tenacidade {
+  order: 7;
+}
+
+#atributo .atributos .sapiencia {
+  order: 8;
+}
+
+#atributo .pontos-composicao {
+  color: #61d461;
+}
+
+#atributo .pontos-composicao-mb {
+  margin-bottom: 25px;
+}
+
+#atributo .pontos-composicao span {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+#atributo .pontos-alerta {
+  display: block;
+  font-size: 0.8rem !important;
+  margin-top: 5px;
+}
+
+#atributo .pontos-ok {
+  display: block;
+  font-size: 0.8rem !important;
+  margin-top: 5px;
+  color: #3081D0 !important;
+}
+
+#atributo .atributo-titulo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+  margin-bottom: -10px;
+}
+
+#atributo .atributo-pontos {
+  cursor: default;
+  user-select: none;
+}
+
+#atributo .atributo-pontos i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 42px;
+}
+
+#atributo .atributo-pontos i:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#atributo .atributo-pontos i:first-of-type {
+  color: #424242;
+}
+
+#atributo .atributo-pontos i.bi-square-fill {
+  color: #fff;
+}
+
+#atributo .atributo-gasto-nulo {
+  visibility: hidden;
+}
+
+#atributo .atributo-titulo-nulo {
+  color: #808080 !important;
+}
+
+#atributo .warning-pontos-excedentes {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 49.9%;
+  bottom: 40px;
+  height: 60px;
+  width: 290px;
+  border-radius: 5px;
+  outline: 2px solid red;
+  background: #04090D;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#atributo .warning-pontos-excedentes p {
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-weight: lighter;
+}

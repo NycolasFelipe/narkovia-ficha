@@ -51,6 +51,7 @@ function changeIdadeSlide(ancestralidades) {
     if (url === "idade") {
         $(".preview-vivencia").prev().removeClass("d-none");
     }
+    updateIdade();
 }
 function changeIdadeButton(ancestralidades, value) {
     incrementIdade(value);
