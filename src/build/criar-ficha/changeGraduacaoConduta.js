@@ -1,5 +1,6 @@
 import Conduta from "../content/classes/conduta.js";
 import Graduacao from "../content/classes/graduacao.js";
+import validaFicha from "./validaFicha.js";
 const deviceDesktop = $(window).width() >= 1024;
 const eventType = deviceDesktop ? "click" : "touchend";
 let graduacoesListValue = [];
@@ -175,10 +176,13 @@ function handleProximaConduta() {
             $("#graduacao-conduta .graduacao-button-holder").addClass("d-none");
             $("#graduacao-conduta .graduacao-sucesso").removeClass("d-none");
             $("#graduacao-conduta .graduacao-resultado").removeClass("d-none");
+            $("#graduacao-conduta").data("valid", true);
+            $("#graduacao-conduta").data("pontos", JSON.stringify(graduacoesListValue));
             handleResult();
         }
         $(window).scrollTop(250);
         calculatePontos();
+        validaFicha();
     });
 }
 function handlePontosSimples(e) {
@@ -288,14 +292,14 @@ function handlePontos() {
         $(e.currentTarget).toggleClass("bi-square");
         $(e.currentTarget).toggleClass("bi-square-fill");
         const prevAll = $(e.currentTarget).prevAll();
-        $.each(prevAll, (i, prev) => {
+        $.each(prevAll, (_i, prev) => {
             if (!$(prev).hasClass("bi-slash-square")) {
                 $(prev).addClass("bi-square-fill");
                 $(prev).removeClass("bi-square");
             }
         });
         const nextAll = $(e.currentTarget).nextAll();
-        $.each(nextAll, (i, next) => {
+        $.each(nextAll, (_i, next) => {
             $(next).removeClass("bi-square-fill");
             $(next).addClass("bi-square");
         });
@@ -336,7 +340,9 @@ function resetPontos() {
     $("#graduacao-conduta .graduacao-sucesso").addClass("d-none");
     $("#graduacao-conduta .graduacao-button-holder").removeClass("d-none");
     $("#graduacao-conduta .graduacao-resultado").addClass("d-none");
-    $("#graduacao-conduta .graduacao-resultado").find("*:not(span)").remove();
+    $("#graduacao-conduta .graduacao-resultado").find("*").remove();
+    $("#graduacao-conduta").data("valid", false);
+    validaFicha();
 }
 function handleResult() {
     const resultadoHtml = $("#graduacao-conduta .graduacao-resultado");
@@ -448,5 +454,6 @@ function changeGraduacaoConduta() {
             });
         }
     }, 100);
+    $("#graduacao-conduta").data("valid", false);
 }
 export default changeGraduacaoConduta;

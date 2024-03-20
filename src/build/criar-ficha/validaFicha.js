@@ -1,4 +1,4 @@
-const PASSOS = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo", "graduacao-conduta"];
+const PASSOS = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo", "graduacao-conduta", "graduacao", "passo-9"];
 function updateQueryParam(value, key = "passo") {
     const url = new URL(window.location.href);
     url.searchParams.set(key, value);
@@ -125,12 +125,18 @@ function validaFicha() {
                 const atributo = $("#atributo").data("valid");
                 allowPasso(atributo, proximoPassoButton);
                 break;
+            case "graduacao-conduta":
+                const graduacaoConduta = $("#graduacao-conduta").data("valid");
+                allowPasso(graduacaoConduta, proximoPassoButton);
+                break;
+            case "graduacao":
+                const graduacao = $("#graduacao").data("valid");
+                allowPasso(graduacao, proximoPassoButton);
+                break;
+            case "passo-9":
+                break;
             default:
                 break;
-        }
-        if (passoAtual === proximoPasso) {
-            $(proximoPassoButton).removeClass("avancar-passo-ok");
-            $(proximoPassoButton).off("click");
         }
     }
 }

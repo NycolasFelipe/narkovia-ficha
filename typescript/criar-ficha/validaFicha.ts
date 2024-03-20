@@ -1,4 +1,4 @@
-const PASSOS: string[] = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo", "graduacao-conduta"];
+const PASSOS: string[] = ["ancestralidade", "categoria", "idade", "conduta", "tamanho", "atributo", "graduacao-conduta", "graduacao", "passo-9"];
 
 function updateQueryParam(value: string, key: string = "passo") {
   const url = new URL(window.location.href);
@@ -116,7 +116,7 @@ function validaFicha() {
         const conduta: boolean = $("#conduta").data("valid");
         const loaded: boolean = $("#conduta").data("loaded");
 
-        if (!loaded) {          
+        if (!loaded) {
           $("#conduta .condutas").find(".slick-prev").trigger("click");
           $("#conduta .loading").show();
           $("#conduta .condutas").css("filter", "opacity(0.0)");
@@ -140,14 +140,27 @@ function validaFicha() {
         allowPasso(atributo, proximoPassoButton);
         break;
 
+      case "graduacao-conduta":
+        const graduacaoConduta: boolean = $("#graduacao-conduta").data("valid");
+        allowPasso(graduacaoConduta, proximoPassoButton);
+        break;
+
+      case "graduacao":
+        const graduacao: boolean = $("#graduacao").data("valid");
+        allowPasso(graduacao, proximoPassoButton);
+        break;
+
+      case "passo-9":
+        break;
+
       default:
         break;
     }
 
-    if (passoAtual === proximoPasso) {
-      $(proximoPassoButton).removeClass("avancar-passo-ok");
-      $(proximoPassoButton).off("click");
-    }
+    // if (passoAtual === proximoPasso) {
+    //   $(proximoPassoButton).removeClass("avancar-passo-ok");
+    //   $(proximoPassoButton).off("click");
+    // }
   }
 }
 

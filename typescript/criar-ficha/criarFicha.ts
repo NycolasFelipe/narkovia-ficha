@@ -4,6 +4,7 @@ import changeAncestralidade from "./changeAncestralidade.js";
 import changeAtributo from "./changeAtributo.js";
 import changeCategoria from "./changeCategoria.js";
 import changeConduta from "./changeConduta.js";
+import changeGraduacao from "./changeGraduacao.js";
 import changeGraduacaoConduta from "./changeGraduacaoConduta.js";
 import changeIdade from "./changeIdade.js";
 import changeTamanho from "./changeTamanho.js";
@@ -20,6 +21,7 @@ jQuery(function () {
   changeTamanho();
   changeAtributo();
   changeGraduacaoConduta();
+  changeGraduacao();
   validaPasso();
   slickSlider("#conduta .condutas");
   // _debug();

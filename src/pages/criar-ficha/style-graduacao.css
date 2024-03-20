@@ -1,0 +1,128 @@
+#graduacao {
+  font-family: "Libre Baskerville", serif;
+}
+
+
+#graduacao .pontos-alerta {
+  display: block;
+  font-size: 0.8rem !important;
+  margin-top: 5px;
+}
+
+#graduacao .pontos-ok {
+  display: block;
+  font-size: 0.8rem !important;
+  margin-top: 5px;
+  color: #3081D0 !important;
+}
+
+#graduacao .pontos-graduacao {
+  color: #61d461;
+  margin-bottom: 0;
+}
+
+#graduacao .pontos-graduacao-mb {
+  margin-bottom: 65px;
+}
+
+#graduacao .pontos-graduacao span {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+#graduacao .pontos-alerta {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #dc3545;
+}
+
+
+#graduacao .graduacao-item-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+  position: relative;
+  top: 16px;
+}
+
+#graduacao .graduacao-item-header i {
+  transition: all 0.3s ease;
+  padding-left: 0.25rem;
+}
+
+#graduacao .graduacao-item-header i:hover {
+  color: #fff !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#graduacao .graduacao-titulo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+  margin-bottom: -10px;
+  color: #5889b9;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#graduacao .graduacao-item-titulo-nulo {
+  color: #808080 !important;
+}
+
+#graduacao .graduacao-gasto-nulo {
+  display: none;
+}
+
+#graduacao .graduacao-pontos {
+  display: flex;
+  justify-content: center;
+}
+
+#graduacao .graduacao-pontos i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 42px;
+  margin: 0 2.5px;
+}
+
+#graduacao .graduacao-pontos i:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+#graduacao .graduacao-pontos i.bi-square-fill {
+  color: #fff;
+}
+
+#graduacao .graduacao-pontos i.bi-slash-square {
+  color: #808080 !important;
+  pointer-events: none;
+}
+
+#graduacao .warning-pontos-excedentes {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 49.9%;
+  bottom: 40px;
+  height: 60px;
+  width: 290px;
+  border-radius: 5px;
+  outline: 2px solid red;
+  background: #04090D;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#graduacao .warning-pontos-excedentes p {
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-weight: lighter;
+}

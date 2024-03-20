@@ -30,6 +30,7 @@ function setUrl(passo: string) {
 //     for (let i = 0; i < 10; i++) {
 //       $("#idade input").attr("value", 90);
 //     }
+//     $("#idade input").trigger("change");
 //     $("#idade input").trigger("touch");
 //     $("#idade input").trigger("focusout");
 //   }, 200);

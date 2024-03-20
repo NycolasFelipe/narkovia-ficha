@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="./../criar-ficha/styles.css">
   <link rel="stylesheet" href="./style-atributo.css">
   <link rel="stylesheet" href="./style-conduta.css">
+  <link rel="stylesheet" href="./style-graduacao.css">
   <link rel="stylesheet" href="./style-graduacao-conduta.css">
   <link rel="stylesheet" href="./style-idade.css">
   <link rel="stylesheet" href="./style-modal-atributo-info.css">
@@ -319,15 +320,46 @@
         </div>
         <div class="graduacao-sucesso d-none">
           <span class="title">Graduações distribuídas</span>
+          <div class="graduacao-resultado d-none"></div>
           <span class="refazer-button">
             Refazer
             <i class="bi bi-pencil-square"></i>
           </span>
         </div>
         <hr class="w-50" style="margin: 0 auto; margin-bottom: 10px;">
-        <div class="graduacao-resultado d-none">
-          <span class="title">Resultado:</span>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
         </div>
+      </div>
+      <div id="graduacao">
+        <p class="passo text-center text-white">8º Passo:</p>
+        <p class="passo-descricao text-center text-white">Distribua seus pontos de graduação</p>
+        <div class="pontos-graduacao pontos-graduacao-mb text-center">
+          <p>Pontos de graduação:</p>
+          <span class="pontos-restantes">0</span>
+          <span>/</span>
+          <span class="pontos-disponiveis">0</span>
+          <span class="pontos-alerta d-none text-danger">
+            <i class="bi bi-exclamation-triangle"></i>
+            Pontos excedentes
+          </span>
+          <span class="pontos-ok d-none">
+            <i class="bi bi-check-circle"></i>
+            Pontos distribuídos
+          </span>
+        </div>
+        <div class="graduacoes"></div>
+        <div class="avancar-passo d-flex justify-content-between mt-5">
+          <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </div>
+        <div class="warning-pontos-excedentes d-none">
+          <i class="bi bi-exclamation-triangle"></i>
+          <p>Pontos excedendo o limite!</p>
+        </div>
+      </div>
+      <div id="passo-9">
         <div class="avancar-passo d-flex justify-content-between mt-5">
           <i class="bi bi-arrow-left-square-fill voltar-passo"></i>
           <i class="bi bi-arrow-right-square-fill"></i>
