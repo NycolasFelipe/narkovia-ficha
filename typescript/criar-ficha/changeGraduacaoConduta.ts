@@ -150,11 +150,11 @@ function loadPontos(conduta: ContentConduta) {
               <p class="graduacao-gastos graduacao-gasto-nulo">0</p>
             </div>
             <div class="graduacao-pontos ${opcaoId}">
-              <i class="bi bi-square"></i>
-              <i class="bi bi-square"></i>
-              <i class="bi bi-square"></i>
-              <i class="bi bi-square"></i>
-              <i class="bi bi-square"></i>
+              <i class="bi bi-square" data="${Pontos['lvl1']}"></i>
+              <i class="bi bi-square" data="${Pontos['lvl2']}"></i>
+              <i class="bi bi-square" data="${Pontos['lvl3']}"></i>
+              <i class="bi bi-square" data="${Pontos['lvl4']}"></i>
+              <i class="bi bi-square" data="${Pontos['lvl5']}"></i>
             </div>
           </div>
         `);
@@ -228,22 +228,21 @@ function handlePontosSimples(e: any) {
     const pontosOk = $(e.currentTarget).parents(".conduta-ganho-item").find(".pontos-ok");
     const pontosAlerta = $(e.currentTarget).parents(".conduta-ganho-item").find(".pontos-alerta");
 
-    let pontosOutrasCondutasTotal = 0;
-    const pontosOutrasCondutas = $(e.currentTarget).parents(".conduta-ganho").find(".graduacao-pontos").get();
-    $.each(pontosOutrasCondutas, (_index, pontos) => {
-      if ($(pontos).parent().find(".bi-square-fill").length > 0) {
-        const qdsLength = $(pontos).find("i.bi-slash-square").length;
-        const pontosCalculo = (1 + qdsLength) * qdsLength / 2;
-        pontosOutrasCondutasTotal += pontosCalculo;
+    let pontosTotaisInt = 0;
+
+    const pontosHabilidade = $(conduta).find(".graduacao-pontos").get();
+    $.each(pontosHabilidade, (_index, pontoHabilidade) => {
+      const ultimoQuadrado = $(pontoHabilidade).find(".bi-square-fill:last");
+      if (ultimoQuadrado.length > 0) {
+        let pontosConduta = $(ultimoQuadrado).prevAll("i.bi-slash-square").length;
+        pontosConduta = (1 + pontosConduta) * pontosConduta / 2;
+        const pontos = $(ultimoQuadrado).attr("data")?.toString();
+        if (typeof pontos !== "undefined") {
+          const pontosInt = parseInt(pontos);
+          pontosTotaisInt += pontosInt - pontosConduta;
+        }
       }
     });
-
-    let pontosTotaisInt = 0;
-    $.each(pontosTotais, (i, e) => {
-      const ponto = $(e).text();
-      pontosTotaisInt += parseInt(ponto);
-    });
-    pontosTotaisInt -= pontosOutrasCondutasTotal;
 
     const pontosRestantesText = pontosDisponiveisInt - pontosTotaisInt;
     $(pontosRestantes).text(pontosRestantesText);

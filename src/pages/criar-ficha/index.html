@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="./style-conduta.css">
   <link rel="stylesheet" href="./style-graduacao-conduta.css">
   <link rel="stylesheet" href="./style-idade.css">
+  <link rel="stylesheet" href="./style-modal-atributo-info.css">
   <link rel="stylesheet" href="./style-modal-graduacao-conduta-refazer.css">
   <link rel="stylesheet" href="./style-modal-graduacao-conduta-info.css">
   <link rel="stylesheet" href="./style-modal-resumo.css">
@@ -367,6 +368,35 @@
     </div>
   </div>
 
+  <!-- Descricao Atributo Modal -->
+  <button id="atributoModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#atributoModal"></button>
+
+  <div class="modal fade" id="atributoModal" tabindex="-1" aria-labelledby="atributoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100" id="atributoModalLabel" style="text-align: center;">Descrição do atributo
+          </h1>
+          <button type="button" class="btn-close" style="position: absolute; right: 25px;" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-atributo-nome" style="padding: 10px 20px;">
+            <h2 class="w-100 text-center fs-6"></h2>
+          </div>
+          <hr class="w-50" style="margin: 0 auto; margin-bottom: 10px;">
+          <div class="modal-atributo-descricao-titulo" style="padding: 10px 20px;">
+            <p class="w-100 text-center fs-6"></p>
+          </div>
+          <div class="modal-atributo-descricao">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Descricao Habilidade Modal -->
   <button id="habilidadeModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
     data-bs-target="#habilidadeModal"></button>
@@ -397,7 +427,8 @@
   <button id="refazerGraduacaoModalButton" type="button" class="d-none btn btn-primary" data-bs-toggle="modal"
     data-bs-target="#refazerGraduacaoModal"></button>
 
-  <div class="modal fade" id="refazerGraduacaoModal" tabindex="-1" aria-labelledby="refazerGraduacaoModalLabel" aria-hidden="true">
+  <div class="modal fade" id="refazerGraduacaoModal" tabindex="-1" aria-labelledby="refazerGraduacaoModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">

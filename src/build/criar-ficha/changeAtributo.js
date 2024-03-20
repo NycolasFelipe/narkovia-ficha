@@ -1,5 +1,7 @@
 import Atributo from "../content/classes/atributo.js";
 import validaFicha from "./validaFicha.js";
+const deviceDesktop = $(window).width() >= 1024;
+const eventType = deviceDesktop ? "click" : "touchend";
 function loadPontos(atributos) {
     $.each(atributos, (_index, atributo) => {
         $("#atributo .atributos").append(`
@@ -7,7 +9,7 @@ function loadPontos(atributos) {
         <div class="atributo-titulo text-white text-center">
           <p>
             ${atributo.titulo}
-            <i class="bi bi-info-circle ps-1" title="${atributo.descricao}" style="color: #808080;"></i>
+            <i class="bi bi-info-circle ps-1" title="${atributo.descricao}" tituloDescricao="${atributo.descricaoTitulo}" style="color: #808080;"></i>
           </p>
           <p class="atributo-gastos">0</p>
         </div>
@@ -38,7 +40,7 @@ function resetPontos() {
 }
 function handlePontos() {
     const selector = $("#atributo .atributo-pontos i:not(.bi-slash-square-fill)");
-    $.each(["click", "touch"], (_k, v) => $(selector).on(v, (e) => {
+    $(selector).on(eventType, (e) => {
         $(e.currentTarget).toggleClass("bi-square");
         $(e.currentTarget).toggleClass("bi-square-fill");
         const prevAll = $(e.currentTarget).prevAll();
@@ -59,7 +61,7 @@ function handlePontos() {
         $(pontosGastos).text(pontosCalculados);
         updatePontosRestantes();
         checkPontos();
-    }));
+    });
 }
 function checkPontos() {
     const pontosRestantes = parseInt($("#atributo .pontos-restantes").text());
@@ -141,6 +143,25 @@ function updatePontosDisponiveis() {
         $("#atributo .pontos-composicao .pontos-restantes").text(pontos);
     });
 }
+function handleModalInfo() {
+    const modalInfoButtons = $("#atributo .bi-info-circle").get();
+    $.each(modalInfoButtons, (_index, infoButton) => {
+        $(infoButton).off();
+    });
+    $.each(modalInfoButtons, (_index, infoButton) => {
+        $(infoButton).on(eventType, (e) => {
+            const atributo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo p:first").text();
+            const descricaoTitulo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("tituloDescricao");
+            const descricao = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("title");
+            if (typeof atributo !== "undefined" && typeof descricao !== "undefined" && typeof descricaoTitulo !== "undefined") {
+                $("#atributoModal .modal-atributo-nome h2").text(atributo);
+                $("#atributoModal .modal-atributo-descricao-titulo p").text(descricaoTitulo);
+                $("#atributoModal .modal-atributo-descricao p").text(descricao);
+            }
+            $("#atributoModalButton").trigger("click");
+        });
+    });
+}
 function changeAtributo() {
     const atributos = Atributo.getItems();
     const contentLoaded = setInterval(() => {
@@ -150,14 +171,15 @@ function changeAtributo() {
             updatePontosDisponiveis();
             handlePontos();
             updatePontosRestantes();
+            handleModalInfo();
             $("#atributo").data("valid", false);
         }
     }, 100);
     $("#categoria select").on("change", () => resetPontos());
     $("#idade input").focus(() => resetPontos());
     $("#idade input").on("touchend", () => resetPontos());
-    $("#idade .idade-mais").on("click", () => resetPontos());
-    $("#idade .idade-menos").on("click", () => resetPontos());
+    $("#idade .idade-mais").on(eventType, () => resetPontos());
+    $("#idade .idade-menos").on(eventType, () => resetPontos());
     $("#tamanho .bi-arrow-right-square-fill").one("mouseup", () => {
         $(".preview-atributo").prev().removeClass("d-none");
         $(".preview-atributo").next().removeClass("d-none");
