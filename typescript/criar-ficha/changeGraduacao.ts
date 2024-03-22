@@ -1,5 +1,6 @@
 import Graduacao from "../content/classes/graduacao.js";
 import ContentGraduacao from "../content/interfaces/graduacao.js";
+import isScrolling from "../util/isScrolling.js";
 import validaFicha from "./validaFicha.js";
 
 //@ts-ignore
@@ -18,55 +19,57 @@ function handlePontos() {
   const selector = $("#graduacao .graduacao-pontos i");
   $(selector).on(eventType, (e) => $(e).off());
   $(selector).on(eventType, (e) => {
-    $(e.currentTarget).toggleClass("bi-square");
-    $(e.currentTarget).toggleClass("bi-square-fill");
+    if (!isScrolling()) {
+      $(e.currentTarget).toggleClass("bi-square");
+      $(e.currentTarget).toggleClass("bi-square-fill");
 
-    const prevAll = $(e.currentTarget).prevAll();
-    $.each(prevAll, (_i, prev) => {
-      if (!$(prev).hasClass("bi-slash-square")) {
-        $(prev).addClass("bi-square-fill");
-        $(prev).removeClass("bi-square");
+      const prevAll = $(e.currentTarget).prevAll();
+      $.each(prevAll, (_i, prev) => {
+        if (!$(prev).hasClass("bi-slash-square")) {
+          $(prev).addClass("bi-square-fill");
+          $(prev).removeClass("bi-square");
+        }
+      });
+
+      const nextAll = $(e.currentTarget).nextAll();
+      $.each(nextAll, (_i, next) => {
+        $(next).removeClass("bi-square-fill");
+        $(next).addClass("bi-square");
+      });
+
+      let pontos = $(e.currentTarget).parent().find(".bi-square-fill").length;
+      pontos += $(e.currentTarget).parent().find(".bi-slash-square").length;
+      pontos = (1 + pontos) * pontos / 2;
+
+      const titulo = $(e.currentTarget).parents(".graduacao-item").find(".graduacao-item-titulo");
+      const pontosGastos = $(e.currentTarget).parents(".graduacao-item").find(".graduacao-gastos");
+      if (pontos > 0) {
+        $(titulo).removeClass("graduacao-item-titulo-nulo");
+        $(pontosGastos).removeClass("graduacao-gasto-nulo");
+      } else {
+        $(titulo).addClass("graduacao-item-titulo-nulo");
+        $(pontosGastos).addClass("graduacao-gasto-nulo");
       }
-    });
 
-    const nextAll = $(e.currentTarget).nextAll();
-    $.each(nextAll, (_i, next) => {
-      $(next).removeClass("bi-square-fill");
-      $(next).addClass("bi-square");
-    });
+      //Casos em que os pontos vêm de outra conduta
+      if ($(e.currentTarget).hasClass("bi-square")
+        && $(e.currentTarget).prev().hasClass("bi-slash-square")) {
+        let pontosAnteriores = $(e.currentTarget).prevAll(".bi-slash-square").length;
+        pontosAnteriores = (1 + pontosAnteriores) * pontosAnteriores / 2;
+        $(pontosGastos).text(pontosAnteriores);
+      } else {
+        $(pontosGastos).text(pontos);
+      }
 
-    let pontos = $(e.currentTarget).parent().find(".bi-square-fill").length;
-    pontos += $(e.currentTarget).parent().find(".bi-slash-square").length;
-    pontos = (1 + pontos) * pontos / 2;
+      // let graduacaoId = $(e.currentTarget).parents(".graduacao-pontos").attr("class");
+      // graduacaoId = graduacaoId?.replace("graduacao-pontos", "").trim();
 
-    const titulo = $(e.currentTarget).parents(".graduacao-item").find(".graduacao-item-titulo");
-    const pontosGastos = $(e.currentTarget).parents(".graduacao-item").find(".graduacao-gastos");
-    if (pontos > 0) {
-      $(titulo).removeClass("graduacao-item-titulo-nulo");
-      $(pontosGastos).removeClass("graduacao-gasto-nulo");
-    } else {
-      $(titulo).addClass("graduacao-item-titulo-nulo");
-      $(pontosGastos).addClass("graduacao-gasto-nulo");
+      // if (typeof graduacaoId !== "undefined") {
+      //   updatePontos(graduacaoId, pontos);
+      // }
+
+      updatePontosRestantes();
     }
-
-    //Casos em que os pontos vêm de outra conduta
-    if ($(e.currentTarget).hasClass("bi-square")
-      && $(e.currentTarget).prev().hasClass("bi-slash-square")) {
-      let pontosAnteriores = $(e.currentTarget).prevAll(".bi-slash-square").length;
-      pontosAnteriores = (1 + pontosAnteriores) * pontosAnteriores / 2;
-      $(pontosGastos).text(pontosAnteriores);
-    } else {
-      $(pontosGastos).text(pontos);
-    }
-
-    // let graduacaoId = $(e.currentTarget).parents(".graduacao-pontos").attr("class");
-    // graduacaoId = graduacaoId?.replace("graduacao-pontos", "").trim();
-
-    // if (typeof graduacaoId !== "undefined") {
-    //   updatePontos(graduacaoId, pontos);
-    // }
-
-    updatePontosRestantes();
   });
 }
 
@@ -198,13 +201,15 @@ function handleModalInfo() {
   });
   $.each(modalInfoButtons, (_index, infoButton) => {
     $(infoButton).on(eventType, (e) => {
-      const habilidade = $(e.currentTarget).parents(".graduacao-item-titulo").text().trim();
-      const descricao = $(e.currentTarget).attr("title")?.toString();
-      if (typeof habilidade !== "undefined" && typeof descricao !== "undefined") {
-        $("#habilidadeModal .modal-habilidade-nome h2").text(habilidade);
-        $("#habilidadeModal .modal-habilidade-descricao p").text(descricao);
+      if (!isScrolling()) {
+        const habilidade = $(e.currentTarget).parents(".graduacao-item-titulo").text().trim();
+        const descricao = $(e.currentTarget).attr("title")?.toString();
+        if (typeof habilidade !== "undefined" && typeof descricao !== "undefined") {
+          $("#habilidadeModal .modal-habilidade-nome h2").text(habilidade);
+          $("#habilidadeModal .modal-habilidade-descricao p").text(descricao);
+        }
+        $("#habilidadeModalButton").trigger("click");
       }
-      $("#habilidadeModalButton").trigger("click");
     });
   });
 }

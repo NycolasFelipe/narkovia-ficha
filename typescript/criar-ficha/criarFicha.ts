@@ -26,3 +26,9 @@ jQuery(function () {
   slickSlider("#conduta .condutas");
   // _debug();
 });
+
+//Adiciona propriedade com valor do ultimo scroll p/ prevenir toques acidentais
+$(window).on("scroll", () => {
+  //@ts-ignore
+  window.lastScrollTime = new Date().getTime();
+});

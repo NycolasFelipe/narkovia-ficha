@@ -257,50 +257,53 @@ function resetCondutas() {
     condutasSelecionadas = 0;
 }
 function handleCondutasDisponiveis() {
-    const disponiveisHtml = $(".vivenciaCondutas").text();
-    $("#conduta .condutas").show();
-    $(".condutas-swipe-hint").show().removeClass("d-none");
-    if (disponiveisHtml === "-") {
-        condutasDisponiveis = 0;
-        $("#conduta .passo-descricao").html(`
-      <span data="condutas-0" class='mb-0'>Sem condutas disponíves</span><br>
-      <span class="text-warning" style="font-size: 0.8rem;">
-        (Personagens infantes não recebem conduta)
-      <span>
-    `);
-        $("#conduta .condutas").hide();
-        $(".condutas-swipe-hint").hide();
-        setTimeout(() => $("#conduta .slick-slider").trigger("click"), 100);
-    }
-    else if (disponiveisHtml === "1") {
-        condutasDisponiveis = 1;
-        $("#conduta .passo-descricao").html(`
-      <span data="condutas-1" style="color: #61d461;">Escolha 1 conduta</span>
-    `);
-    }
-    else if (disponiveisHtml === "2") {
-        condutasDisponiveis = 2;
-        $("#conduta .passo-descricao").html(`
-      <span data="condutas-2" style="color: #61d461;">Escolha 2 condutas</span>
-    `);
-    }
-    else if (disponiveisHtml === "3") {
-        condutasDisponiveis = 3;
-        $("#conduta .passo-descricao").html(`
-      <span data="condutas-3" style="color: #61d461;">Escolha 3 condutas</span>
-    `);
-    }
-    if (disponiveisHtml === "-") {
-        $("#conduta .loading:not(.loaded)").css("filter", "opacity(0.0)");
-    }
-    else {
-        $("#conduta .loading:not(.loaded)").css("filter", "opacity(1.0)");
-    }
-    $("#conduta .voltar-passo").on("mouseup", () => {
-        $("#conduta .condutas-descricao").hide();
-        $("#conduta .conduta.conduta-selecionada").removeClass("conduta-selecionada");
-    });
-    validate();
+    setTimeout(() => {
+        const disponiveisHtml = $(".vivenciaCondutas").text();
+        console.log(disponiveisHtml);
+        $("#conduta .condutas").show();
+        $(".condutas-swipe-hint").show().removeClass("d-none");
+        if (disponiveisHtml === "-") {
+            condutasDisponiveis = 0;
+            $("#conduta .passo-descricao").html(`
+        <span data="condutas-0" class='mb-0'>Sem condutas disponíves</span><br>
+        <span class="text-warning" style="font-size: 0.8rem;">
+          (Personagens infantes não recebem conduta)
+        <span>
+      `);
+            $("#conduta .condutas").hide();
+            $(".condutas-swipe-hint").hide();
+            setTimeout(() => $("#conduta .slick-slider").trigger("click"), 100);
+        }
+        else if (disponiveisHtml === "1") {
+            condutasDisponiveis = 1;
+            $("#conduta .passo-descricao").html(`
+        <span data="condutas-1" style="color: #61d461;">Escolha 1 conduta</span>
+      `);
+        }
+        else if (disponiveisHtml === "2") {
+            condutasDisponiveis = 2;
+            $("#conduta .passo-descricao").html(`
+        <span data="condutas-2" style="color: #61d461;">Escolha 2 condutas</span>
+      `);
+        }
+        else if (disponiveisHtml === "3") {
+            condutasDisponiveis = 3;
+            $("#conduta .passo-descricao").html(`
+        <span data="condutas-3" style="color: #61d461;">Escolha 3 condutas</span>
+      `);
+        }
+        if (disponiveisHtml === "-") {
+            $("#conduta .loading:not(.loaded)").css("filter", "opacity(0.0)");
+        }
+        else {
+            $("#conduta .loading:not(.loaded)").css("filter", "opacity(1.0)");
+        }
+        $("#conduta .voltar-passo").on("mouseup", () => {
+            $("#conduta .condutas-descricao").hide();
+            $("#conduta .conduta.conduta-selecionada").removeClass("conduta-selecionada");
+        });
+        validate();
+    }, 100);
 }
 function handleEscolhaConduta() {
     $("#conduta .conduta").on("mouseup", () => {

@@ -1,5 +1,6 @@
 import Ancestralidade from "../content/classes/ancestralidade.js";
 import Vivencia from "../content/classes/vivencia.js";
+import isScrolling from "../util/isScrolling.js";
 import validaFicha from "./validaFicha.js";
 function changeIdadeSlide(ancestralidades) {
     const valor = $('#idade input').val()?.toString();
@@ -90,9 +91,23 @@ function changeIdade() {
     const ancestralidades = Ancestralidade.getItems();
     updateExpectativa();
     changeIdadeSlide(ancestralidades);
-    $.each(["mouseup", "touch"], (k, v) => $("#idade input").on(v, () => changeIdadeSlide(ancestralidades)));
-    $.each(["mousemove", "touchmove"], (k, v) => $("#idade input").on(v, () => updateIdade()));
-    $("#idade input").on("touchend", () => changeIdadeSlide(ancestralidades));
+    $.each(["mouseup", "touchstart"], (k, v) => $("#idade input").on(v, (e) => {
+        const lastVal = $(e.currentTarget).val();
+        if (!isScrolling(1100)) {
+            $(e.currentTarget).one("touchend", () => {
+                updateIdade();
+                changeIdadeSlide(ancestralidades);
+            });
+        }
+        else {
+            $(e.currentTarget).one("touchend", () => {
+                $(e.currentTarget).val(lastVal);
+                $(e).trigger("blur");
+                updateIdade();
+            });
+        }
+    }));
+    $("#idade input").on("mousemove", () => updateIdade());
     $("#ancestralidade select").on("change", () => changeIdadeSlide(ancestralidades));
     $("#idade input").focusout(() => validaFicha());
     $("#idade input").focus(() => validaFicha());

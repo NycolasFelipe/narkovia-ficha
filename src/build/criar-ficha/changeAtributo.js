@@ -1,4 +1,5 @@
 import Atributo from "../content/classes/atributo.js";
+import isScrolling from "../util/isScrolling.js";
 import validaFicha from "./validaFicha.js";
 const deviceDesktop = $(window).width() >= 1024;
 const eventType = deviceDesktop ? "click" : "touchend";
@@ -41,26 +42,29 @@ function resetPontos() {
 function handlePontos() {
     const selector = $("#atributo .atributo-pontos i:not(.bi-slash-square-fill)");
     $(selector).on(eventType, (e) => {
-        $(e.currentTarget).toggleClass("bi-square");
-        $(e.currentTarget).toggleClass("bi-square-fill");
-        const prevAll = $(e.currentTarget).prevAll();
-        $.each(prevAll, (_i, prev) => {
-            const element = $(prev).not(".bi-slash-square-fill");
-            $(element).addClass("bi-square-fill");
-            $(element).removeClass("bi-square");
-        });
-        const nextAll = $(e.currentTarget).nextAll();
-        $.each(nextAll, (_i, next) => {
-            const element = $(next);
-            $(element).removeClass("bi-square-fill");
-            $(element).addClass("bi-square");
-        });
-        const pontos = $(e.currentTarget).parent().find(".bi-square-fill").length + 1;
-        const pontosCalculados = 2 ** pontos - 2;
-        const pontosGastos = $(e.currentTarget).parents(".atributo").find(".atributo-gastos");
-        $(pontosGastos).text(pontosCalculados);
-        updatePontosRestantes();
-        checkPontos();
+        if (!isScrolling()) {
+            e.preventDefault();
+            $(e.currentTarget).toggleClass("bi-square");
+            $(e.currentTarget).toggleClass("bi-square-fill");
+            const prevAll = $(e.currentTarget).prevAll();
+            $.each(prevAll, (_i, prev) => {
+                const element = $(prev).not(".bi-slash-square-fill");
+                $(element).addClass("bi-square-fill");
+                $(element).removeClass("bi-square");
+            });
+            const nextAll = $(e.currentTarget).nextAll();
+            $.each(nextAll, (_i, next) => {
+                const element = $(next);
+                $(element).removeClass("bi-square-fill");
+                $(element).addClass("bi-square");
+            });
+            const pontos = $(e.currentTarget).parent().find(".bi-square-fill").length + 1;
+            const pontosCalculados = 2 ** pontos - 2;
+            const pontosGastos = $(e.currentTarget).parents(".atributo").find(".atributo-gastos");
+            $(pontosGastos).text(pontosCalculados);
+            updatePontosRestantes();
+            checkPontos();
+        }
     });
 }
 function checkPontos() {
@@ -150,15 +154,17 @@ function handleModalInfo() {
     });
     $.each(modalInfoButtons, (_index, infoButton) => {
         $(infoButton).on(eventType, (e) => {
-            const atributo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo p:first").text();
-            const descricaoTitulo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("tituloDescricao");
-            const descricao = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("title");
-            if (typeof atributo !== "undefined" && typeof descricao !== "undefined" && typeof descricaoTitulo !== "undefined") {
-                $("#atributoModal .modal-atributo-nome h2").text(atributo);
-                $("#atributoModal .modal-atributo-descricao-titulo p").text(descricaoTitulo);
-                $("#atributoModal .modal-atributo-descricao p").text(descricao);
+            if (!isScrolling()) {
+                const atributo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo p:first").text();
+                const descricaoTitulo = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("tituloDescricao");
+                const descricao = $(e.currentTarget).parents(".atributo").find(".atributo-titulo i").attr("title");
+                if (typeof atributo !== "undefined" && typeof descricao !== "undefined" && typeof descricaoTitulo !== "undefined") {
+                    $("#atributoModal .modal-atributo-nome h2").text(atributo);
+                    $("#atributoModal .modal-atributo-descricao-titulo p").text(descricaoTitulo);
+                    $("#atributoModal .modal-atributo-descricao p").text(descricao);
+                }
+                $("#atributoModalButton").trigger("click");
             }
-            $("#atributoModalButton").trigger("click");
         });
     });
 }

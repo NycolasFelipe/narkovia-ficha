@@ -22,3 +22,6 @@ jQuery(function () {
     validaPasso();
     slickSlider("#conduta .condutas");
 });
+$(window).on("scroll", () => {
+    window.lastScrollTime = new Date().getTime();
+});
